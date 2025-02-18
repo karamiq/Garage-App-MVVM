@@ -6,7 +6,7 @@ part of 'drivers_fake.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$fakeIraqiInfoHash() => r'51efb4264c1e50fcc1045b96521bfe6ab80af8f2';
+String _$fakeIraqiInfoHash() => r'f2dbead7adbc7e5a4a3d59af3fe56e02d415c415';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -34,7 +34,7 @@ class _SystemHash {
 const fakeIraqiInfoProvider = FakeIraqiInfoFamily();
 
 /// See also [fakeIraqiInfo].
-class FakeIraqiInfoFamily extends Family<AsyncValue<List<HolderInfoRow>>> {
+class FakeIraqiInfoFamily extends Family<AsyncValue<List<HolderInfoRowModel>>> {
   /// See also [fakeIraqiInfo].
   const FakeIraqiInfoFamily();
 
@@ -76,7 +76,7 @@ class FakeIraqiInfoFamily extends Family<AsyncValue<List<HolderInfoRow>>> {
 
 /// See also [fakeIraqiInfo].
 class FakeIraqiInfoProvider
-    extends AutoDisposeFutureProvider<List<HolderInfoRow>> {
+    extends AutoDisposeFutureProvider<List<HolderInfoRowModel>> {
   /// See also [fakeIraqiInfo].
   FakeIraqiInfoProvider({
     String? region,
@@ -116,7 +116,8 @@ class FakeIraqiInfoProvider
 
   @override
   Override overrideWith(
-    FutureOr<List<HolderInfoRow>> Function(FakeIraqiInfoRef provider) create,
+    FutureOr<List<HolderInfoRowModel>> Function(FakeIraqiInfoRef provider)
+        create,
   ) {
     return ProviderOverride(
       origin: this,
@@ -134,7 +135,7 @@ class FakeIraqiInfoProvider
   }
 
   @override
-  AutoDisposeFutureProviderElement<List<HolderInfoRow>> createElement() {
+  AutoDisposeFutureProviderElement<List<HolderInfoRowModel>> createElement() {
     return _FakeIraqiInfoProviderElement(this);
   }
 
@@ -157,7 +158,8 @@ class FakeIraqiInfoProvider
 
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
-mixin FakeIraqiInfoRef on AutoDisposeFutureProviderRef<List<HolderInfoRow>> {
+mixin FakeIraqiInfoRef
+    on AutoDisposeFutureProviderRef<List<HolderInfoRowModel>> {
   /// The parameter `region` of this provider.
   String? get region;
 
@@ -166,7 +168,7 @@ mixin FakeIraqiInfoRef on AutoDisposeFutureProviderRef<List<HolderInfoRow>> {
 }
 
 class _FakeIraqiInfoProviderElement
-    extends AutoDisposeFutureProviderElement<List<HolderInfoRow>>
+    extends AutoDisposeFutureProviderElement<List<HolderInfoRowModel>>
     with FakeIraqiInfoRef {
   _FakeIraqiInfoProviderElement(super.provider);
 

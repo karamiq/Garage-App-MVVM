@@ -1,18 +1,13 @@
-import 'dart:math';
-
-import 'package:app/data/fake_data/constatnt_fake.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import '../../src/veichles_page/components/holder_info_row.dart';
 import '../services/clients/_clients.dart';
+import 'constatnt_fake.dart';
 part 'drivers_fake.g.dart';
 
 @riverpod
-Future<List<HolderInfoRow>> fakeIraqiInfo(Ref ref,
+Future<List<HolderInfoRowModel>> fakeIraqiInfo(Ref ref,
     {String? region, String? garage}) async {
   await Future.delayed(Duration(seconds: delaySeconds)); // Simulate network delay
 
-  final random = Random();
   const states = [
     "بغداد",
     "البصرة",
@@ -96,15 +91,16 @@ Future<List<HolderInfoRow>> fakeIraqiInfo(Ref ref,
     "باسم"
   ];
 
-  List<HolderInfoRow> infoList = List.generate(35, (index) {
-    final id = "IQ${random.nextInt(1000000).toString().padLeft(6, '0')}";
+  List<HolderInfoRowModel> infoList = List.generate(35, (index) {
+    final id = "IQ${index.toString().padLeft(6, '0')}"; // Deterministic ID
     final name =
-        "${names[random.nextInt(names.length)]} ${names[random.nextInt(names.length)]}";
-    final state = states[random.nextInt(states.length)];
-    final phoneNumber = "07${random.nextInt(1000000000).toString().padLeft(9, '0')}";
+        "${names[index % names.length]} ${names[(index + 1) % names.length]}"; // Deterministic name
+    final state = states[index % states.length]; // Deterministic state
+    final phoneNumber =
+        "07${index.toString().padLeft(9, '0')}"; // Deterministic phone number
     final photoUrl = myImageUrl;
 
-    return HolderInfoRow(
+    return HolderInfoRowModel(
       id: id,
       name: name,
       state: state,
@@ -113,7 +109,7 @@ Future<List<HolderInfoRow>> fakeIraqiInfo(Ref ref,
     );
   });
 
-  List<HolderInfoRow> filteredList = infoList.where((car) {
+  List<HolderInfoRowModel> filteredList = infoList.where((car) {
     final matchesRegion =
         region == null || car.state.toLowerCase().contains(region.toLowerCase());
     final matchesGarage =
@@ -123,4 +119,41 @@ Future<List<HolderInfoRow>> fakeIraqiInfo(Ref ref,
   }).toList();
 
   return filteredList;
+}
+
+////////////////////////////////////////////////
+class HolderInfoRowModel {
+  final String id;
+  final String name;
+  final String state;
+  final String phoneNumber;
+  final String photoUrl;
+
+  HolderInfoRowModel({
+    required this.id,
+    required this.name,
+    required this.state,
+    required this.phoneNumber,
+    required this.photoUrl,
+  });
+
+  factory HolderInfoRowModel.fromJson(Map<String, dynamic> json) {
+    return HolderInfoRowModel(
+      id: json['id'],
+      name: json['name'],
+      state: json['state'],
+      phoneNumber: json['phoneNumber'],
+      photoUrl: json['photoUrl'],
+    );
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'state': state,
+      'phoneNumber': phoneNumber,
+      'photoUrl': photoUrl,
+    };
+  }
 }

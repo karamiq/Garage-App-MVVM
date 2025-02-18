@@ -3,6 +3,7 @@ import 'package:app/data/fake_data/constatnt_fake.dart';
 import 'package:app/data/fake_data/drivers_fake.dart';
 import 'package:app/data/fake_data/profile_fake.dart';
 import 'package:app/data/providers/car_info_status.dart';
+import 'package:app/src/veichles_page/components/holder_info_row.dart';
 import 'package:flutter/material.dart';
 import '../../common_lib.dart';
 import '../../components/cusotm_row_skeleton.dart';
@@ -80,7 +81,12 @@ class VeichlesPage extends ConsumerWidget {
                     padding: EdgeInsets.all(0),
                     shrinkWrap: true,
                     physics: NeverScrollableScrollPhysics(),
-                    itemBuilder: (context, index) => data[index],
+                    itemBuilder: (context, index) => HolderInfoRow(
+                        id: data[index].id,
+                        name: data[index].name,
+                        phoneNumber: data[index].phoneNumber,
+                        state: data[index].state,
+                        photoUrl: myImageUrl),
                     separatorBuilder: (context, index) => Gap(Insets.small),
                     itemCount: 3),
                 error: (e, r) => Center(child: Text('Error: $e')),
