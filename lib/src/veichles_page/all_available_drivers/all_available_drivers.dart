@@ -1,6 +1,5 @@
 import 'package:app/components/cusotm_row_skeleton.dart';
 import 'package:flutter/material.dart';
-
 import '../../../common_lib.dart';
 import '../../../components/custom_app_bar.dart';
 import '../../../components/custom_paginated_api_item_select.dart';
@@ -13,79 +12,100 @@ class AllAvailableDriversPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final drivers = ref.watch(fakeIraqiInfoProvider);
     final garageController = TextEditingController();
     final stateController = TextEditingController();
+
+    // Call the provider with the current state and garage values
+    final drivers = ref.watch(fakeIraqiInfoProvider(
+        region: stateController.text, garage: garageController.text));
 
     List driversList = [];
     List filteredDrivers = [];
     String searchQuery = '';
 
     void filterCars(String query) {
-      if (true) {
-        searchQuery = query;
-        filteredDrivers = driversList
-            .where((car) => car.name.toLowerCase().contains(query.toLowerCase()))
-            .toList();
-      }
+      ref.refresh(fakeIraqiInfoProvider(
+        region: stateController.text,
+        garage: garageController.text,
+      ));
     }
 
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: const CustomAppBar(
         title: 'جميع الحائزين المتوفرين',
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(Insets.medium),
+        padding: const EdgeInsets.all(Insets.medium),
         child: Column(
           children: [
             Row(
               children: [
                 Expanded(
                   child: CustomPaginatedApiItemSelect(
-                      labelText: 'المحافظة',
-                      controller: garageController,
-                      function: (String search, int page) =>
-                          ref.read(authClientProvider).getGovernorates(
-                                name: search,
-                                pageNumber: page,
-                              ),
-                      validator: null),
+                    labelText: 'المحافظة',
+                    controller: stateController,
+                    function: (String search, int page) =>
+                        ref.read(authClientProvider).getGovernorates(
+                              name: search,
+                              pageNumber: page,
+                            ),
+                    validator: null,
+                    onChanged: (value) {
+                      ref.refresh(
+                        fakeIraqiInfoProvider(
+                          region: stateController.text,
+                          garage: garageController.text,
+                        ),
+                      );
+                    },
+                  ),
                 ),
-                Gap(Insets.small),
+                const Gap(Insets.small),
                 Expanded(
                   child: CustomPaginatedApiItemSelect(
-                      labelText: 'الكراج',
-                      controller: stateController,
-                      function: (String search, int page) =>
-                          ref.read(authClientProvider).getGovernorates(
-                                name: search,
-                                pageNumber: page,
-                              ),
-                      validator: null),
+                    labelText: 'الكراج',
+                    controller: garageController,
+                    function: (String search, int page) =>
+                        ref.read(authClientProvider).getGovernorates(
+                              name: search,
+                              pageNumber: page,
+                            ),
+                    validator: null,
+                    onChanged: (value) {
+                      ref.refresh(
+                        fakeIraqiInfoProvider(
+                          region: stateController.text,
+                          garage: garageController.text,
+                        ),
+                      );
+                    },
+                  ),
                 ),
               ],
             ),
             drivers.when(
-                data: (data) => ListView.separated(
-                    shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
-                    //The filtered list must be applied here when linking with api
-                    itemBuilder: (context, index) => HolderInfoRow(
-                        name: 'محمد علي',
-                        id: '93745',
-                        phoneNumber: 'أ ',
-                        photoUrl: Assets.assetsImagesAvatarImage,
-                        state: 'صلاح الدين'),
-                    separatorBuilder: (context, index) => Gap(Insets.small),
-                    itemCount: 11),
-                error: (e, r) => Center(child: Text('Error: $e')),
-                loading: () => ListView.separated(
-                    shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
-                    //The filtered list must be applied here when linking with api
-                    itemBuilder: (context, index) => CustomRowSkeleton(),
-                    separatorBuilder: (context, index) => Gap(Insets.small),
-                    itemCount: 11))
+              data: (data) => ListView.separated(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) => HolderInfoRow(
+                  name: data[index].name,
+                  state: data[index].state,
+                  id: data[index].id,
+                  phoneNumber: data[index].phoneNumber,
+                  photoUrl: data[index].photoUrl,
+                ),
+                separatorBuilder: (context, index) => const Gap(Insets.small),
+                itemCount: data.length,
+              ),
+              error: (e, r) => Center(child: Text('Error: $e')),
+              loading: () => ListView.separated(
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) => const CustomRowSkeleton(),
+                separatorBuilder: (context, index) => const Gap(Insets.small),
+                itemCount: 11,
+              ),
+            ),
           ],
         ),
       ),

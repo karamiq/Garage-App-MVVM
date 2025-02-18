@@ -32,8 +32,7 @@ class HolderInfoRow extends StatelessWidget {
               flex: 11,
               child: Row(
                 children: [
-                  CircleAvatar(
-                      backgroundImage: AssetImage(Assets.assetsImagesAvatarImage)),
+                  CircleAvatar(backgroundImage: NetworkImage(photoUrl)),
                   Gap(Insets.small),
                   Expanded(
                     child: Column(

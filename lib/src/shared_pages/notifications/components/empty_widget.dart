@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../../common_lib.dart';
 
 class NotificationsEmptyWidget extends StatelessWidget {
@@ -23,16 +22,16 @@ class NotificationsEmptyWidget extends StatelessWidget {
                 boxShadow: [
                   BoxShadow(
                       color: Theme.of(context).colorScheme.shadow.withOpacity(.1),
-                      offset: Offset(1, 1),
-                      blurRadius: 20),
+                      offset: Offset(.5, .5),
+                      blurRadius: 1),
                 ],
                 color: Theme.of(context).colorScheme.surface,
                 shape: BoxShape.circle,
               ),
               child: Center(
                 child: Container(
-                  height: height * .85,
-                  width: height * .85,
+                  height: height * .83,
+                  width: height * .83,
                   decoration: BoxDecoration(
                       color: Colors.green,
                       shape: BoxShape.circle,
@@ -54,13 +53,14 @@ class NotificationsEmptyWidget extends StatelessWidget {
                       ),
                       child: Center(
                         child: Container(
-                          width: height * .6,
+                          width: height * .5,
                           decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               gradient: LinearGradient(
                                   begin: Alignment.topLeft,
                                   end: Alignment.bottomRight,
                                   colors: [
+                                    Theme.of(context).colorScheme.primary,
                                     Theme.of(context).colorScheme.primary,
                                     Theme.of(context).colorScheme.primaryContainer,
                                     Theme.of(context).colorScheme.surface,
@@ -91,6 +91,7 @@ class NotificationsEmptyWidget extends StatelessWidget {
           Text(
             'لا توجد اشعارات',
             style: TextStyle(
+              // fontFamily: GoogleFonts.cairo().fontFamily,
               fontSize: CustomFontsTheme.veryBigSize,
               color: Theme.of(context).colorScheme.primary,
             ),
@@ -99,6 +100,7 @@ class NotificationsEmptyWidget extends StatelessWidget {
             'هنا سوف تظهر لك اخر الاشعارات و التنبيهات',
             textAlign: TextAlign.center,
             style: TextStyle(
+                //   fontFamily: GoogleFonts.cairo().fontFamily,
                 color: Theme.of(context).colorScheme.secondary,
                 fontSize: CustomFontsTheme.mediumSize),
           ),

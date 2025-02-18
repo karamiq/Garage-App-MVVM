@@ -2,6 +2,7 @@ import 'package:app/components/custom_list_tile_skeleton.dart';
 import 'package:app/data/fake_data/constatnt_fake.dart';
 import 'package:app/data/fake_data/drivers_fake.dart';
 import 'package:app/data/fake_data/profile_fake.dart';
+import 'package:app/data/providers/car_info_status.dart';
 import 'package:flutter/material.dart';
 import '../../common_lib.dart';
 import '../../components/cusotm_row_skeleton.dart';
@@ -57,8 +58,11 @@ class VeichlesPage extends ConsumerWidget {
                 ),
             Gap(Insets.large),
             ElevatedButton(
-                onPressed: () =>
-                    context.pushNamed(Routes.ownerCarInfoPage, extra: {'isOwner': false}),
+                onPressed: () {
+                  context.pushNamed(Routes.ownerCarInfoPage);
+                  ref.watch(carInfoPageStatusProvider.notifier).state =
+                      CarInfoStatus.addingNewCar;
+                },
                 child: ElevatedButtonChild(
                     text: 'اضافة مركبة', icon: Assets.assetsIconsPlusCircle)),
             Gap(Insets.medium),
@@ -70,7 +74,8 @@ class VeichlesPage extends ConsumerWidget {
                 onTap: () => context.pushNamed(
                       Routes.allAvailableDriversPage,
                     )),
-            ref.watch(fakeIraqiInfoProvider).when(
+            Gap(Insets.large),
+            ref.watch(fakeIraqiInfoProvider()).when(
                 data: (data) => ListView.separated(
                     padding: EdgeInsets.all(0),
                     shrinkWrap: true,

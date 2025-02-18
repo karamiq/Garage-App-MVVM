@@ -8,8 +8,9 @@ import '../services/clients/_clients.dart';
 part 'drivers_fake.g.dart';
 
 @riverpod
-Future<List<HolderInfoRow>> fakeIraqiInfo(Ref ref) async {
-  await Future.delayed(const Duration(seconds: 2)); // Simulate network delay
+Future<List<HolderInfoRow>> fakeIraqiInfo(Ref ref,
+    {String? region, String? garage}) async {
+  await Future.delayed(Duration(seconds: delaySeconds)); // Simulate network delay
 
   final random = Random();
   const states = [
@@ -112,9 +113,14 @@ Future<List<HolderInfoRow>> fakeIraqiInfo(Ref ref) async {
     );
   });
 
-  return infoList;
-}
+  List<HolderInfoRow> filteredList = infoList.where((car) {
+    final matchesRegion =
+        region == null || car.state.toLowerCase().contains(region.toLowerCase());
+    final matchesGarage =
+        garage == null || car.name.toLowerCase().contains(garage.toLowerCase());
 
-// Usage in widget:
-// final holderInfo = ref.watch(fakeIraqiInfoProvider.future);
-// holderInfo.then((info) => print(info.name));
+    return matchesRegion && matchesGarage;
+  }).toList();
+
+  return filteredList;
+}

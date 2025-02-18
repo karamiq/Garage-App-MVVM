@@ -26,21 +26,26 @@ class OwnerCarInfoPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final controller = ref.watch(createOwnerControllerProvider.notifier).state;
-    final isOwner =
-        ref.watch(carInfoPageStatusProvider.notifier).state == CarInfoStatus.owner;
+    final redirectStatus = ref.watch(carInfoPageStatusProvider.notifier).state;
     void checkValidation() {
       if (!_formKey.currentState!.validate()) return;
       if (controller.carLicensePicture == null) return;
       if (controller.carPicture == null) return;
 
-      if (isOwner) {
-        context.pushNamed(Routes.enterPersonalPicturePage, extra: {'isOwner': isOwner});
-      } else {
-        context.pushNamed(Routes.qrCodeGeneratorPage, extra: {
-          'text': 'اذهب الى الهيأة لأضافة السيارة',
-          'qrData': "https://github.com/karamiq/Garage-App",
-          'newCar': true,
-        });
+      switch (redirectStatus) {
+        case CarInfoStatus.owner:
+          context.pushNamed(Routes.enterPersonalPicturePage);
+          break;
+        case CarInfoStatus.rider:
+          context.pushNamed(Routes.qrCodeGeneratorPage, extra: {
+            'text': 'اذهب الى الهيأة لأضافة السيارة',
+            'qrData': "https://github.com/karamiq/Garage-App",
+            'newCar': true,
+          });
+          break;
+        case CarInfoStatus.addingNewCar:
+          context.pop();
+          break;
       }
     }
 
@@ -56,8 +61,10 @@ class OwnerCarInfoPage extends ConsumerWidget {
               Text('معلومات السيارة',
                   style: TextStyle(fontSize: CustomFontsTheme.veryBigSize)),
               SizedBox(height: Insets.small),
-              if (isOwner)
-                CustomAuthStepsTracker(itemCount: isOwner ? 4 : 3, highlightIndex: 1),
+              if (redirectStatus != CarInfoStatus.addingNewCar)
+                CustomAuthStepsTracker(
+                    itemCount: redirectStatus == CarInfoStatus.owner ? 4 : 3,
+                    highlightIndex: 1),
               SizedBox(height: Insets.medium * 2),
               Row(
                 mainAxisSize: MainAxisSize.min,

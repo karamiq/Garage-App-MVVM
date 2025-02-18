@@ -16,13 +16,17 @@ class HomePageHead extends StatelessWidget {
       trailing: IconButton(
           style: IconButton.styleFrom(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(CustomBorderTheme.normalBorderRadius),
+                borderRadius: BorderRadius.circular(50),
               ),
               backgroundColor: Theme.of(context).scaffoldBackgroundColor,
               elevation: 1,
               shadowColor: Theme.of(context).colorScheme.shadow),
           onPressed: () => context.pushNamed(Routes.notificationsPage),
-          icon: SvgPicture.asset(Assets.assetsIconsNotification)),
+          icon: Padding(
+            padding: const EdgeInsets.all(4),
+            child: SvgPicture.asset(Assets.assetsIconsNotification,
+                color: context.theme.colorScheme.onSurface),
+          )),
     );
   }
 }

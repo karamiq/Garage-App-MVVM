@@ -17,6 +17,8 @@ class AppTheme {
         textButtonTheme: _buildTextButtonTheme(brightness),
         elevatedButtonTheme: _buildElevatedButtonTheme(brightness),
         datePickerTheme: _buildDatePickerTheme(brightness),
+        //   fontFamily: GoogleFonts.cairo().fontFamily,
+        // textTheme: _buildTextTheme(GoogleFonts.cairoTextTheme()),
         checkboxTheme: CheckboxThemeData(
           materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
           splashRadius: 0,
@@ -60,6 +62,10 @@ class AppTheme {
     return _build(Brightness.light);
   }
 
+  TextTheme _buildTextTheme(TextTheme textTheme) {
+    return GoogleFonts.cairoTextTheme(textTheme);
+  }
+
   InputDecorationTheme _buildInputDecorationTheme(Brightness brightness) {
     final colorScheme = _buildColorScheme(brightness);
 
@@ -82,10 +88,6 @@ class AppTheme {
       focusedErrorBorder: buildBorder(colorScheme.error, width: 2),
       disabledBorder: buildBorder(colorScheme.outline.withOpacity(0.5)),
     );
-  }
-
-  TextTheme _buildTextTheme(TextTheme textTheme) {
-    return GoogleFonts.ibmPlexSansArabicTextTheme(textTheme);
   }
 
   ExtraColors buildExtraColors() {

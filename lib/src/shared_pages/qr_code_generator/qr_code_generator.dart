@@ -45,7 +45,7 @@ class QrCodeGEneratorPage extends StatelessWidget {
                               dataModuleStyle: QrDataModuleStyle(
                                   color: context.theme.colorScheme.primary,
                                   dataModuleShape: QrDataModuleShape.square),
-                              foregroundColor: context.theme.colorScheme.primary,
+                              foregroundColor: Color(0xFFD07A09),
                               data: qrData,
                               version: QrVersions.auto,
                             ),

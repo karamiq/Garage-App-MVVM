@@ -1,3 +1,4 @@
+import 'package:app/data/fake_data/constatnt_fake.dart';
 import 'package:app/data/models/notif.dart';
 import 'package:flutter/material.dart';
 import '../../../common_lib.dart';
@@ -15,7 +16,8 @@ class NotificationsPage extends StatefulWidget {
 }
 
 class _NotificationsPageState extends State<NotificationsPage> {
-  final Future<List<Notif>> controller = Future.value();
+  final Future<List<Notif>> controller =
+      Future.delayed(Duration(seconds: delaySeconds), () => []);
 
   @override
   Widget build(BuildContext context) {

@@ -29,6 +29,7 @@ import '../src/home_page/garage_rating/garage_rating.dart';
 import '../src/home_page/home_page.dart';
 import '../src/home_page/profile/profile.dart';
 import '../src/path_page/path_page.dart';
+import '../src/shared_pages/notifications/notifications.dart';
 import '../src/splash/splash_page.dart';
 import '../src/veichles_page/all_veichles/all_veichles.dart';
 import '../src/veichles_page/veichles_page.dart';
@@ -229,6 +230,11 @@ final router = GoRouter(
       path: Routes.selectedCarInfoPage,
       name: Routes.selectedCarInfoPage,
       builder: (context, state) => SelectedCarInfoPage(index: state.extra as int),
+    ),
+    GoRoute(
+      path: Routes.notificationsPage,
+      name: Routes.notificationsPage,
+      builder: (context, state) => NotificationsPage(),
     ),
     // ShellRoute(
     //   navigatorKey: _shellNavigatorKey,
