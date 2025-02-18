@@ -10,11 +10,13 @@ class ProfileCard extends StatelessWidget {
     required this.expireDate,
     required this.cardNumber,
     required this.cardMoney,
+    required this.image,
   });
   final String userName;
   final String expireDate;
   final String cardNumber;
   final String cardMoney;
+  final String image;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,8 +29,8 @@ class ProfileCard extends StatelessWidget {
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
                 colors: [
-                  Theme.of(context).colorScheme.inversePrimary,
-                  Theme.of(context).colorScheme.primary,
+                  Color(0xFFF8A435).withAlpha(230),
+                  Color(0xFFF78034).withAlpha(230),
                 ])),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -43,9 +45,8 @@ class ProfileCard extends StatelessWidget {
                             color: Theme.of(context).colorScheme.primaryContainer,
                             width: CustomBorderTheme.borderWidth / 2)),
                     padding: EdgeInsets.all(5),
-                    child: CircleAvatar(
-                        radius: 20,
-                        backgroundImage: AssetImage(Assets.assetsImagesAvatarImage))),
+                    child:
+                        CircleAvatar(radius: 20, backgroundImage: NetworkImage(image))),
                 Gap(Insets.small),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

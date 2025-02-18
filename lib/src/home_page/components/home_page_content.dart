@@ -1,10 +1,8 @@
+import 'package:app/data/models/money_transaction.dart';
+import 'package:app/data/models/trip_info_model.dart';
 import 'package:flutter/material.dart';
 import '../../../common_lib.dart';
-import '../../../components/custom_list_tile.dart';
 import '../../../components/mini_card.dart';
-import '../../../components/shimmer_container.dart';
-import '../../../components/trip_card.dart';
-import '../../../data/models/last_trips.dart';
 import 'container_stack_decoration.dart';
 import 'home_page_bottom_falf.dart';
 import 'home_page_head.dart';
@@ -25,8 +23,8 @@ class HomePageContent extends StatelessWidget {
   final String tripsCardTitle;
   final String tripsCardNumber;
   final String tripsCardNumText;
-  final List<CustomListTile> moneyTransfersList;
-  final List<TripHistory> latestTripsList;
+  final List<MoneyTransaction> moneyTransfersList;
+  final List<TripInfo> latestTripsList;
 
   const HomePageContent({
     super.key,
@@ -50,20 +48,23 @@ class HomePageContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Column(
-        children: [
-          HomePageHead(imageUrl: imageUrl),
-          Gap(Insets.medium),
-          _buildUserCard(),
-          Gap(Insets.small),
-          _buildMiniCardsRow(context),
-          Gap(Insets.small),
-          HomePageBottomHalf(
-            moneyTransfersList: moneyTransfersList,
-            latestTripsList: latestTripsList,
-          ),
-        ],
+    return Padding(
+      padding: Insets.smallAll,
+      child: Expanded(
+        child: Column(
+          children: [
+            HomePageHead(imageUrl: imageUrl),
+            Gap(Insets.medium),
+            _buildUserCard(),
+            Gap(Insets.small),
+            _buildMiniCardsRow(context),
+            Gap(Insets.small),
+            HomePageBottomHalf(
+              moneyTransfersList: moneyTransfersList,
+              latestTripsList: latestTripsList,
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -80,7 +81,7 @@ class HomePageContent extends StatelessWidget {
     );
   }
 
-  Widget _buildMiniCardsRow(context) {
+  Widget _buildMiniCardsRow(BuildContext context) {
     return Row(
       children: [
         Expanded(
@@ -89,7 +90,9 @@ class HomePageContent extends StatelessWidget {
             cardNumber: feesCardNumber,
             cardNumText: feesCardNumText,
             decoration: SequaredPositionedContainers(),
-            onIconPressed: () => context.pushedNamed(Routes.feesOnCarPage),
+            onIconPressed: () => context.pushNamed(
+              Routes.feesOnCarPage,
+            ),
           ),
         ),
         Gap(Insets.small),
@@ -99,7 +102,7 @@ class HomePageContent extends StatelessWidget {
             cardNumber: tripsCardNumber,
             cardNumText: tripsCardNumText,
             decoration: CirculerPositionedContainers(),
-            onIconPressed: () => context.pushedNamed(Routes.tripsPage),
+            onIconPressed: () => context.pushNamed(Routes.tripsPage),
           ),
         ),
       ],

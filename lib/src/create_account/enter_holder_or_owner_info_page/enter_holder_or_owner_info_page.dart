@@ -1,3 +1,5 @@
+import 'package:app/data/services/clients/auth_client.dart';
+import 'package:app/utils/app_validator.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../components/custom_date_picker.dart';
@@ -5,30 +7,32 @@ import '../../../../components/custom_text_form_field.dart';
 import '../../../common_lib.dart';
 import '../../../components/custom_auth_steps_tracker.dart';
 import '../../../components/custom_back_botton.dart';
-import '../../../components/custom_item_select.dart';
+import '../../../components/custom_paginated_api_item_select.dart';
+import '../../../data/providers/car_info_status.dart';
 import '../../../data/providers/create_owner_controller.dart';
 import 'components/image_input.dart';
 
 class EnterHolderOrOwnerInfoPage extends ConsumerWidget {
-  TextEditingController DatePicker = TextEditingController();
-
-  String? message;
-
-  String? storagingType;
+  //TextEditingController DatePicker = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
-  EnterHolderOrOwnerInfoPage({super.key});
+  EnterHolderOrOwnerInfoPage({
+    super.key,
+  });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     var controller = ref.watch(createOwnerControllerProvider.notifier).state;
-    final data = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
-    final isOwner = data['isOwner'];
+    final isOwner =
+        ref.watch(carInfoPageStatusProvider.notifier).state == CarInfoStatus.owner;
+
     void nextPage() async {
       if (_formKey.currentState!.validate() && controller.drivingLicensePicture != null) {
-        if (isOwner) {
-          context.goNamed(Routes.ownerCarInfoPage, extra: {'isOwner': isOwner});
+        if (isOwner == CarInfoStatus.owner) {
+          context.pushNamed(Routes.ownerCarInfoPage);
         } else {
-          context.goNamed(Routes.enterPersonalPicturePage, extra: {'isOwner': isOwner});
+          context.pushNamed(
+            Routes.enterPersonalPicturePage,
+          );
         }
       }
     }
@@ -67,13 +71,19 @@ class EnterHolderOrOwnerInfoPage extends ConsumerWidget {
                     labelText: 'أسم الأم',
                     prefixIcon: Assets.assetsIconsUser),
                 Gap(Insets.small),
-                CustomApiItemSelect(
-                    labelText: 'المحافظة',
-                    controller: controller.governorate,
-                    validator: context.validator.build(),
-                    itemListFuture: Future.wait([])
-                    // itemListFuture: GovsService.gov()
-                    ),
+                CustomPaginatedApiItemSelect(
+                  labelText: 'المحافظة',
+                  controller: controller.governorate,
+                  validator: context.validator.build(),
+                  function: (String search, int page) async =>
+                      await ref.read(authClientProvider).getGovernorates(
+                            name: search,
+                            pageNumber: page,
+                          ),
+                )
+
+                //  itemListFuture: Future.wait([])
+                ,
                 Gap(Insets.small),
                 CustomAppTextFormField(
                     validator: context.validator.build(),
@@ -82,7 +92,9 @@ class EnterHolderOrOwnerInfoPage extends ConsumerWidget {
                     prefixIcon: Assets.assetsIconsMapPin),
                 Gap(Insets.small),
                 CustomAppTextFormField(
-                    validator: context.validator.build(),
+                    validator: AppValidationBuilder(context: context, optional: false)
+                        .numbersOnly()
+                        .build(),
                     keyboardType: TextInputType.number,
                     controller: controller.idNumber,
                     labelText: 'رقم الهوية',
@@ -101,7 +113,9 @@ class EnterHolderOrOwnerInfoPage extends ConsumerWidget {
                   validator: context.validator.build(),
                 ),
                 CustomAppTextFormField(
-                    validator: context.validator.build(),
+                    validator: AppValidationBuilder(context: context, optional: false)
+                        .numbersOnly()
+                        .build(),
                     keyboardType: TextInputType.number,
                     controller: controller.drivingLicenseNumber,
                     labelText: 'رقم أجازة السوق',

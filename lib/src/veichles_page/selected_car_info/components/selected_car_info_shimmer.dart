@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../../common_lib.dart';
-import '../../../../components/custom_svg_style.dart';
 import '../../../../components/home_page_bottom_half_shimmer.dart';
 import '../../../../components/shimmer_container.dart';
 import '../../../../components/user_card_shimmer.dart';

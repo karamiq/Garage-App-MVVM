@@ -1,45 +1,22 @@
-import 'package:app/data/providers/authentication_provider.dart';
 import 'package:flutter/material.dart';
 
 import '../../../common_lib.dart';
 import '../../../components/custom_app_bar.dart';
 import '../../../components/custom_floating_action_button.dart';
-import '../../../data/models/vehicle_violations.dart';
+import '../../../data/fake_data/vehicle_violation_fake.dart';
 import 'components/fees_on_car_content.dart';
-import 'components/fees_on_car_skeleton.dart'; // Assuming you have FeeCard imported
+import 'components/fees_on_car_skeleton.dart';
 
-class FeesOnCarPage extends ConsumerStatefulWidget {
+class FeesOnCarPage extends ConsumerWidget {
   const FeesOnCarPage({super.key});
 
   @override
-  ConsumerState<FeesOnCarPage> createState() => _FeesOnCarPageState();
-}
-
-class _FeesOnCarPageState extends ConsumerState<FeesOnCarPage> {
-  late Future<VehicleViolations?> _dataFuture;
-
-  @override
-  void initState() {
-    super.initState();
-    _dataFuture = fetchData();
-  }
-
-  Future<VehicleViolations?> fetchData() async {
-    try {
-      // return await VehicleViolationService.vehicleViolations(
-      //     controller.currentuUser!.vehicle!.first.id);
-    } catch (e) {
-      // Handle error as needed
-      print('Error fetching data: $e');
-      return null;
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final controller = ref.watch(authenticationProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
     var icon = Assets.assetsIconsCard;
     var text = 'دفع الغرامات المتراكمة';
+
+    final vehicleViolationsAsync = ref.watch(vehicleViolationsProvider);
+
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: Padding(
@@ -49,46 +26,22 @@ class _FeesOnCarPageState extends ConsumerState<FeesOnCarPage> {
       appBar: CustomAppBar(),
       body: SingleChildScrollView(
         padding: EdgeInsets.symmetric(horizontal: Insets.medium, vertical: Insets.medium),
-        child: FutureBuilder<VehicleViolations?>(
-          future: _dataFuture,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return FeesOnCarSkeleton();
-            } else {
-              if (snapshot.hasError) {
-                return Center(
-                  child: Column(
-                    children: [
-                      Gap(MediaQuery.of(context).size.height / 3.5),
-                      Text('حدث خط: ${snapshot.error}'),
-                    ],
-                  ),
-                );
-              } else if (!snapshot.hasData || snapshot.data == null) {
-                return Center(
-                  child: Column(
-                    children: [
-                      Gap(MediaQuery.of(context).size.height / 3.5),
-                      Text(
-                        'لا يوجد بياتات',
-                        style: TextStyle(fontSize: CustomFontsTheme.bigSize),
-                      ),
-                    ],
-                  ),
-                );
-              } else {
-                final vehicleDebtStatementDetails = snapshot.data!;
-                return Column(
-                  children: [
-                    FeesOnCarContent(
-                      accumulatedPrice: vehicleDebtStatementDetails.accumulatedPrice,
-                      numberOfReceipt: vehicleDebtStatementDetails.numberOfViolation,
-                      feesList: vehicleDebtStatementDetails.vehicleViolations,
-                    )
-                  ],
-                );
-              }
-            }
+        child: vehicleViolationsAsync.when(
+          loading: () => FeesOnCarSkeleton(),
+          error: (error, stackTrace) => Center(
+            child: Column(
+              children: [
+                Gap(MediaQuery.of(context).size.height / 3.5),
+                Text('حدث خطأ: $error'),
+              ],
+            ),
+          ),
+          data: (vehicleDebtStatementDetails) {
+            return FeesOnCarContent(
+              feesList: vehicleDebtStatementDetails[0].vehicleViolations,
+              numberOfReceipt: vehicleDebtStatementDetails[0].accumulatedPrice,
+              accumulatedPrice: 1000,
+            );
           },
         ),
       ),

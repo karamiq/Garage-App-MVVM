@@ -94,7 +94,7 @@ class CustomFontsTheme {
 }
 
 class CustomBorderTheme {
-  static const double normalBorderRadius = 16;
+  static const double normalBorderRadius = 12;
   static const double borderWidth = 2;
 }
 

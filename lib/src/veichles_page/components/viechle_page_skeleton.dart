@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 import '../../../common_lib.dart';
 import '../../../components/custom_list_tile_skeleton.dart';
 import '../../../components/home_page_head_shimmer.dart';
 import '../../../components/shimmer_container.dart';
-import '../../../components/viewed_item_title.dart';
 
 class ViechlePageSkeleton extends StatelessWidget {
   const ViechlePageSkeleton({super.key});

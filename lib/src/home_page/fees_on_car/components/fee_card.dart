@@ -15,9 +15,9 @@ class FeeCard extends StatelessWidget {
       elevation: 0,
       color: Theme.of(context).colorScheme.onSecondary,
       child: ListTile(
-        onTap: () => context.pushNamed(Routes.feesOnCarPage + Routes.feeDetailesPage,
+        onTap: () => context.pushNamed(Routes.feeDetailesPage,
             //here is where tha id is passed
-            extra: {'debtStatementReceipt': debtStatementReceipt}),
+            extra: debtStatementReceipt),
         contentPadding: EdgeInsets.symmetric(horizontal: Insets.small),
         leading: Container(
           padding: EdgeInsets.all(Insets.small),
@@ -47,15 +47,14 @@ class FeeCard extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(Insets.exLarge),
                     color: debtStatementReceipt.isPaid
-                        ? Color.fromARGB(255, 93, 216, 157)
+                        ? Color.fromARGB(255, 107, 215, 163)
                         : Theme.of(context).colorScheme.errorContainer),
                 padding: EdgeInsets.all(Insets.small),
                 child: Text(
                   debtStatementReceipt.isPaid ? 'مدفوعة' : ' غير مدفوعة',
                   style: TextStyle(
-                      color: debtStatementReceipt.isPaid
-                          ? Color.fromARGB(255, 31, 72, 33)
-                          : Color.fromARGB(255, 91, 30, 30)),
+                      color: context.theme.colorScheme.onSurface,
+                      fontSize: CustomFontsTheme.smallSize),
                 )),
             Gap(Insets.small),
             Icon(

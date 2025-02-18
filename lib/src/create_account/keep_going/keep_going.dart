@@ -39,7 +39,7 @@ class KeepGoingPage extends StatelessWidget {
                 ],
               ),
               ElevatedButton(
-                onPressed: () => context.pushNamed(Routes.tapsPage),
+                onPressed: () => context.pushNamed(Routes.home),
                 child: Text('استمرار'),
               ),
             ],

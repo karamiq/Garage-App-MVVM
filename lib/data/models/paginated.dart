@@ -2,12 +2,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
 class Paginated<T extends dynamic> {
-  final List<T> result;
+  final List<T> data;
 
   final int total;
 
   const Paginated({
-    required this.result,
+    required this.data,
     required this.total,
   });
 }
@@ -24,10 +24,10 @@ extension PaginatedExtension on PagingController {
   ]) {
     final isLastPage = (itemList ?? []).length + limitSize >= data.total;
     if (isLastPage) {
-      appendLastPage(data.result);
+      appendLastPage(data.data);
     } else {
       final nextPageKey = pageKey + 1;
-      appendPage(data.result, nextPageKey);
+      appendPage(data.data, nextPageKey);
     }
   }
 }

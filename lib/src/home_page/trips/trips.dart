@@ -1,3 +1,4 @@
+import 'package:app/data/fake_data/trip_info_fake.dart';
 import 'package:flutter/material.dart';
 
 import '../../../common_lib.dart';
@@ -5,11 +6,11 @@ import '../../../components/custom_app_bar.dart';
 import '../../../components/trip_card.dart';
 import '../components/trips_sequared_card.dart';
 
-class TripsPage extends StatelessWidget {
+class TripsPage extends ConsumerWidget {
   const TripsPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: CustomAppBar(),
       body: SingleChildScrollView(
@@ -40,7 +41,8 @@ class TripsPage extends StatelessWidget {
               shrinkWrap: true,
               itemCount: 11,
               itemBuilder: (context, index) => TripCard(
-                  from: 'كراج السليمانية  ', to: 'كراج صلاح اغعفلغ', price: '3,500'),
+                trip: ref.watch(tripInfoProvider)[index],
+              ),
               separatorBuilder: (context, index) => Gap(Insets.small),
             )
           ],

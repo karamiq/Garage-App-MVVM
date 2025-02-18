@@ -39,13 +39,14 @@ class Utils {
       ..showSnackBar(snackBar);
   }
 }
+
 extension SnackBarX on BuildContext {
   void showSnackBar(String text) {
     ScaffoldMessenger.of(this).showSnackBar(
       SnackBar(
         content: Text(text),
-      behavior: SnackBarBehavior.floating,
-      backgroundColor: theme.colorScheme.error,
+        behavior: SnackBarBehavior.floating,
+        backgroundColor: theme.colorScheme.error,
       ),
     );
   }
@@ -55,8 +56,9 @@ extension SnackBarX on BuildContext {
 
     ScaffoldMessenger.of(this).showSnackBar(
       SnackBar(
+        backgroundColor: theme.colorScheme.primary,
         content: Text(text),
-      behavior: SnackBarBehavior.floating,
+        behavior: SnackBarBehavior.floating,
       ),
     );
   }

@@ -1,51 +1,51 @@
+import 'package:app/components/custom_list_tile_skeleton.dart';
+import 'package:app/data/fake_data/financial_transaction_fake.dart';
 import 'package:flutter/material.dart';
 
 import '../../../common_lib.dart';
 import '../../../components/custom_app_bar.dart';
-import '../../../components/custom_list_tile.dart';
 
-class FinancialTranscationsPage extends StatefulWidget {
+class FinancialTranscationsPage extends ConsumerWidget {
   const FinancialTranscationsPage({super.key});
 
   @override
-  State<FinancialTranscationsPage> createState() => _FinancialTranscationsPageState();
-}
-
-class _FinancialTranscationsPageState extends State<FinancialTranscationsPage> {
-  List data = [
-    CustomListTile(
-        icon: Assets.assetsIconsCardCharge,
-        title: 'شحن البطاقة ',
-        subtitle: 'تم شحن البطاقة الشخصية بمقدار 25,000 د. ع.',
-        trailing2: '2024/1/31'),
-    CustomListTile(
-        icon: Assets.assetsIconsTicket,
-        title: 'عملية تحويل ',
-        subtitle: 'قمت بتحويلها الى حسين علي  ',
-        trailing2: '15,000 د. ع.'),
-  ];
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final financialTranscationsAsync = ref.watch(financialTransactionsProvider);
     return Scaffold(
         appBar: CustomAppBar(
           title: 'العمليات المالية',
         ),
-        body: data.isEmpty
-            ? Center(
-                child: Text(
-                  'الصفحة فارغة',
-                  style: TextStyle(
-                      color: Theme.of(context).colorScheme.primary,
-                      fontSize: CustomFontsTheme.veryBigSize),
-                ),
-              )
-            : ListView.separated(
-                padding: EdgeInsets.all(Insets.medium),
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemCount: data.length,
-                itemBuilder: (context, index) => data[index],
-                separatorBuilder: (context, index) => Gap(Insets.small),
-              ));
+        body: SingleChildScrollView(
+          child: financialTranscationsAsync.when(
+              data: (data) {
+                if (data.isEmpty) {
+                  return Center(
+                    child: Text(
+                      'الصفحة فارغة',
+                      style: TextStyle(
+                          color: Theme.of(context).colorScheme.primary,
+                          fontSize: CustomFontsTheme.veryBigSize),
+                    ),
+                  );
+                }
+                return ListView.separated(
+                  padding: EdgeInsets.all(Insets.medium),
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: data.length,
+                  itemBuilder: (context, index) => data[index],
+                  separatorBuilder: (context, index) => Gap(Insets.small),
+                );
+              },
+              error: (e, r) => null,
+              loading: () => Column(
+                  children: List.generate(
+                      11,
+                      (index) => Padding(
+                            padding: const EdgeInsets.symmetric(
+                                vertical: Insets.small, horizontal: Insets.medium),
+                            child: CustomListTileSkeleton(),
+                          )))),
+        ));
   }
 }

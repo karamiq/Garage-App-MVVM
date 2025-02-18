@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../common_lib.dart';
 import '../../../../components/custom_svg_style.dart';
@@ -43,9 +44,16 @@ class SelectedCarInfoHead extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                InkWell(
-                    onTap: () async => (phoneNumber),
-                    child: CustomSvgStyle(icon: Assets.assetsIconsPhone)),
+                IconButton(
+                    onPressed: () async {
+                      final Uri phoneUri = Uri.parse('tel:$phoneNumber');
+                      if (await canLaunchUrl(phoneUri)) {
+                        await launchUrl(phoneUri);
+                      } else {
+                        debugPrint("Could not launch $phoneUri");
+                      }
+                    },
+                    icon: CustomSvgStyle(icon: Assets.assetsIconsPhone)),
                 Gap(Insets.small),
                 Icon(
                   Icons.keyboard_arrow_down_outlined,

@@ -43,13 +43,12 @@ _$ViolationImpl _$$ViolationImplFromJson(Map<String, dynamic> json) =>
       plateNumber: json['plateNumber'] as String,
       feeFines: FeeFines.fromJson(json['feeFines'] as Map<String, dynamic>),
       isPaid: json['isPaid'] as bool,
-      images:
-          (json['images'] as List<dynamic>).map((e) => e as String).toList(),
+      images: json['images'] as String,
       duplicateCount: (json['duplicateCount'] as num).toInt(),
       amount: (json['amount'] as num).toInt(),
       totalAmount: (json['totalAmount'] as num).toInt(),
-      lat: json['lat'] as String,
-      lng: json['lng'] as String,
+      lat: (json['lat'] as num).toDouble(),
+      lng: (json['lng'] as num).toDouble(),
       invoiceNumber: (json['invoiceNumber'] as num).toInt(),
       violationPayReceiptId: json['violationPayReceiptId'] as String,
       violationPayReceiptNumber:

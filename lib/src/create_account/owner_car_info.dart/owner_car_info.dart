@@ -1,26 +1,33 @@
+import 'package:app/data/models/plate_types.dart';
+import 'package:app/data/models/vehicle_models.dart';
+import 'package:app/utils/app_validator.dart';
 import 'package:flutter/material.dart';
 import '../../../common_lib.dart';
 import '../../../components/custom_app_bar.dart';
 import '../../../components/custom_auth_steps_tracker.dart';
-import '../../../components/custom_item_select.dart';
+import '../../../components/custom_paginated_api_item_select.dart';
 import '../../../components/custom_text_form_field.dart';
 import '../../../components/custom_year_date_picker.dart';
+import '../../../data/models/governorate_model.dart';
+import '../../../data/models/plate_characters.dart';
+import '../../../data/models/vehicle_type.dart';
+import '../../../data/providers/car_info_status.dart';
 import '../../../data/providers/create_owner_controller.dart';
+import '../../../data/services/clients/auth_client.dart';
 import '../enter_holder_or_owner_info_page/components/image_input.dart';
 
 class OwnerCarInfoPage extends ConsumerWidget {
-  OwnerCarInfoPage({super.key});
+  OwnerCarInfoPage({
+    super.key,
+  });
 
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-
-  bool valid = true;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final controller = ref.watch(createOwnerControllerProvider.notifier).state;
-    final data = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
-    bool isOwner = data['isOwner'];
-
+    final isOwner =
+        ref.watch(carInfoPageStatusProvider.notifier).state == CarInfoStatus.owner;
     void checkValidation() {
       if (!_formKey.currentState!.validate()) return;
       if (controller.carLicensePicture == null) return;
@@ -58,7 +65,9 @@ class OwnerCarInfoPage extends ConsumerWidget {
                   Expanded(
                     child: CustomAppTextFormField(
                       keyboardType: TextInputType.number,
-                      validator: context.validator.build(),
+                      validator: AppValidationBuilder(context: context, optional: false)
+                          .numbersOnly()
+                          .build(),
                       controller: controller.carPlateNumber,
                       labelText: 'رقم اللوحة',
                       prefixIcon: Assets.assetsIconsCarNumber,
@@ -66,75 +75,87 @@ class OwnerCarInfoPage extends ConsumerWidget {
                   ),
                   SizedBox(width: Insets.small),
                   Expanded(
-                    child: CustomApiItemSelect(
+                    child: CustomPaginatedApiItemSelect<PlateCharacters>(
+                      enabled: controller.carGovernorate.text.isNotEmpty,
                       onChanged: (selectedChar) async {
-                        try {
-                          controller.plateCharacterId.text = selectedChar?.id;
-                          // dynamic ff =
-                          //     await GovsService.govGetById(selectedChar.governorateId);
-                          dynamic ff = '';
-                          controller.carState.text = ff.name;
-                          print(selectedChar);
-                        } catch (e) {
-                          print(selectedChar);
-                        }
+                        controller.plateCharacterId.text = selectedChar.id;
+                      },
+                      function: (String search, int page) {
+                        return ref.read(authClientProvider).getPlateCharecters(
+                              name: search,
+                              pageNumber: page,
+                              governorateName: controller.carGovernorate.text,
+                            );
                       },
                       labelText: 'حرف اللوحة',
                       controller: controller.carPlateLetter,
-                      itemListFuture: Future.value([]),
                       validator: context.validator.build(),
                     ),
                   ),
                 ],
               ),
               SizedBox(height: Insets.small),
-              CustomApiItemSelect(
+              CustomPaginatedApiItemSelect<GovernorateModel>(
+                function: (String search, int page) =>
+                    ref.read(authClientProvider).getGovernorates(
+                          name: search,
+                          pageNumber: page,
+                        ),
                 labelText: 'المحافظة',
-                controller: controller.carState,
-                itemListFuture: Future.value([]),
+                controller: controller.carGovernorate,
                 validator: context.validator.build(),
-                onChanged: (selectedState) async {
-                  try {
-                    controller.carGovernorateId.text = selectedState?.id;
-                    controller.carPlateLetter = TextEditingController();
-                  } catch (e) {
-                    print(selectedState);
-                  }
+                onChanged: (selectedState) {
+                  controller.carGovernorateId.text = selectedState.id;
+                  controller.carPlateLetter.text = '';
                 },
               ),
               SizedBox(height: Insets.small),
-              CustomApiItemSelect(
+              CustomPaginatedApiItemSelect<PlateTypes>(
+                function: (String search, int page) =>
+                    ref.read(authClientProvider).getPlateType(
+                          name: search,
+                          pageNumber: page,
+                        ),
                 labelText: 'نوع اللوحة',
                 controller: controller.carPlateType,
-                itemListFuture: Future.value([]),
                 validator: context.validator.build(),
-                onChanged: (p0) => controller.plateTypeId.text = p0?.id,
+                onChanged: (p0) => controller.plateTypeId.text = p0.id,
               ),
               SizedBox(height: Insets.small),
               CustomAppTextFormField(
                 keyboardType: TextInputType.number,
-                validator: context.validator.build(),
+                validator: AppValidationBuilder(context: context, optional: false)
+                    .numbersOnly()
+                    .build(),
                 controller: controller.carShasyNumber,
                 labelText: 'رقم الشاصي',
                 prefixIcon: Assets.assetsIconsCarNumber,
               ),
               SizedBox(height: Insets.small),
-              CustomApiItemSelect(
+              CustomPaginatedApiItemSelect<VehicleType>(
+                function: (String search, int page) =>
+                    ref.read(authClientProvider).getVeichleType(
+                          name: search,
+                          pageNumber: page,
+                        ),
                 labelText: 'نوع المركبة',
                 controller: controller.carType,
-                itemListFuture: Future.value([]),
                 validator: context.validator.build(),
                 prefixIcon: Assets.assetsIconsCar,
-                onChanged: (p0) => controller.vehicleTypeId.text = p0?.id,
+                onChanged: (p0) => controller.vehicleTypeId.text = p0.id,
               ),
               SizedBox(height: Insets.small),
-              CustomApiItemSelect(
-                itemListFuture: Future.value([]),
+              CustomPaginatedApiItemSelect<VehicleModel>(
+                function: (String search, int page) =>
+                    ref.read(authClientProvider).getVeichleModel(
+                          name: search,
+                          pageNumber: page,
+                        ),
                 validator: context.validator.build(),
                 controller: controller.carModel,
                 labelText: 'موديل المركبة',
                 prefixIcon: Assets.assetsIconsDocument,
-                onChanged: (p0) => controller.vehicleModelId.text = p0?.id,
+                onChanged: (p0) => controller.vehicleModelId.text = p0.id,
               ),
               SizedBox(height: Insets.small),
               CustomYearDatePicker(
@@ -153,7 +174,9 @@ class OwnerCarInfoPage extends ConsumerWidget {
               SizedBox(height: Insets.small),
               CustomAppTextFormField(
                 keyboardType: TextInputType.number,
-                validator: context.validator.build(),
+                validator: AppValidationBuilder(context: context, optional: false)
+                    .numbersOnly()
+                    .build(),
                 controller: controller.carNumberOfSeats,
                 labelText: 'عدد المقاعد',
                 prefixIcon: Assets.assetsIconsAirlineSeatReclineExtra,

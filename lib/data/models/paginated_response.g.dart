@@ -11,8 +11,6 @@ PaginatedResponse<T> _$PaginatedResponseFromJson<T>(
   T Function(Object? json) fromJsonT,
 ) =>
     PaginatedResponse<T>(
-      result: (json['result'] as List<dynamic>).map(fromJsonT).toList(),
-      count: (json['count'] as num).toInt(),
-      message: json['message'] as String,
-      statusCode: (json['statusCode'] as num).toInt(),
+      data: (json['data'] as List<dynamic>).map(fromJsonT).toList(),
+      pagesCount: (json['pagesCount'] as num).toInt(),
     );

@@ -54,6 +54,7 @@ class _AllVeichlesPageState extends State<AllVeichlesPage> {
                 physics: NeverScrollableScrollPhysics(),
                 //The filtered list must be applied here when linking with api
                 itemBuilder: (context, index) => VehiclesInfoRow(
+                    index: index,
                     id: index.toString(),
                     carType: 'كورلا',
                     carPlateNumber: '93745',

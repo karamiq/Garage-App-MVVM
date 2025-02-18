@@ -7,17 +7,15 @@ import 'package:image_picker/image_picker.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-Future<void> fetchPage<T>(
-  {
+Future<void> fetchPage<T>({
   int? pageKey,
   required PagingController<int, T> pagingController,
   required FuturePaginatedResponse<T> futureItems,
   String? pageSize,
-  }
-) async {
+}) async {
   try {
     final newItems = await futureItems;
-    final items = newItems.data.result;
+    final items = newItems.data.data;
     final isLastPage = items.length < int.parse(pageSize ?? "25");
 
     if (isLastPage) {
@@ -101,23 +99,23 @@ List<DateTime> getDates(DateTime fromDate, DateTime toDate) {
   return dateList;
 }
 
- double calculateProgress(double value, double end) {
-    if(value == 0) return 0;
+double calculateProgress(double value, double end) {
+  if (value == 0) return 0;
 
-    final x = value * 100;
-    return x / end;
+  final x = value * 100;
+  return x / end;
+}
+
+int getMonthsDifference(DateTime startDate, DateTime endDate) {
+  int months = (endDate.year - startDate.year) * 12 + endDate.month - startDate.month;
+
+  // Check if there are any remaining days in the last month
+  if (endDate.day >= startDate.day) {
+    months += 1;
   }
 
-  int getMonthsDifference(DateTime startDate, DateTime endDate) {
-    int months = (endDate.year - startDate.year) * 12 + endDate.month - startDate.month;
-
-    // Check if there are any remaining days in the last month
-    if (endDate.day >= startDate.day) {
-      months += 1;
-    }
-
-    return months;
-  }
+  return months;
+}
 
 /// FNV-1a 64bit hash algorithm optimized for Dart Strings
 int fastHash(String string) {
@@ -138,11 +136,10 @@ int fastHash(String string) {
 String getCompletedPhoneNumber(String phoneNumber, String countryCode) {
   if (phoneNumber.startsWith("0")) {
     return phoneNumber.replaceFirst("0", countryCode);
-  }else{
+  } else {
     return "$countryCode$phoneNumber";
   }
 }
-
 
 String getEncodedComponent(String component) => Uri.encodeComponent(component);
 

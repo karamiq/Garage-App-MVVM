@@ -1,27 +1,17 @@
+import 'package:app/data/models/trip_info_model.dart';
 import 'package:flutter/material.dart';
 
 import '../common_lib.dart';
-import '../utils/constants/sizes.dart';
 
 class TripCard extends StatelessWidget {
-  const TripCard(
-      {super.key,
-      required this.from,
-      required this.to,
-      required this.price,
-      this.id = ''});
-
-  final String id;
-  final String from;
-  final String to;
-  final String price;
+  const TripCard({super.key, required this.trip});
+  final TripInfo trip;
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.circular(CustomBorderTheme.normalBorderRadius),
-      onTap: () => context
-          .pushNamed(Routes.tripsPage + Routes.tripDetailesPage, extra: {'id': id}),
+      onTap: () => context.pushNamed(Routes.tripDetailesPage, extra: trip),
       child: Container(
           padding: EdgeInsets.symmetric(vertical: Insets.small, horizontal: Insets.small),
           decoration: BoxDecoration(
@@ -62,7 +52,7 @@ class TripCard extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            from,
+                            trip.fromGarage,
                             overflow: TextOverflow.ellipsis,
                             maxLines: 2,
                           ),
@@ -96,7 +86,7 @@ class TripCard extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            to,
+                            trip.toGarage,
                             overflow: TextOverflow.ellipsis,
                             maxLines: 3,
                           ),
@@ -116,7 +106,7 @@ class TripCard extends StatelessWidget {
                             ),
                           ),
                           Text(
-                            '$price د. ع.',
+                            '${trip.totalPrice} د. ع.',
                             overflow: TextOverflow.ellipsis,
                             maxLines: 2,
                           ),

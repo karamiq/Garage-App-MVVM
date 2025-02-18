@@ -1,3 +1,4 @@
+import 'package:app/data/fake_data/constatnt_fake.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -46,7 +47,7 @@ class _PathPageContentState extends State<PathPageContent> {
       PolylinePoints polylinePoints = PolylinePoints();
       PolylineResult result = await polylinePoints.getRouteBetweenCoordinates(
         googleApiKey:
-            'AIzaSyC_HxdEWLvZODhPgCUxKtzXEBu6UCIanEU', // Replace with your API key
+            'AIzaSyAjW0VnW1nSkCKd8NQGJfB1QPFMlAs3lJY', // Replace with your API key
         request: PolylineRequest(
           origin: PointLatLng(_startPoint.latitude, _startPoint.longitude),
           destination: PointLatLng(_endPoint.latitude, _endPoint.longitude),
@@ -110,9 +111,9 @@ class _PathPageContentState extends State<PathPageContent> {
         Align(
           alignment: Alignment.topCenter,
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: Insets.medium),
+            padding: EdgeInsets.symmetric(horizontal: Insets.medium * .5),
             child: HomePageHead(
-              imageUrl: Assets.assetsImagesAvatarImage,
+              imageUrl: myImageUrl,
             ),
           ),
         ),

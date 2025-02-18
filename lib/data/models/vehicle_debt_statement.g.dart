@@ -9,7 +9,7 @@ part of 'vehicle_debt_statement.dart';
 _$VehicleDebtStatementImpl _$$VehicleDebtStatementImplFromJson(
         Map<String, dynamic> json) =>
     _$VehicleDebtStatementImpl(
-      accumulatedPrice: json['accumulatedPrice'],
+      accumulatedPrice: (json['accumulatedPrice'] as num).toInt(),
       numberOfReceipt: (json['numberOfReceipt'] as num).toInt(),
       debtStatementReceipts: (json['debtStatementReceipts'] as List<dynamic>)
           .map((e) => DebtStatementReceipt.fromJson(e as Map<String, dynamic>))

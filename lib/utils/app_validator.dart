@@ -49,4 +49,9 @@ class AppValidationBuilder extends ValidationBuilder {
         usernameRegex,
         context.l10n.invalidFieldValue,
       );
+
+  AppValidationBuilder numbersOnly() => regExp(
+        RegExp(r"^\d+$"),
+        context.l10n.validateNumber,
+      );
 }

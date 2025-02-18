@@ -20,7 +20,7 @@ VehicleDebtStatement _$VehicleDebtStatementFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$VehicleDebtStatement {
-  dynamic get accumulatedPrice => throw _privateConstructorUsedError;
+  int get accumulatedPrice => throw _privateConstructorUsedError;
   int get numberOfReceipt => throw _privateConstructorUsedError;
   List<DebtStatementReceipt> get debtStatementReceipts =>
       throw _privateConstructorUsedError;
@@ -42,7 +42,7 @@ abstract class $VehicleDebtStatementCopyWith<$Res> {
       _$VehicleDebtStatementCopyWithImpl<$Res, VehicleDebtStatement>;
   @useResult
   $Res call(
-      {dynamic accumulatedPrice,
+      {int accumulatedPrice,
       int numberOfReceipt,
       List<DebtStatementReceipt> debtStatementReceipts});
 }
@@ -63,15 +63,15 @@ class _$VehicleDebtStatementCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? accumulatedPrice = freezed,
+    Object? accumulatedPrice = null,
     Object? numberOfReceipt = null,
     Object? debtStatementReceipts = null,
   }) {
     return _then(_value.copyWith(
-      accumulatedPrice: freezed == accumulatedPrice
+      accumulatedPrice: null == accumulatedPrice
           ? _value.accumulatedPrice
           : accumulatedPrice // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int,
       numberOfReceipt: null == numberOfReceipt
           ? _value.numberOfReceipt
           : numberOfReceipt // ignore: cast_nullable_to_non_nullable
@@ -93,7 +93,7 @@ abstract class _$$VehicleDebtStatementImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {dynamic accumulatedPrice,
+      {int accumulatedPrice,
       int numberOfReceipt,
       List<DebtStatementReceipt> debtStatementReceipts});
 }
@@ -111,15 +111,15 @@ class __$$VehicleDebtStatementImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? accumulatedPrice = freezed,
+    Object? accumulatedPrice = null,
     Object? numberOfReceipt = null,
     Object? debtStatementReceipts = null,
   }) {
     return _then(_$VehicleDebtStatementImpl(
-      accumulatedPrice: freezed == accumulatedPrice
+      accumulatedPrice: null == accumulatedPrice
           ? _value.accumulatedPrice
           : accumulatedPrice // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int,
       numberOfReceipt: null == numberOfReceipt
           ? _value.numberOfReceipt
           : numberOfReceipt // ignore: cast_nullable_to_non_nullable
@@ -136,7 +136,7 @@ class __$$VehicleDebtStatementImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$VehicleDebtStatementImpl implements _VehicleDebtStatement {
   _$VehicleDebtStatementImpl(
-      {this.accumulatedPrice,
+      {required this.accumulatedPrice,
       required this.numberOfReceipt,
       required final List<DebtStatementReceipt> debtStatementReceipts})
       : _debtStatementReceipts = debtStatementReceipts;
@@ -145,7 +145,7 @@ class _$VehicleDebtStatementImpl implements _VehicleDebtStatement {
       _$$VehicleDebtStatementImplFromJson(json);
 
   @override
-  final dynamic accumulatedPrice;
+  final int accumulatedPrice;
   @override
   final int numberOfReceipt;
   final List<DebtStatementReceipt> _debtStatementReceipts;
@@ -167,8 +167,8 @@ class _$VehicleDebtStatementImpl implements _VehicleDebtStatement {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$VehicleDebtStatementImpl &&
-            const DeepCollectionEquality()
-                .equals(other.accumulatedPrice, accumulatedPrice) &&
+            (identical(other.accumulatedPrice, accumulatedPrice) ||
+                other.accumulatedPrice == accumulatedPrice) &&
             (identical(other.numberOfReceipt, numberOfReceipt) ||
                 other.numberOfReceipt == numberOfReceipt) &&
             const DeepCollectionEquality()
@@ -179,7 +179,7 @@ class _$VehicleDebtStatementImpl implements _VehicleDebtStatement {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(accumulatedPrice),
+      accumulatedPrice,
       numberOfReceipt,
       const DeepCollectionEquality().hash(_debtStatementReceipts));
 
@@ -203,7 +203,7 @@ class _$VehicleDebtStatementImpl implements _VehicleDebtStatement {
 
 abstract class _VehicleDebtStatement implements VehicleDebtStatement {
   factory _VehicleDebtStatement(
-          {final dynamic accumulatedPrice,
+          {required final int accumulatedPrice,
           required final int numberOfReceipt,
           required final List<DebtStatementReceipt> debtStatementReceipts}) =
       _$VehicleDebtStatementImpl;
@@ -212,7 +212,7 @@ abstract class _VehicleDebtStatement implements VehicleDebtStatement {
       _$VehicleDebtStatementImpl.fromJson;
 
   @override
-  dynamic get accumulatedPrice;
+  int get accumulatedPrice;
   @override
   int get numberOfReceipt;
   @override

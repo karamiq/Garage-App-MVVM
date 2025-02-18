@@ -11,47 +11,54 @@ class HomePageSkeleton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        HomePageHeadShimmer(),
-        Gap(Insets.medium),
-        UserCardShimmer(),
-        Gap(Insets.small),
-        Row(
-          children: [
-            MiniCardShimmer(),
-            Gap(Insets.medium),
-            MiniCardShimmer(),
-          ],
-        ),
-        Gap(Insets.large),
-        Column(
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Expanded(
-                  flex: 3,
-                  child: ShimmerContainer(
-                    width: 60,
-                    height: 40,
+    return SingleChildScrollView(
+      padding: Insets.smallAll,
+      child: Column(
+        children: [
+          HomePageHeadShimmer(),
+          Gap(Insets.medium),
+          UserCardShimmer(),
+          Gap(Insets.small),
+          Row(
+            children: [
+              MiniCardShimmer(),
+              Gap(Insets.medium),
+              MiniCardShimmer(),
+            ],
+          ),
+          Gap(Insets.large),
+          Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Expanded(
+                    flex: 3,
+                    child: ShimmerContainer(
+                      width: 60,
+                      height: 40,
+                    ),
                   ),
-                ),
-                Gap(Insets.medium),
-                Expanded(
-                  flex: 3,
-                  child: ShimmerContainer(
-                    width: 100,
-                    height: 55,
+                  Gap(Insets.medium),
+                  Expanded(
+                    flex: 3,
+                    child: ShimmerContainer(
+                      width: 100,
+                      height: 55,
+                    ),
                   ),
-                ),
-              ],
-            ),
-            Gap(Insets.small),
-            CustomRowSkeleton(),
-          ],
-        )
-      ],
+                ],
+              ),
+              Gap(Insets.small),
+              CustomRowSkeleton(),
+              Gap(Insets.small),
+              CustomRowSkeleton(),
+              Gap(Insets.small),
+              CustomRowSkeleton(),
+            ],
+          )
+        ],
+      ),
     );
   }
 }

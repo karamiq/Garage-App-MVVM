@@ -1,91 +1,43 @@
+import 'package:app/data/fake_data/constatnt_fake.dart';
 import 'package:flutter/material.dart';
 
 import '../../common_lib.dart';
+import '../../data/fake_data/money_transaction_fake.dart';
 import 'components/card_page_contents.dart';
 import 'components/card_page_skeleton.dart';
 
-class CardPage extends StatefulWidget {
+class CardPage extends ConsumerWidget {
   const CardPage({super.key});
 
   @override
-  State<CardPage> createState() => _CardPageState();
-}
-
-class _CardPageState extends State<CardPage> {
-  late Future _futureTransaction;
-
-  @override
-  void initState() {
-    super.initState();
-    _futureTransaction = driverCardTransaction();
-  }
-
-  Future driverCardTransaction() async {
-    try {
-      //  return await DriverCardTransactionService.cardTransactionGet('');
-    } catch (e) {
-      // Handle any potential errors here
-      print('Error fetching transaction data: $e');
-      return null; // Return null or handle as appropriate
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: Insets.medium),
-        child: FutureBuilder(
-          future: _futureTransaction,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return CardPageSkeleton();
-            } else if (snapshot.hasError) {
-              return Center(
-                  child: Column(
-                children: [
-                  Gap(MediaQuery.of(context).size.height / 2.5),
-                  Text('Error: ${snapshot.error}'),
-                ],
-              ));
-            } else if (!snapshot.hasData || snapshot.data == null) {
-              return Center(
-                  child: Column(
-                children: [
-                  Gap(MediaQuery.of(context).size.height / 2.5),
-                  Text('No data available'),
-                ],
-              ));
-            } else {
-              final transaction = snapshot.data!;
-              return Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CardPageContents(
-                    imageUrl: 'path/to/image',
-                    qrData: 'https://github.com/karamiq/Garage-App',
+          padding: EdgeInsets.symmetric(horizontal: Insets.small, vertical: Insets.small),
+          child: ref.watch(moneyTransactionsProvider).when(
+              data: (data) {
+                return CardPageContents(
+                    isCardPage: true,
+                    imageUrl: myImageUrl,
+                    qrData: 'https://github.com/karamiq',
                     carPlateInfo: '24214 أ / بغداد',
                     carType: 'دوج جارجر',
                     expireDate: ' 10/12/2025',
                     cardNumber: '10023',
                     cardMoney: 125000,
-                    buttonAppears: false,
                     mainText: 'أخر التحويلات المالية',
                     secondText: 'رؤية الجميع',
-                    transactions: transaction.accumulatedPrice
-                        .map((trans) => {
-                              'title': trans.title,
-                              'date': trans.date,
-                              'amount': '${trans.amount} د. ع.'
-                            })
-                        .toList(),
+                    transactions: [...List.generate(4, (index) => data[index])]);
+              },
+              error: (error, stackTrace) => Center(
+                    child: Column(
+                      children: [
+                        Gap(MediaQuery.of(context).size.height / 3.5),
+                        Text('حدث خطأ: $error'),
+                      ],
+                    ),
                   ),
-                ],
-              );
-            }
-          },
-        ),
-      ),
+              loading: () => CardPageSkeleton())),
     );
   }
 }

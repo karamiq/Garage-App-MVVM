@@ -3,19 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import '../../../components/custom_auth_steps_tracker.dart';
 import '../../../components/custom_back_botton.dart';
+import '../../../data/providers/car_info_status.dart';
 
-class CreateQrCodePage extends StatelessWidget {
+class CreateQrCodePage extends ConsumerWidget {
   const CreateQrCodePage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    dynamic data = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
-    bool isOwner = data['isOwner'];
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isOwner =
+        ref.watch(carInfoPageStatusProvider.notifier).state == CarInfoStatus.owner;
     void next() {
       if (isOwner) {
         context.pushNamed(Routes.keepGoingPage);
       } else {
-        context.pushNamed(Routes.tapsPage);
+        context.pushNamed(Routes.keepGoingPage);
       }
     }
 

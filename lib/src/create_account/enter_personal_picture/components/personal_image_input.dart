@@ -1,8 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:file_picker/file_picker.dart';
-import 'package:flutter/services.dart';
+import 'package:image_picker/image_picker.dart';
 
 import '../../../../common_lib.dart';
 
@@ -21,18 +20,19 @@ class _PersonalImageInputState extends State<PersonalImageInput> {
   File? _selectedImage;
 
   dynamic _takePicture(bool isFromGallery) async {
+    final picker = ImagePicker();
     try {
-      FilePickerResult? result;
+      File? result;
       if (isFromGallery) {
-        result = await FilePicker.platform.pickFiles(
-          type: FileType.image,
-          allowMultiple: false,
-        );
-      } else {}
+        final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+        result = image != null ? File(image.path) : null;
+      } else {
+        final XFile? image = await picker.pickImage(source: ImageSource.camera);
+        result = image != null ? File(image.path) : null;
+      }
 
       if (result != null) {
-        File pickedFile = File(result.files.single.path!);
-        setState(() => _selectedImage = pickedFile);
+        setState(() => _selectedImage = result);
         widget.onPickImage(_selectedImage!);
       } else {
         // User canceled the picker

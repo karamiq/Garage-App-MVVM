@@ -4,35 +4,24 @@ import '../../../common_lib.dart';
 import '../../../components/custom_back_botton.dart';
 import '../../../components/custom_elevated_button.dart';
 
-class RegisterPage extends StatefulWidget {
+class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});
 
   @override
-  State<RegisterPage> createState() => _RegisterPageState();
-}
-
-class _RegisterPageState extends State<RegisterPage> {
-  final _formKey = GlobalKey<FormState>();
-  final TextEditingController otpController = TextEditingController();
-  var phoneNumber = TextEditingController();
-
-  void next() {
-    if (_formKey.currentState!.validate()) {
-      //  otpController.sendOtp();
-      context.pushNamed(Routes.otpPage, extra: {
-        'isLogin': false,
-      });
-    }
-  }
-
-  @override
-  void initState() {
-    phoneNumber = TextEditingController(text: '07709509877');
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
+    final formKey = GlobalKey<FormState>();
+    var phoneNumber = TextEditingController(text: '07709509877');
+
+    void next() {
+      if (formKey.currentState!.validate()) {
+        //  otpController.sendOtp();
+        context.pushNamed(Routes.otpPage, extra: {
+          'phoneNumber': phoneNumber.text,
+          'isLogin': false,
+        });
+      }
+    }
+
     return Scaffold(
       appBar: AppBar(
         leadingWidth: 100,
@@ -44,7 +33,7 @@ class _RegisterPageState extends State<RegisterPage> {
           horizontal: Insets.medium,
         ),
         child: Form(
-          key: _formKey,
+          key: formKey,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

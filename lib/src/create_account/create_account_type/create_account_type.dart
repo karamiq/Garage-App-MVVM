@@ -1,26 +1,16 @@
-import 'package:app/data/providers/create_owner_controller.dart';
 import 'package:flutter/material.dart';
 import '../../../common_lib.dart';
 import '../../../components/custom_back_botton.dart';
+import '../../../data/providers/car_info_status.dart';
 import 'components/account_type_card.dart';
 
-class CreateAccountTypePage extends ConsumerStatefulWidget {
+class CreateAccountTypePage extends HookConsumerWidget {
   const CreateAccountTypePage({super.key});
 
   @override
-  ConsumerState<CreateAccountTypePage> createState() => _CreateAccountTypePageState();
-}
+  Widget build(BuildContext context, WidgetRef ref) {
+    final CarInfoStatus isOnwerType = ref.watch(carInfoPageStatusProvider);
 
-class _CreateAccountTypePageState extends ConsumerState<CreateAccountTypePage> {
-  bool isOnwerType = false;
-  void next(controller) {
-    controller.isOwner = isOnwerType;
-    context.pushNamed(Routes.enterHolderOrOwnerInfoPage, extra: {'isOwner': isOnwerType});
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final controller = ref.watch(createOwnerControllerProvider.notifier).state;
     return Scaffold(
         appBar: AppBar(
           leadingWidth: 100,
@@ -40,23 +30,27 @@ class _CreateAccountTypePageState extends ConsumerState<CreateAccountTypePage> {
                 ),
                 Gap(Insets.exLarge),
                 AccountTypeCard(
-                  value: true,
+                  value: CarInfoStatus.owner,
                   isOwnerType: isOnwerType,
                   title: 'مالك',
                   subTitle:
                       'لديك سيارة و ترغب ان تكون سائق او لديك سيارة و ترغب في توظيف سائق لها',
-                  onChange: (value) => setState(() => isOnwerType = value),
+                  onChange: (value) =>
+                      ref.read(carInfoPageStatusProvider.notifier).state = value,
                 ),
                 AccountTypeCard(
-                  value: false,
+                  value: CarInfoStatus.rider,
                   isOwnerType: isOnwerType,
                   title: 'حائز',
                   subTitle: 'ليس لديك سيارة و لكنك ترغب ان تكون سائق',
-                  onChange: (value) => setState(() => isOnwerType = value),
+                  onChange: (value) =>
+                      ref.read(carInfoPageStatusProvider.notifier).state = value,
                 ),
                 Spacer(),
                 ElevatedButton(
-                    onPressed: () => next(controller),
+                    onPressed: () => context.pushNamed(
+                          Routes.enterHolderOrOwnerInfoPage,
+                        ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [

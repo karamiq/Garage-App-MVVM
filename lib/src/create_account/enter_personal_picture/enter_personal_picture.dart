@@ -4,12 +4,14 @@ import 'package:flutter/material.dart';
 import '../../../common_lib.dart';
 import '../../../components/custom_auth_steps_tracker.dart';
 import '../../../components/custom_back_botton.dart';
-import '../../../components/custom_shaking_button.dart';
+import '../../../data/providers/car_info_status.dart';
 import '../../../data/providers/create_owner_controller.dart';
 import 'components/personal_image_input.dart';
 
 class EnterPersonalPicturePage extends ConsumerStatefulWidget {
-  const EnterPersonalPicturePage({super.key});
+  const EnterPersonalPicturePage({
+    super.key,
+  });
 
   @override
   ConsumerState<EnterPersonalPicturePage> createState() =>
@@ -22,9 +24,9 @@ class _EnterPersonalPicturePageState extends ConsumerState<EnterPersonalPictureP
   @override
   Widget build(BuildContext context) {
     var controller = ref.watch(createOwnerControllerProvider.notifier).state;
+    final isOwner =
+        ref.watch(carInfoPageStatusProvider.notifier).state == CarInfoStatus.owner;
 
-    final data = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
-    bool isOwner = data['isOwner'];
     Future<bool> checkValidation() async {
       // controller.printVariables();
       setState(() {
@@ -33,9 +35,9 @@ class _EnterPersonalPicturePageState extends ConsumerState<EnterPersonalPictureP
       if (isValid) {
         /// await controller.register();
         if (isOwner) {
-          context.pushNamed(Routes.createQrCodePage, extra: {'isOwner': isOwner});
+          context.pushNamed(Routes.createQrCodePage);
         } else {
-          context.pushNamed(Routes.whereDoYouWantToWorkPage, extra: {'isOwner': isOwner});
+          context.pushNamed(Routes.whereDoYouWantToWorkPage);
         }
       }
       return isValid;
@@ -67,12 +69,7 @@ class _EnterPersonalPicturePageState extends ConsumerState<EnterPersonalPictureP
               onPickImage: (image) => controller.personalPicture = image,
             ),
             Spacer(),
-            ShakeButton(
-              text: 'التالي',
-              icon: Icon(Icons.chevron_right_outlined),
-              onPress: checkValidation,
-              shaking: !isValid,
-            ),
+            ElevatedButton(onPressed: checkValidation, child: Text('التالي')),
           ],
         ),
       ),

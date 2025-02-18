@@ -2,7 +2,6 @@ import 'package:app/data/models/notif.dart';
 import 'package:flutter/material.dart';
 import '../../../common_lib.dart';
 import '../../../components/custom_app_bar.dart';
-import '../../../components/custom_list_tile.dart';
 
 import '../../../components/custom_list_tile_skeleton.dart';
 import 'components/empty_widget.dart';

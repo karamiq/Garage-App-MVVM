@@ -1,64 +1,44 @@
-// import 'package:app/common_lib.dart';
-// import 'package:flutter/material.dart';
+import 'package:app/common_lib.dart';
+import 'package:flutter/material.dart';
 
-// class EntryPoint extends StatefulHookConsumerWidget {
-//   const EntryPoint({super.key, required this.child});
+import '../components/custom_botton_app_bar.dart';
 
-//   final Widget child;
+class TapsPage extends StatefulWidget {
+  const TapsPage({super.key, required this.child});
+  final Widget child;
 
-//   @override
-//   ConsumerState<ConsumerStatefulWidget> createState() => _EntryPointState();
-// }
+  @override
+  State<TapsPage> createState() => _TapsPageState();
+}
 
-// class _EntryPointState extends ConsumerState<EntryPoint> {
-//   @override
-//   Widget build(BuildContext context) {
-//     final pages = [
-//       RoutesDocument.home,
-//       RoutesDocument.categories,
-//       RoutesDocument.bookMark,
-//       RoutesDocument.profile,
-//     ];
-//     int getSelectedIndex() {
-//       final String location = GoRouterState.of(context).fullPath!;
+class _TapsPageState extends State<TapsPage> {
+  int pageIndex = 0;
+  void _selectedPage(int index) {
+    setState(() {
+      // selectedPageIndex = index;
+      pageIndex = index;
+    });
+    context.push(_pages[index]);
+  }
 
-//       return pages.indexOf(location);
-//     }
-
-//     void onItemTapped(int index) {
-//       GoRouter.of(context).go(pages[index]);
-//     }
-
-//     return Scaffold(
-//       body: widget.child,
-//       bottomNavigationBar: NavigationBar(
-//         animationDuration: Time.small,
-//         selectedIndex: getSelectedIndex(),
-//         destinations: const [
-//           NavigationDestination(
-//             icon: Icon(Icons.home),
-//             label: 'الرئيسية',
-//             tooltip: 'الرئيسية',
-//           ),
-//           NavigationDestination(
-//             icon: Icon(Icons.category),
-//             label: 'الاقسام',
-//             tooltip: 'الاقسام',
-//           ),
-//           NavigationDestination(
-//             icon: Icon(Icons.bookmark),
-//             label: 'المحفوظات',
-//             tooltip: 'المحفوظات',
-//           ),
-//           NavigationDestination(
-//             icon: Icon(Icons.person),
-//             label: 'الملف الشخصي',
-//             tooltip: 'الملف الشخصي',
-//           ),
-//         ],
-//         onDestinationSelected: onItemTapped,
-//         labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
-//       ),
-//     );
-//   }
-// }
+  // int selectedPageIndex = 0;
+  double slideSize = 0;
+  final List<String> _pages = [
+    Routes.home,
+    Routes.cardPage,
+    Routes.pathPage,
+    Routes.veichlesPage
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      resizeToAvoidBottomInset: false,
+      extendBody: true,
+      bottomNavigationBar: CustomBottomAppBar(
+        selectedPage: _selectedPage,
+        selectedPageIndex: pageIndex,
+      ),
+      body: SafeArea(child: widget.child),
+    );
+  }
+}

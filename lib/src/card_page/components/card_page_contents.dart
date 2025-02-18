@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../common_lib.dart';
 import '../../../components/custom_list_tile.dart';
 import '../../../components/viewed_item_title.dart';
+import '../../../data/models/money_transaction.dart';
 import '../../home_page/components/home_page_head.dart';
 import '../../home_page/components/user_card.dart';
 
@@ -13,10 +14,10 @@ class CardPageContents extends StatelessWidget {
   final String expireDate;
   final String cardNumber;
   final int cardMoney;
-  final bool buttonAppears;
   final String mainText;
   final String secondText;
-  final List<Map<String, String>> transactions;
+  final bool isCardPage;
+  final List<MoneyTransaction> transactions;
 
   const CardPageContents({
     super.key,
@@ -27,10 +28,10 @@ class CardPageContents extends StatelessWidget {
     required this.expireDate,
     required this.cardNumber,
     required this.cardMoney,
-    required this.buttonAppears,
     required this.mainText,
     required this.secondText,
     required this.transactions,
+    required this.isCardPage,
   });
 
   @override
@@ -42,13 +43,14 @@ class CardPageContents extends StatelessWidget {
         ),
         SizedBox(height: Insets.medium),
         UserCard(
+          isCardPage: isCardPage,
+          cardAvailable: true,
           qrData: qrData,
           carPlateInfo: carPlateInfo,
           carType: carType,
           expireDate: expireDate,
           cardNumber: cardNumber,
           cardMoney: cardMoney,
-          buttonAppears: buttonAppears,
         ),
         SizedBox(height: Insets.exLarge),
         ViewedItemsTitle(
@@ -67,9 +69,9 @@ class CardPageContents extends StatelessWidget {
             final transaction = transactions[index];
             return CustomListTile(
               icon: Assets.assetsIconsCard,
-              title: transaction['title']!,
-              subtitle: transaction['date']!,
-              trailing2: transaction['amount']!,
+              title: transaction.type,
+              subtitle: transaction.date.format(),
+              trailing2: transaction.amount.toString(),
             );
           },
           separatorBuilder: (context, index) => SizedBox(height: Insets.small),

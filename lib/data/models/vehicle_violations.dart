@@ -1,10 +1,12 @@
+import 'package:app/utils/annotations/annotations_lib.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'vehicle_violations.freezed.dart';
 part 'vehicle_violations.g.dart';
 
-@freezed
+@freezedResponse
 class VehicleViolations with _$VehicleViolations {
+  @jsonSerializableResponse
   factory VehicleViolations({
     required int accumulatedPrice,
     required int numberOfViolation,
@@ -15,8 +17,9 @@ class VehicleViolations with _$VehicleViolations {
       _$VehicleViolationsFromJson(json);
 }
 
-@freezed
+@freezedResponse
 class Violation with _$Violation {
+  @jsonSerializableResponse
   factory Violation({
     required String id,
     required DateTime creationDate,
@@ -35,12 +38,12 @@ class Violation with _$Violation {
     required String plateNumber,
     required FeeFines feeFines,
     required bool isPaid,
-    required List<String> images,
+    required String images,
     required int duplicateCount,
     required int amount,
     required int totalAmount,
-    required String lat,
-    required String lng,
+    required double lat,
+    required double lng,
     required int invoiceNumber,
     required String violationPayReceiptId,
     required int violationPayReceiptNumber,

@@ -1,9 +1,7 @@
 import 'package:app/data/providers/authentication_provider.dart';
 import 'package:app/data/providers/settings_provider.dart';
 import 'package:app/theme/theme_mode.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../common_lib.dart';
 import '../../../../components/custom_svg_style.dart';
@@ -19,9 +17,10 @@ class SignOutBottomSheet extends ConsumerWidget {
     final settings = ref.watch(settingsProvider);
     return SizedBox(
       height: 280,
-      child: Card(
-        elevation: 0,
-        color: Theme.of(context).colorScheme.onSecondary,
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(CustomBorderTheme.normalBorderRadius),
+        ),
         child: Padding(
           padding: EdgeInsets.all(Insets.medium),
           child: Column(
@@ -55,7 +54,8 @@ class SignOutBottomSheet extends ConsumerWidget {
                     minimumSize: Size(double.infinity, 40),
                     foregroundColor: Theme.of(context).colorScheme.onSurface,
                   ),
-                  child: Text('لا')),
+                  child: Text('لا',
+                      style: TextStyle(fontSize: CustomFontsTheme.mediumSize))),
               Gap(Insets.medium),
             ],
           ),
@@ -73,22 +73,20 @@ class ChangeThemeButton extends ConsumerStatefulWidget {
 }
 
 class _ChangeThemeButtonState extends ConsumerState<ChangeThemeButton> {
-  bool themeChange = false;
   @override
   Widget build(BuildContext context) {
+    final isDark = ref.watch(settingsProvider).themeMode.isDark;
     return ListTile(
         leading: CustomSvgStyle(icon: Assets.assetsIconsPaintRoller),
         title: Text('الثيم'),
         trailing: Switch(
-            value: themeChange,
+            value: isDark,
             onChanged: (value) {
               setState(() {
                 if (value) {
                   ref.read(settingsProvider.notifier).toggleThemeMode(context);
-                  themeChange = value;
                 } else {
                   ref.read(settingsProvider.notifier).toggleThemeMode(context);
-                  themeChange = value;
                 }
               });
             }));

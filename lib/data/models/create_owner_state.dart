@@ -8,6 +8,7 @@ class CreateOwnerState {
   TextEditingController fullName;
   TextEditingController motherName;
   TextEditingController governorate;
+  TextEditingController carGovernorate;
   TextEditingController area;
   TextEditingController idNumber;
   TextEditingController issuer;
@@ -16,7 +17,6 @@ class CreateOwnerState {
   File? drivingLicensePicture;
   TextEditingController carPlateNumber;
   TextEditingController carPlateLetter;
-  TextEditingController carState;
   TextEditingController carPlateType;
   TextEditingController carShasyNumber;
   TextEditingController carType;
@@ -46,6 +46,7 @@ class CreateOwnerState {
     required this.fullName,
     required this.motherName,
     required this.governorate,
+    required this.carGovernorate,
     required this.area,
     required this.idNumber,
     required this.issuer,
@@ -54,7 +55,6 @@ class CreateOwnerState {
     required this.drivingLicensePicture,
     required this.carPlateNumber,
     required this.carPlateLetter,
-    required this.carState,
     required this.carPlateType,
     required this.carShasyNumber,
     required this.carType,
@@ -84,7 +84,7 @@ class CreateOwnerState {
     bool? isOwner,
     TextEditingController? fullName,
     TextEditingController? motherName,
-    TextEditingController? governorate,
+    TextEditingController? cargovernorate,
     TextEditingController? area,
     TextEditingController? idNumber,
     TextEditingController? issuer,
@@ -121,9 +121,9 @@ class CreateOwnerState {
       isLoading: isLoading ?? this.isLoading,
       isOwner: isOwner ?? this.isOwner,
       fullName: fullName ?? this.fullName,
-      motherName: motherName ?? this.motherName,
-      governorate: governorate ?? this.governorate,
+      carGovernorate: cargovernorate ?? carGovernorate,
       area: area ?? this.area,
+      governorate: governorate ?? governorate,
       idNumber: idNumber ?? this.idNumber,
       issuer: issuer ?? this.issuer,
       issuerDate: issuerDate ?? this.issuerDate,
@@ -131,7 +131,6 @@ class CreateOwnerState {
       drivingLicensePicture: drivingLicensePicture ?? this.drivingLicensePicture,
       carPlateNumber: carPlateNumber ?? this.carPlateNumber,
       carPlateLetter: carPlateLetter ?? this.carPlateLetter,
-      carState: carState ?? this.carState,
       carPlateType: carPlateType ?? this.carPlateType,
       carShasyNumber: carShasyNumber ?? this.carShasyNumber,
       carType: carType ?? this.carType,
@@ -154,6 +153,7 @@ class CreateOwnerState {
       vehicleImageUrl: vehicleImageUrl ?? this.vehicleImageUrl,
       vehicleLicenseImageUrl: vehicleLicenseImageUrl ?? this.vehicleLicenseImageUrl,
       vehicle: vehicle ?? this.vehicle,
+      motherName: motherName ?? this.motherName,
     );
   }
 }

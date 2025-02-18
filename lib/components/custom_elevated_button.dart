@@ -1,8 +1,10 @@
+import 'package:app/data/providers/settings_provider.dart';
+import 'package:app/theme/theme_mode.dart';
 import 'package:flutter/material.dart';
 
 import '../common_lib.dart';
 
-class ElevatedButtonChild extends StatelessWidget {
+class ElevatedButtonChild extends ConsumerWidget {
   const ElevatedButtonChild({
     super.key,
     required this.text,
@@ -11,7 +13,8 @@ class ElevatedButtonChild extends StatelessWidget {
   final String text;
   final dynamic icon;
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isDark = ref.watch(settingsProvider).themeMode.isDark;
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -20,12 +23,11 @@ class ElevatedButtonChild extends StatelessWidget {
         if (icon is IconData)
           Icon(
             icon as IconData?,
-            color: Theme.of(context).scaffoldBackgroundColor,
           ),
         if (icon is String)
           SvgPicture.asset(
             icon as String,
-            color: Theme.of(context).scaffoldBackgroundColor,
+            color: !isDark ? Colors.white : Colors.black,
           )
       ],
     );

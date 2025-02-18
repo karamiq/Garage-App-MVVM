@@ -13689,3 +13689,1164 @@ at:
 #6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
 <asynchronous suspension>
 
+[WrapWithConsumer] 2025-02-11T19:01:01.395861 Plugin WrapWithConsumer threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/router/app_router.dart:
+[WrapWithConsumer] 2025-02-11T19:01:01.395861 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-02-11T19:01:01.395861
+[WrapWithConsumer] 2025-02-11T19:01:01.395861 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-02-11T19:01:01.395861 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-02-11T19:01:01.395861 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-02-11T19:01:01.395861 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-02-11T19:01:01.395861 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-02-11T19:01:01.395861 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithConsumer] 2025-02-11T19:01:01.395861 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithConsumer] 2025-02-11T19:01:01.395861 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-11T19:01:01.395861 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithConsumer] 2025-02-11T19:01:01.395861 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithConsumer] 2025-02-11T19:01:01.395861 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithConsumer] 2025-02-11T19:01:01.395861 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-11T19:01:01.395861 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithConsumer] 2025-02-11T19:01:01.395861 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-02-11T19:01:01.395861 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithConsumer] 2025-02-11T19:01:01.395861 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithConsumer] 2025-02-11T19:01:01.395861 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithConsumer] 2025-02-11T19:01:01.395861
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921 Plugin WrapWithProviderScope threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/router/app_router.dart:
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithProviderScope] 2025-02-11T19:01:01.401921
+[WrapWithConsumer] 2025-02-11T19:11:28.519533 Plugin WrapWithConsumer threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/router/app_router.dart:
+[WrapWithConsumer] 2025-02-11T19:11:28.519533 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-02-11T19:11:28.519533
+[WrapWithConsumer] 2025-02-11T19:11:28.519533 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-02-11T19:11:28.519533 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-02-11T19:11:28.519533 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-02-11T19:11:28.519533 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-02-11T19:11:28.519533 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-02-11T19:11:28.519533 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithConsumer] 2025-02-11T19:11:28.519533 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithConsumer] 2025-02-11T19:11:28.519533 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-11T19:11:28.519533 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithConsumer] 2025-02-11T19:11:28.519533 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithConsumer] 2025-02-11T19:11:28.519533 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithConsumer] 2025-02-11T19:11:28.519533 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-11T19:11:28.519533 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithConsumer] 2025-02-11T19:11:28.519533 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-02-11T19:11:28.519533 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithConsumer] 2025-02-11T19:11:28.519533 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithConsumer] 2025-02-11T19:11:28.519533 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithConsumer] 2025-02-11T19:11:28.519533
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948 Plugin WrapWithProviderScope threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/router/app_router.dart:
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithProviderScope] 2025-02-11T19:11:28.524948
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:PathNotFoundException(path=/Users/karam/Documents/github/Garage-App-MVVM/lib/components/custom_item_select.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:142:18)
+#2      FileSource.contentsFromFile (package:analyzer/source/file_source.dart:56:12)
+#3      FileSource.contents (package:analyzer/source/file_source.dart:43:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:37:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:975:41)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:1092:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:929:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:9)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:212:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:142:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:508:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:137:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:351:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:546:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:597:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:268:11)
+#1      _$CustomLintResponseAnalyzerPluginResponseImpl.map (package:custom_lint/src/v2/protocol.freezed.dart:928:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:262:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:190:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:PathNotFoundException(path=/Users/karam/Documents/github/Garage-App-MVVM/lib/components/custom_item_select.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:142:18)
+#2      FileSource.contentsFromFile (package:analyzer/source/file_source.dart:56:12)
+#3      FileSource.contents (package:analyzer/source/file_source.dart:43:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:37:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:975:41)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:1092:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:929:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:9)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:212:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:142:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:508:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:137:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:351:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:546:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:597:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:268:11)
+#1      _$CustomLintResponseAnalyzerPluginResponseImpl.map (package:custom_lint/src/v2/protocol.freezed.dart:928:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:262:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:190:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:PathNotFoundException(path=/Users/karam/Documents/github/Garage-App-MVVM/lib/components/custom_item_select.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:142:18)
+#2      FileSource.contentsFromFile (package:analyzer/source/file_source.dart:56:12)
+#3      FileSource.contents (package:analyzer/source/file_source.dart:43:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:37:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:975:41)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:1092:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:929:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:9)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:212:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:142:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:508:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:137:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:351:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:546:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:597:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:268:11)
+#1      _$CustomLintResponseAnalyzerPluginResponseImpl.map (package:custom_lint/src/v2/protocol.freezed.dart:928:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:262:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:190:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:PathNotFoundException(path=/Users/karam/Documents/github/Garage-App-MVVM/lib/components/custom_item_select.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:142:18)
+#2      FileSource.contentsFromFile (package:analyzer/source/file_source.dart:56:12)
+#3      FileSource.contents (package:analyzer/source/file_source.dart:43:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:37:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:975:41)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:1092:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:929:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:9)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:212:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:142:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:508:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:137:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:351:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:546:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:597:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:268:11)
+#1      _$CustomLintResponseAnalyzerPluginResponseImpl.map (package:custom_lint/src/v2/protocol.freezed.dart:928:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:262:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:190:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:PathNotFoundException(path=/Users/karam/Documents/github/Garage-App-MVVM/lib/components/custom_item_select.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:142:18)
+#2      FileSource.contentsFromFile (package:analyzer/source/file_source.dart:56:12)
+#3      FileSource.contents (package:analyzer/source/file_source.dart:43:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:37:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:975:41)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:1092:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:929:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:9)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:212:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:142:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:508:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:137:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:351:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:546:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:597:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:268:11)
+#1      _$CustomLintResponseAnalyzerPluginResponseImpl.map (package:custom_lint/src/v2/protocol.freezed.dart:928:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:262:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:190:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:PathNotFoundException(path=/Users/karam/Documents/github/Garage-App-MVVM/lib/components/custom_item_select.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:142:18)
+#2      FileSource.contentsFromFile (package:analyzer/source/file_source.dart:56:12)
+#3      FileSource.contents (package:analyzer/source/file_source.dart:43:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:37:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:975:41)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:1092:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:929:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:9)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:212:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:142:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:508:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:137:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:351:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:546:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:597:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:268:11)
+#1      _$CustomLintResponseAnalyzerPluginResponseImpl.map (package:custom_lint/src/v2/protocol.freezed.dart:928:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:262:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:190:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:PathNotFoundException(path=/Users/karam/Documents/github/Garage-App-MVVM/lib/components/custom_item_select.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:142:18)
+#2      FileSource.contentsFromFile (package:analyzer/source/file_source.dart:56:12)
+#3      FileSource.contents (package:analyzer/source/file_source.dart:43:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:37:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:975:41)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:1092:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:929:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:9)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:212:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:142:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:508:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:137:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:351:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:546:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:597:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:268:11)
+#1      _$CustomLintResponseAnalyzerPluginResponseImpl.map (package:custom_lint/src/v2/protocol.freezed.dart:928:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:262:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:190:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:PathNotFoundException(path=/Users/karam/Documents/github/Garage-App-MVVM/lib/components/custom_item_select.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:142:18)
+#2      FileSource.contentsFromFile (package:analyzer/source/file_source.dart:56:12)
+#3      FileSource.contents (package:analyzer/source/file_source.dart:43:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:37:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:975:41)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:1092:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:929:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:9)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:212:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:142:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:508:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:137:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:351:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:546:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:597:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:268:11)
+#1      _$CustomLintResponseAnalyzerPluginResponseImpl.map (package:custom_lint/src/v2/protocol.freezed.dart:928:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:262:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:190:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+The request analysis.updateContent failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+A request threw the exception:PathNotFoundException(path=/Users/karam/Documents/github/Garage-App-MVVM/lib/components/custom_item_select.dart; message=Cannot retrieve modification time)
+#0      _PhysicalFile.modificationStamp (package:analyzer/file_system/physical_file_system.dart:118:7)
+#1      _OverlayFile.modificationStamp (package:analyzer/file_system/overlay_file_system.dart:142:18)
+#2      FileSource.contentsFromFile (package:analyzer/source/file_source.dart:56:12)
+#3      FileSource.contents (package:analyzer/source/file_source.dart:43:12)
+#4      ExpectLint.run (package:custom_lint_builder/src/expect_lint.dart:37:23)
+#5      _ClientAnalyzerPlugin.analyzeFile.<anonymous closure> (package:custom_lint_builder/src/client.dart:975:41)
+<asynchronous suspension>
+#6      _ClientAnalyzerPlugin._runOperation (package:custom_lint_builder/src/client.dart:1092:14)
+<asynchronous suspension>
+#7      _ClientAnalyzerPlugin.analyzeFile (package:custom_lint_builder/src/client.dart:929:5)
+<asynchronous suspension>
+#8      ServerPlugin.analyzeFiles (package:analyzer_plugin/plugin/plugin.dart:111:9)
+<asynchronous suspension>
+#9      ServerPlugin.handleAffectedFiles (package:analyzer_plugin/plugin/plugin.dart:212:5)
+<asynchronous suspension>
+#10     ServerPlugin.contentChanged.<anonymous closure> (package:analyzer_plugin/plugin/plugin.dart:142:9)
+<asynchronous suspension>
+#11     ServerPlugin._forAnalysisContexts (package:analyzer_plugin/plugin/plugin.dart:508:9)
+<asynchronous suspension>
+#12     ServerPlugin.contentChanged (package:analyzer_plugin/plugin/plugin.dart:137:7)
+<asynchronous suspension>
+#13     ServerPlugin.handleAnalysisUpdateContent (package:analyzer_plugin/plugin/plugin.dart:351:5)
+<asynchronous suspension>
+#14     ServerPlugin._getResponse (package:analyzer_plugin/plugin/plugin.dart:546:18)
+<asynchronous suspension>
+#15     ServerPlugin._onRequest (package:analyzer_plugin/plugin/plugin.dart:597:18)
+<asynchronous suspension>
+
+at:
+#0      SocketCustomLintServerToClientChannel.sendCustomLintRequest.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:268:11)
+#1      _$CustomLintResponseAnalyzerPluginResponseImpl.map (package:custom_lint/src/v2/protocol.freezed.dart:928:34)
+#2      SocketCustomLintServerToClientChannel.sendCustomLintRequest (package:custom_lint/src/v2/server_to_client_channel.dart:262:14)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.sendAnalyzerPluginRequest (package:custom_lint/src/v2/server_to_client_channel.dart:234:22)
+<asynchronous suspension>
+#4      CustomLintServer._handleRequest.<anonymous closure>.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:190:17)
+<asynchronous suspension>
+#5      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#6      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+[WrapWithConsumer] 2025-02-13T22:12:05.970111 Plugin WrapWithConsumer threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/src/create_account/owner_car_info.dart/owner_car_info.dart:
+[WrapWithConsumer] 2025-02-13T22:12:05.970111 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-02-13T22:12:05.970111
+[WrapWithConsumer] 2025-02-13T22:12:05.970111 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-02-13T22:12:05.970111 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-02-13T22:12:05.970111 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-02-13T22:12:05.970111 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-02-13T22:12:05.970111 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-02-13T22:12:05.970111 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithConsumer] 2025-02-13T22:12:05.970111 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithConsumer] 2025-02-13T22:12:05.970111 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-13T22:12:05.970111 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithConsumer] 2025-02-13T22:12:05.970111 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithConsumer] 2025-02-13T22:12:05.970111 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithConsumer] 2025-02-13T22:12:05.970111 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-13T22:12:05.970111 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithConsumer] 2025-02-13T22:12:05.970111 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-02-13T22:12:05.970111 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithConsumer] 2025-02-13T22:12:05.970111 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithConsumer] 2025-02-13T22:12:05.970111 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithConsumer] 2025-02-13T22:12:05.970111
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347 Plugin WrapWithProviderScope threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/src/create_account/owner_car_info.dart/owner_car_info.dart:
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithProviderScope] 2025-02-13T22:12:05.974347
+The request analysis.setContextRoots failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Exception: Failed to run "pub get" in the client project:
+
+Failed to start the Dart CLI isolate. Could not resolve DartDev snapshot or kernel.
+(null).
+Failed to update packages.
+
+at:
+#0      CustomLintWorkspace.runPubGet (package:custom_lint/src/workspace.dart:764:7)
+<asynchronous suspension>
+#1      CustomLintWorkspace.resolvePluginHost (package:custom_lint/src/workspace.dart:748:5)
+<asynchronous suspension>
+#2      SocketCustomLintServerToClientChannel._startProcess (package:custom_lint/src/v2/server_to_client_channel.dart:151:7)
+<asynchronous suspension>
+#3      SocketCustomLintServerToClientChannel.init (package:custom_lint/src/v2/server_to_client_channel.dart:111:21)
+<asynchronous suspension>
+#4      CustomLintServer._maybeSpawnCustomLintPlugin (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:394:5)
+<asynchronous suspension>
+#5      CustomLintServer._handleAnalysisSetContextRoots.<anonymous closure> (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:341:9)
+<asynchronous suspension>
+#6      PendingOperation.run (package:custom_lint/src/async_operation.dart:22:14)
+<asynchronous suspension>
+#7      CustomLintServer._handleRequest (package:custom_lint/src/v2/custom_lint_analyzer_plugin.dart:173:22)
+<asynchronous suspension>
+
+[custom_lint] 2025-02-14T19:05:59.682959 /Users/karam/.pub-cache/hosted/pub.dev/pubspec_parse-1.5.0/lib/pubspec_parse.dart:1:1: Error: The specified language version is too high. The highest supported language version is 3.5.
+[custom_lint] 2025-02-14T19:05:59.682959 // Copyright (c) 2018, the Dart project authors. Please see the AUTHORS file
+[custom_lint] 2025-02-14T19:05:59.682959 ^
+[custom_lint] 2025-02-14T19:05:59.682959 /Users/karam/.pub-cache/hosted/pub.dev/pubspec_parse-1.5.0/lib/src/dependency.dart:1:1: Error: The specified language version is too high. The highest supported language version is 3.5.
+[custom_lint] 2025-02-14T19:05:59.682959 // Copyright (c) 2018, the Dart project authors.  Please see the AUTHORS file
+[custom_lint] 2025-02-14T19:05:59.682959 ^
+[custom_lint] 2025-02-14T19:05:59.682959 /Users/karam/.pub-cache/hosted/pub.dev/pubspec_parse-1.5.0/lib/src/pubspec.dart:1:1: Error: The specified language version is too high. The highest supported language version is 3.5.
+[custom_lint] 2025-02-14T19:05:59.682959 // Copyright (c) 2018, the Dart project authors.  Please see the AUTHORS file
+[custom_lint] 2025-02-14T19:05:59.682959 ^
+[custom_lint] 2025-02-14T19:05:59.682959 /Users/karam/.pub-cache/hosted/pub.dev/pubspec_parse-1.5.0/lib/src/screenshot.dart:1:1: Error: The specified language version is too high. The highest supported language version is 3.5.
+[custom_lint] 2025-02-14T19:05:59.682959 // Copyright (c) 2021, the Dart project authors.  Please see the AUTHORS file
+[custom_lint] 2025-02-14T19:05:59.682959 ^
+[custom_lint] 2025-02-14T19:05:59.682959 /Users/karam/.pub-cache/hosted/pub.dev/pubspec_parse-1.5.0/lib/src/dependency.g.dart:1:1: Error: The specified language version is too high. The highest supported language version is 3.5.
+[custom_lint] 2025-02-14T19:05:59.682959 // GENERATED CODE - DO NOT MODIFY BY HAND
+[custom_lint] 2025-02-14T19:05:59.682959 ^
+[custom_lint] 2025-02-14T19:05:59.682959 /Users/karam/.pub-cache/hosted/pub.dev/pubspec_parse-1.5.0/lib/src/pubspec.g.dart:1:1: Error: The specified language version is too high. The highest supported language version is 3.5.
+[custom_lint] 2025-02-14T19:05:59.682959 // GENERATED CODE - DO NOT MODIFY BY HAND
+[custom_lint] 2025-02-14T19:05:59.682959 ^
+[custom_lint] 2025-02-14T19:05:59.682959
+[custom_lint] 2025-02-14T19:05:59.682959
+Failed to start pluginsThe request analysis.setContextRoots failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Bad state: Failed to start the plugins.
+at:
+#0      SocketCustomLintServerToClientChannel._checkInitializationFail.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:223:11)
+<asynchronous suspension>
+#1      Future.any.onValue (dart:async/future.dart:628:5)
+<asynchronous suspension>
+
+[custom_lint] 2025-02-14T23:19:39.441673 /Users/karam/.pub-cache/hosted/pub.dev/pubspec_parse-1.5.0/lib/pubspec_parse.dart:1:1: Error: The specified language version is too high. The highest supported language version is 3.5.
+[custom_lint] 2025-02-14T23:19:39.441673 // Copyright (c) 2018, the Dart project authors. Please see the AUTHORS file
+[custom_lint] 2025-02-14T23:19:39.441673 ^
+[custom_lint] 2025-02-14T23:19:39.441673 /Users/karam/.pub-cache/hosted/pub.dev/pubspec_parse-1.5.0/lib/src/dependency.dart:1:1: Error: The specified language version is too high. The highest supported language version is 3.5.
+[custom_lint] 2025-02-14T23:19:39.441673 // Copyright (c) 2018, the Dart project authors.  Please see the AUTHORS file
+[custom_lint] 2025-02-14T23:19:39.441673 ^
+[custom_lint] 2025-02-14T23:19:39.441673 /Users/karam/.pub-cache/hosted/pub.dev/pubspec_parse-1.5.0/lib/src/pubspec.dart:1:1: Error: The specified language version is too high. The highest supported language version is 3.5.
+[custom_lint] 2025-02-14T23:19:39.441673 // Copyright (c) 2018, the Dart project authors.  Please see the AUTHORS file
+[custom_lint] 2025-02-14T23:19:39.441673 ^
+[custom_lint] 2025-02-14T23:19:39.441673 /Users/karam/.pub-cache/hosted/pub.dev/pubspec_parse-1.5.0/lib/src/screenshot.dart:1:1: Error: The specified language version is too high. The highest supported language version is 3.5.
+[custom_lint] 2025-02-14T23:19:39.441673 // Copyright (c) 2021, the Dart project authors.  Please see the AUTHORS file
+[custom_lint] 2025-02-14T23:19:39.441673 ^
+[custom_lint] 2025-02-14T23:19:39.441673 /Users/karam/.pub-cache/hosted/pub.dev/pubspec_parse-1.5.0/lib/src/dependency.g.dart:1:1: Error: The specified language version is too high. The highest supported language version is 3.5.
+[custom_lint] 2025-02-14T23:19:39.441673 // GENERATED CODE - DO NOT MODIFY BY HAND
+[custom_lint] 2025-02-14T23:19:39.441673 ^
+[custom_lint] 2025-02-14T23:19:39.441673 /Users/karam/.pub-cache/hosted/pub.dev/pubspec_parse-1.5.0/lib/src/pubspec.g.dart:1:1: Error: The specified language version is too high. The highest supported language version is 3.5.
+[custom_lint] 2025-02-14T23:19:39.441673 // GENERATED CODE - DO NOT MODIFY BY HAND
+[custom_lint] 2025-02-14T23:19:39.441673 ^
+[custom_lint] 2025-02-14T23:19:39.441673
+[custom_lint] 2025-02-14T23:19:39.441673
+Failed to start pluginsThe request analysis.setContextRoots failed with the following error:
+RequestErrorCode.PLUGIN_ERROR
+Bad state: Failed to start the plugins.
+at:
+#0      SocketCustomLintServerToClientChannel._checkInitializationFail.<anonymous closure> (package:custom_lint/src/v2/server_to_client_channel.dart:223:11)
+<asynchronous suspension>
+#1      Future.any.onValue (dart:async/future.dart:628:5)
+<asynchronous suspension>
+
+[WrapWithConsumer] 2025-02-15T01:34:34.166339 Plugin WrapWithConsumer threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/src/home_page/profile/profile.dart:
+[WrapWithConsumer] 2025-02-15T01:34:34.166339 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-02-15T01:34:34.166339
+[WrapWithConsumer] 2025-02-15T01:34:34.166339 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-02-15T01:34:34.166339 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-02-15T01:34:34.166339 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-02-15T01:34:34.166339 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-02-15T01:34:34.166339 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-02-15T01:34:34.166339 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithConsumer] 2025-02-15T01:34:34.166339 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithConsumer] 2025-02-15T01:34:34.166339 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-15T01:34:34.166339 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithConsumer] 2025-02-15T01:34:34.166339 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithConsumer] 2025-02-15T01:34:34.166339 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithConsumer] 2025-02-15T01:34:34.166339 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-15T01:34:34.166339 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithConsumer] 2025-02-15T01:34:34.166339 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-02-15T01:34:34.166339 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithConsumer] 2025-02-15T01:34:34.166339 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithConsumer] 2025-02-15T01:34:34.166339 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithConsumer] 2025-02-15T01:34:34.166339
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086 Plugin WrapWithProviderScope threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/src/home_page/profile/profile.dart:
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithProviderScope] 2025-02-15T01:34:34.175086
+[WrapWithConsumer] 2025-02-15T01:34:34.211608 Plugin WrapWithConsumer threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/src/home_page/profile/profile.dart:
+[WrapWithConsumer] 2025-02-15T01:34:34.211608 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-02-15T01:34:34.211608
+[WrapWithConsumer] 2025-02-15T01:34:34.211608 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-02-15T01:34:34.211608 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-02-15T01:34:34.211608 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-02-15T01:34:34.211608 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-02-15T01:34:34.211608 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-02-15T01:34:34.211608 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithConsumer] 2025-02-15T01:34:34.211608 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithConsumer] 2025-02-15T01:34:34.211608 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-15T01:34:34.211608 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithConsumer] 2025-02-15T01:34:34.211608 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithConsumer] 2025-02-15T01:34:34.211608 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithConsumer] 2025-02-15T01:34:34.211608 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-15T01:34:34.211608 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithConsumer] 2025-02-15T01:34:34.211608 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-02-15T01:34:34.211608 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithConsumer] 2025-02-15T01:34:34.211608 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithConsumer] 2025-02-15T01:34:34.211608 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithConsumer] 2025-02-15T01:34:34.211608
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012 Plugin WrapWithProviderScope threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/src/home_page/profile/profile.dart:
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212012
+[WrapWithConsumer] 2025-02-15T01:34:34.212221 Plugin WrapWithConsumer threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/src/home_page/profile/profile.dart:
+[WrapWithConsumer] 2025-02-15T01:34:34.212221 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-02-15T01:34:34.212221
+[WrapWithConsumer] 2025-02-15T01:34:34.212221 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-02-15T01:34:34.212221 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-02-15T01:34:34.212221 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-02-15T01:34:34.212221 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-02-15T01:34:34.212221 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-02-15T01:34:34.212221 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithConsumer] 2025-02-15T01:34:34.212221 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithConsumer] 2025-02-15T01:34:34.212221 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-15T01:34:34.212221 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithConsumer] 2025-02-15T01:34:34.212221 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithConsumer] 2025-02-15T01:34:34.212221 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithConsumer] 2025-02-15T01:34:34.212221 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-15T01:34:34.212221 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithConsumer] 2025-02-15T01:34:34.212221 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-02-15T01:34:34.212221 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithConsumer] 2025-02-15T01:34:34.212221 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithConsumer] 2025-02-15T01:34:34.212221 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithConsumer] 2025-02-15T01:34:34.212221
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387 Plugin WrapWithProviderScope threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/src/home_page/profile/profile.dart:
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212387
+[WrapWithConsumer] 2025-02-15T01:34:34.212523 Plugin WrapWithConsumer threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/src/home_page/profile/profile.dart:
+[WrapWithConsumer] 2025-02-15T01:34:34.212523 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-02-15T01:34:34.212523
+[WrapWithConsumer] 2025-02-15T01:34:34.212523 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-02-15T01:34:34.212523 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-02-15T01:34:34.212523 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-02-15T01:34:34.212523 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-02-15T01:34:34.212523 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-02-15T01:34:34.212523 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithConsumer] 2025-02-15T01:34:34.212523 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithConsumer] 2025-02-15T01:34:34.212523 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-15T01:34:34.212523 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithConsumer] 2025-02-15T01:34:34.212523 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithConsumer] 2025-02-15T01:34:34.212523 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithConsumer] 2025-02-15T01:34:34.212523 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-15T01:34:34.212523 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithConsumer] 2025-02-15T01:34:34.212523 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-02-15T01:34:34.212523 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithConsumer] 2025-02-15T01:34:34.212523 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithConsumer] 2025-02-15T01:34:34.212523 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithConsumer] 2025-02-15T01:34:34.212523
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758 Plugin WrapWithProviderScope threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/src/home_page/profile/profile.dart:
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithProviderScope] 2025-02-15T01:34:34.212758
+[WrapWithConsumer] 2025-02-15T02:35:51.112510 Plugin WrapWithConsumer threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/src/home_page/financial_transcations/financial_transcations.dart:
+[WrapWithConsumer] 2025-02-15T02:35:51.112510 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-02-15T02:35:51.112510
+[WrapWithConsumer] 2025-02-15T02:35:51.112510 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-02-15T02:35:51.112510 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-02-15T02:35:51.112510 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-02-15T02:35:51.112510 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-02-15T02:35:51.112510 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-02-15T02:35:51.112510 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithConsumer] 2025-02-15T02:35:51.112510 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithConsumer] 2025-02-15T02:35:51.112510 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-15T02:35:51.112510 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithConsumer] 2025-02-15T02:35:51.112510 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithConsumer] 2025-02-15T02:35:51.112510 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithConsumer] 2025-02-15T02:35:51.112510 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-15T02:35:51.112510 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithConsumer] 2025-02-15T02:35:51.112510 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-02-15T02:35:51.112510 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithConsumer] 2025-02-15T02:35:51.112510 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithConsumer] 2025-02-15T02:35:51.112510 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithConsumer] 2025-02-15T02:35:51.112510
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365 Plugin WrapWithProviderScope threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/src/home_page/financial_transcations/financial_transcations.dart:
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithProviderScope] 2025-02-15T02:35:51.121365
+[WrapWithConsumer] 2025-02-15T02:48:36.743469 Plugin WrapWithConsumer threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/src/shared_pages/qr_code_generator/qr_code_generator.dart:
+[WrapWithConsumer] 2025-02-15T02:48:36.743469 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-02-15T02:48:36.743469
+[WrapWithConsumer] 2025-02-15T02:48:36.743469 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-02-15T02:48:36.743469 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-02-15T02:48:36.743469 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-02-15T02:48:36.743469 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-02-15T02:48:36.743469 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-02-15T02:48:36.743469 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithConsumer] 2025-02-15T02:48:36.743469 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithConsumer] 2025-02-15T02:48:36.743469 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-15T02:48:36.743469 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithConsumer] 2025-02-15T02:48:36.743469 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithConsumer] 2025-02-15T02:48:36.743469 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithConsumer] 2025-02-15T02:48:36.743469 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-15T02:48:36.743469 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithConsumer] 2025-02-15T02:48:36.743469 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-02-15T02:48:36.743469 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithConsumer] 2025-02-15T02:48:36.743469 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithConsumer] 2025-02-15T02:48:36.743469 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithConsumer] 2025-02-15T02:48:36.743469
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120 Plugin WrapWithProviderScope threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/src/shared_pages/qr_code_generator/qr_code_generator.dart:
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithProviderScope] 2025-02-15T02:48:36.936120
+[WrapWithConsumer] 2025-02-16T17:06:50.982615 Plugin WrapWithConsumer threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/router/app_router.dart:
+[WrapWithConsumer] 2025-02-16T17:06:50.982615 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-02-16T17:06:50.982615
+[WrapWithConsumer] 2025-02-16T17:06:50.982615 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-02-16T17:06:50.982615 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-02-16T17:06:50.982615 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-02-16T17:06:50.982615 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-02-16T17:06:50.982615 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-02-16T17:06:50.982615 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithConsumer] 2025-02-16T17:06:50.982615 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithConsumer] 2025-02-16T17:06:50.982615 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-16T17:06:50.982615 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithConsumer] 2025-02-16T17:06:50.982615 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithConsumer] 2025-02-16T17:06:50.982615 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithConsumer] 2025-02-16T17:06:50.982615 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-16T17:06:50.982615 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithConsumer] 2025-02-16T17:06:50.982615 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-02-16T17:06:50.982615 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithConsumer] 2025-02-16T17:06:50.982615 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithConsumer] 2025-02-16T17:06:50.982615 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithConsumer] 2025-02-16T17:06:50.982615
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625 Plugin WrapWithProviderScope threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/router/app_router.dart:
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithProviderScope] 2025-02-16T17:06:50.993625
+[WrapWithConsumer] 2025-02-16T20:58:32.769971 Plugin WrapWithConsumer threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/src/veichles_page/selected_car_info/selected_car_info.dart:
+[WrapWithConsumer] 2025-02-16T20:58:32.769971 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-02-16T20:58:32.769971
+[WrapWithConsumer] 2025-02-16T20:58:32.769971 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-02-16T20:58:32.769971 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-02-16T20:58:32.769971 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-02-16T20:58:32.769971 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-02-16T20:58:32.769971 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-02-16T20:58:32.769971 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithConsumer] 2025-02-16T20:58:32.769971 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithConsumer] 2025-02-16T20:58:32.769971 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-16T20:58:32.769971 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithConsumer] 2025-02-16T20:58:32.769971 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithConsumer] 2025-02-16T20:58:32.769971 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithConsumer] 2025-02-16T20:58:32.769971 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-16T20:58:32.769971 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithConsumer] 2025-02-16T20:58:32.769971 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-02-16T20:58:32.769971 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithConsumer] 2025-02-16T20:58:32.769971 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithConsumer] 2025-02-16T20:58:32.769971 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithConsumer] 2025-02-16T20:58:32.769971
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550 Plugin WrapWithProviderScope threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/src/veichles_page/selected_car_info/selected_car_info.dart:
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithProviderScope] 2025-02-16T20:58:32.787550
+[WrapWithConsumer] 2025-02-16T21:41:55.067110 Plugin WrapWithConsumer threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/data/fake_data/drivers_fake.dart:
+[WrapWithConsumer] 2025-02-16T21:41:55.067110 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-02-16T21:41:55.067110
+[WrapWithConsumer] 2025-02-16T21:41:55.067110 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-02-16T21:41:55.067110 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-02-16T21:41:55.067110 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-02-16T21:41:55.067110 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-02-16T21:41:55.067110 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-02-16T21:41:55.067110 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithConsumer] 2025-02-16T21:41:55.067110 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithConsumer] 2025-02-16T21:41:55.067110 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-16T21:41:55.067110 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithConsumer] 2025-02-16T21:41:55.067110 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithConsumer] 2025-02-16T21:41:55.067110 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithConsumer] 2025-02-16T21:41:55.067110 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-16T21:41:55.067110 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithConsumer] 2025-02-16T21:41:55.067110 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-02-16T21:41:55.067110 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithConsumer] 2025-02-16T21:41:55.067110 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithConsumer] 2025-02-16T21:41:55.067110 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithConsumer] 2025-02-16T21:41:55.067110
+[WrapWithConsumer] 2025-02-16T21:48:01.246045 Plugin WrapWithConsumer threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/data/fake_data/drivers_fake.dart:
+[WrapWithConsumer] 2025-02-16T21:48:01.246045 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-02-16T21:48:01.246045
+[WrapWithConsumer] 2025-02-16T21:48:01.246045 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-02-16T21:48:01.246045 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-02-16T21:48:01.246045 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-02-16T21:48:01.246045 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-02-16T21:48:01.246045 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-02-16T21:48:01.246045 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithConsumer] 2025-02-16T21:48:01.246045 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithConsumer] 2025-02-16T21:48:01.246045 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-16T21:48:01.246045 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithConsumer] 2025-02-16T21:48:01.246045 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithConsumer] 2025-02-16T21:48:01.246045 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithConsumer] 2025-02-16T21:48:01.246045 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-16T21:48:01.246045 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithConsumer] 2025-02-16T21:48:01.246045 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-02-16T21:48:01.246045 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithConsumer] 2025-02-16T21:48:01.246045 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithConsumer] 2025-02-16T21:48:01.246045 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithConsumer] 2025-02-16T21:48:01.246045
+[WrapWithConsumer] 2025-02-16T21:48:01.249775 Plugin WrapWithConsumer threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/data/fake_data/drivers_fake.dart:
+[WrapWithConsumer] 2025-02-16T21:48:01.249775 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-02-16T21:48:01.249775
+[WrapWithConsumer] 2025-02-16T21:48:01.249775 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-02-16T21:48:01.249775 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-02-16T21:48:01.249775 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-02-16T21:48:01.249775 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-02-16T21:48:01.249775 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-02-16T21:48:01.249775 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithConsumer] 2025-02-16T21:48:01.249775 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithConsumer] 2025-02-16T21:48:01.249775 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-16T21:48:01.249775 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithConsumer] 2025-02-16T21:48:01.249775 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithConsumer] 2025-02-16T21:48:01.249775 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithConsumer] 2025-02-16T21:48:01.249775 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-16T21:48:01.249775 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithConsumer] 2025-02-16T21:48:01.249775 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-02-16T21:48:01.249775 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithConsumer] 2025-02-16T21:48:01.249775 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithConsumer] 2025-02-16T21:48:01.249775 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithConsumer] 2025-02-16T21:48:01.249775
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046 Plugin WrapWithProviderScope threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/data/fake_data/drivers_fake.dart:
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250046
+[WrapWithConsumer] 2025-02-16T21:48:01.250161 Plugin WrapWithConsumer threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/data/fake_data/drivers_fake.dart:
+[WrapWithConsumer] 2025-02-16T21:48:01.250161 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-02-16T21:48:01.250161
+[WrapWithConsumer] 2025-02-16T21:48:01.250161 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-02-16T21:48:01.250161 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-02-16T21:48:01.250161 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-02-16T21:48:01.250161 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-02-16T21:48:01.250161 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-02-16T21:48:01.250161 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithConsumer] 2025-02-16T21:48:01.250161 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithConsumer] 2025-02-16T21:48:01.250161 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-16T21:48:01.250161 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithConsumer] 2025-02-16T21:48:01.250161 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithConsumer] 2025-02-16T21:48:01.250161 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithConsumer] 2025-02-16T21:48:01.250161 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-16T21:48:01.250161 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithConsumer] 2025-02-16T21:48:01.250161 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-02-16T21:48:01.250161 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithConsumer] 2025-02-16T21:48:01.250161 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithConsumer] 2025-02-16T21:48:01.250161 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithConsumer] 2025-02-16T21:48:01.250161
+[WrapWithConsumer] 2025-02-16T21:48:01.250266 Plugin WrapWithConsumer threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/data/fake_data/drivers_fake.dart:
+[WrapWithConsumer] 2025-02-16T21:48:01.250266 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-02-16T21:48:01.250266
+[WrapWithConsumer] 2025-02-16T21:48:01.250266 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-02-16T21:48:01.250266 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-02-16T21:48:01.250266 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-02-16T21:48:01.250266 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-02-16T21:48:01.250266 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-02-16T21:48:01.250266 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithConsumer] 2025-02-16T21:48:01.250266 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithConsumer] 2025-02-16T21:48:01.250266 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-16T21:48:01.250266 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithConsumer] 2025-02-16T21:48:01.250266 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithConsumer] 2025-02-16T21:48:01.250266 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithConsumer] 2025-02-16T21:48:01.250266 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-16T21:48:01.250266 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithConsumer] 2025-02-16T21:48:01.250266 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-02-16T21:48:01.250266 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithConsumer] 2025-02-16T21:48:01.250266 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithConsumer] 2025-02-16T21:48:01.250266 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithConsumer] 2025-02-16T21:48:01.250266
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365 Plugin WrapWithProviderScope threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/data/fake_data/drivers_fake.dart:
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250365
+[WrapWithConsumer] 2025-02-16T21:48:01.250465 Plugin WrapWithConsumer threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/data/fake_data/drivers_fake.dart:
+[WrapWithConsumer] 2025-02-16T21:48:01.250465 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-02-16T21:48:01.250465
+[WrapWithConsumer] 2025-02-16T21:48:01.250465 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-02-16T21:48:01.250465 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-02-16T21:48:01.250465 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-02-16T21:48:01.250465 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-02-16T21:48:01.250465 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-02-16T21:48:01.250465 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithConsumer] 2025-02-16T21:48:01.250465 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithConsumer] 2025-02-16T21:48:01.250465 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-16T21:48:01.250465 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithConsumer] 2025-02-16T21:48:01.250465 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithConsumer] 2025-02-16T21:48:01.250465 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithConsumer] 2025-02-16T21:48:01.250465 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-16T21:48:01.250465 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithConsumer] 2025-02-16T21:48:01.250465 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-02-16T21:48:01.250465 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithConsumer] 2025-02-16T21:48:01.250465 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithConsumer] 2025-02-16T21:48:01.250465 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithConsumer] 2025-02-16T21:48:01.250465
+[WrapWithConsumer] 2025-02-16T21:48:01.250559 Plugin WrapWithConsumer threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/data/fake_data/drivers_fake.dart:
+[WrapWithConsumer] 2025-02-16T21:48:01.250559 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithConsumer] 2025-02-16T21:48:01.250559
+[WrapWithConsumer] 2025-02-16T21:48:01.250559 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithConsumer] 2025-02-16T21:48:01.250559 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithConsumer] 2025-02-16T21:48:01.250559 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithConsumer] 2025-02-16T21:48:01.250559 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithConsumer] 2025-02-16T21:48:01.250559 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithConsumer] 2025-02-16T21:48:01.250559 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithConsumer] 2025-02-16T21:48:01.250559 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithConsumer] 2025-02-16T21:48:01.250559 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-16T21:48:01.250559 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithConsumer] 2025-02-16T21:48:01.250559 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithConsumer] 2025-02-16T21:48:01.250559 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithConsumer] 2025-02-16T21:48:01.250559 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithConsumer] 2025-02-16T21:48:01.250559 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithConsumer] 2025-02-16T21:48:01.250559 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithConsumer] 2025-02-16T21:48:01.250559 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithConsumer] 2025-02-16T21:48:01.250559 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithConsumer] 2025-02-16T21:48:01.250559 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithConsumer] 2025-02-16T21:48:01.250559
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653 Plugin WrapWithProviderScope threw while analyzing /Users/karam/Documents/github/Garage-App-MVVM/lib/data/fake_data/drivers_fake.dart:
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653 InconsistentAnalysisException: Requested result might be inconsistent with previously returned results
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653 #0      AnalysisSessionImpl.checkConsistency (package:analyzer/src/dart/analysis/session.dart:61:7)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653 #1      AnalysisSessionImpl.getResolvedUnit (package:analyzer/src/dart/analysis/session.dart:160:5)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653 #2      ChangeBuilderImpl._createDartFileEditBuilder (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:320:33)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653 #3      ChangeBuilderImpl.addDartFileEdit (package:analyzer_plugin/src/utilities/change_builder/change_builder_core.dart:153:23)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653 #4      ChangeBuilderImpl.addDartFileEdit.<anonymous closure> (package:custom_lint_core/src/change_reporter.dart:241:35)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653 #5      new Future.<anonymous closure> (dart:async/future.dart:258:40)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653 #6      _rootRun (dart:async/zone.dart:1406:47)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653 #7      _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653 #8      _CustomZone.runGuarded (dart:async/zone.dart:1225:7)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653 #9      _CustomZone.bindCallbackGuarded.<anonymous closure> (dart:async/zone.dart:1265:23)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653 #10     _rootRun (dart:async/zone.dart:1414:13)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653 #11     _CustomZone.run (dart:async/zone.dart:1317:19)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653 #12     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:1249:23)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653 #13     Timer._createTimer.<anonymous closure> (dart:async-patch/timer_patch.dart:18:15)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653 #14     _Timer._runTimers (dart:isolate-patch/timer_impl.dart:398:19)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653 #15     _Timer._handleMessage (dart:isolate-patch/timer_impl.dart:429:5)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653 #16     _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:184:12)
+[WrapWithProviderScope] 2025-02-16T21:48:01.250653

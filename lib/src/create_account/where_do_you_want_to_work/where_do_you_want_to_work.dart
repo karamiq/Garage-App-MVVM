@@ -1,9 +1,12 @@
+import 'package:app/data/models/garage_model.dart';
+import 'package:app/data/models/governorate_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../common_lib.dart';
 import '../../../components/custom_back_botton.dart';
-import '../../../components/custom_item_select.dart';
+import '../../../components/custom_paginated_api_item_select.dart';
 import '../../../data/providers/create_owner_controller.dart';
+import '../../../data/services/clients/auth_client.dart';
 
 class WhereDoYouWantToWorkPage extends ConsumerWidget {
   const WhereDoYouWantToWorkPage({super.key});
@@ -42,16 +45,24 @@ class WhereDoYouWantToWorkPage extends ConsumerWidget {
                 ),
               ),
               SizedBox(height: Insets.exLarge * 1.5),
-              CustomApiItemSelect(
+              CustomPaginatedApiItemSelect<GovernorateModel>(
                   labelText: 'المحافظة',
                   controller: controller.holderStateWork,
-                  itemListFuture: Future.value([]),
+                  function: (String search, int page) =>
+                      ref.read(authClientProvider).getGovernorates(
+                            name: search,
+                            pageNumber: page,
+                          ),
                   validator: context.validator.build()),
               SizedBox(height: Insets.small),
-              CustomApiItemSelect(
+              CustomPaginatedApiItemSelect<Garage>(
                   labelText: 'الكراج',
                   controller: controller.holderGarageWork,
-                  itemListFuture: Future.value([]),
+                  function: (String search, int page) =>
+                      ref.read(authClientProvider).getGarages(
+                            name: search,
+                            pageNumber: page,
+                          ),
                   validator: context.validator.build()),
               Spacer(),
               ElevatedButton(

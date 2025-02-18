@@ -22,8 +22,7 @@ class _PagingControllerHookCreator {
 
 const usePagingController = _PagingControllerHookCreator();
 
-class _PagingControllerHook<ItemType>
-    extends Hook<PagingController<int, ItemType>> {
+class _PagingControllerHook<ItemType> extends Hook<PagingController<int, ItemType>> {
   const _PagingControllerHook(
     this.page,
     this.perPage,
@@ -41,11 +40,10 @@ class _PagingControllerHook<ItemType>
   }
 }
 
-class _PagingControllerHookState<ItemType> extends HookState<
-    PagingController<int, ItemType>, _PagingControllerHook<ItemType>> {
-  late final _controller =
-      PagingController<int, ItemType>(firstPageKey: hook.page)
-        ..listen(callback: hook.listen, perPage: hook.perPage);
+class _PagingControllerHookState<ItemType>
+    extends HookState<PagingController<int, ItemType>, _PagingControllerHook<ItemType>> {
+  late final _controller = PagingController<int, ItemType>(firstPageKey: hook.page)
+    ..listen(callback: hook.listen, perPage: hook.perPage);
 
   @override
   PagingController<int, ItemType> build(BuildContext context) => _controller;
@@ -63,12 +61,12 @@ extension PagingControllerX<ItemType> on PagingController<int, ItemType> {
       try {
         final page = await callback(pageKey);
 
-        final isLastPage = page.result.length < perPage;
+        final isLastPage = page.data.length < perPage;
         if (isLastPage) {
-          appendLastPage(page.result);
+          appendLastPage(page.data);
         } else {
           final nextPageKey = pageKey + 1;
-          appendPage(page.result, nextPageKey);
+          appendPage(page.data, nextPageKey);
         }
       } catch (e, stackTrace) {
         log(toString(), error: error, stackTrace: stackTrace);

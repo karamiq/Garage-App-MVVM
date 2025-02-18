@@ -1,17 +1,17 @@
+import 'package:app/data/fake_data/money_transaction_fake.dart';
 import 'package:flutter/material.dart';
 import '../../../../common_lib.dart';
-import '../../../../components/custom_list_tile.dart';
 import '../../../../components/mini_card.dart';
 import '../../../home_page/components/container_stack_decoration.dart';
 import '../../../home_page/components/home_page_bottom_falf.dart';
 import '../../../home_page/components/user_card.dart';
 import 'selected_car_info_head.dart';
 
-class SelectedCarInfoContent extends StatelessWidget {
+class SelectedCarInfoContent extends ConsumerWidget {
   const SelectedCarInfoContent({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Column(
       children: [
         SelectedCarInfoHead(userName: 'محمد علي', phoneNumber: '07728833423'),
@@ -43,13 +43,9 @@ class SelectedCarInfoContent extends StatelessWidget {
         ),
         Gap(Insets.small),
         HomePageBottomHalf(
-          moneyTransfersList: [
-            CustomListTile(
-                icon: Assets.assetsIconsRouting,
-                title: 'تم شحن البطاقة',
-                subtitle: '2023/2/24',
-                trailing2: '25,000 د. ع.')
-          ],
+          moneyTransfersList: ref
+              .watch(moneyTransactionsProvider)
+              .when(data: (data) => data, error: (e, r) => [], loading: () => []),
           latestTripsList: [],
         )
       ],

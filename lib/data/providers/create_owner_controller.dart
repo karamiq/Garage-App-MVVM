@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:riverpod/riverpod.dart';
 import '../models/create_owner_state.dart';
@@ -54,7 +53,7 @@ final createOwnerControllerProvider = StateProvider<CreateOwnerState>((ref) {
       drivingLicensePicture: null,
       carPlateNumber: TextEditingController(),
       carPlateLetter: TextEditingController(),
-      carState: TextEditingController(),
+      carGovernorate: TextEditingController(),
       carPlateType: TextEditingController(),
       carShasyNumber: TextEditingController(),
       carType: TextEditingController(),

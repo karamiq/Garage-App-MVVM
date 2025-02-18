@@ -3,18 +3,25 @@ import 'package:flutter/material.dart';
 import '../../../common_lib.dart';
 import '../../../components/custom_app_bar.dart';
 import '../../../components/custom_elevated_button.dart';
-import '../../../components/custom_item_select.dart';
+import '../../../components/custom_paginated_api_item_select.dart';
 import '../../../components/custom_text_form_field.dart';
 import '../../../data/models/vehicle_violations.dart';
+import '../../../data/services/clients/auth_client.dart';
 
-class SendingComplainPage extends StatefulWidget {
-  const SendingComplainPage({super.key});
+class SendingComplainPage extends StatefulHookConsumerWidget {
+  const SendingComplainPage({
+    super.key,
+    required this.isFromProfile,
+    this.debtStatementReceipt,
+  });
+  final bool isFromProfile;
+  final Violation? debtStatementReceipt;
 
   @override
-  State<SendingComplainPage> createState() => _SendingComplainPageState();
+  ConsumerState<SendingComplainPage> createState() => _SendingComplainPageState();
 }
 
-class _SendingComplainPageState extends State<SendingComplainPage> {
+class _SendingComplainPageState extends ConsumerState<SendingComplainPage> {
   final complainTypeController = TextEditingController();
   TextEditingController complainController = TextEditingController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -25,24 +32,28 @@ class _SendingComplainPageState extends State<SendingComplainPage> {
     });
   }
 
+  @override
   Widget build(BuildContext context) {
-    final data = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
-
-    final bool isFromProfile = data['isFromProfile'];
-    final Violation? debtStatementReceipt = data['violation'];
-    void send() {
+    var isLoading = useState<bool>(false);
+    void send() async {
       if (_formKey.currentState!.validate()) {
-        if (isFromProfile) {
+        isLoading.value = true;
+        await Future.delayed((Duration(seconds: 2)));
+        if (widget.isFromProfile) {
           print('Its from profile');
         } else {
           print('Its not from profile');
         }
+        context.showSuccessSnackBar('تم ارسال الشكوى بنجاح');
+        context.pop();
       }
+      isLoading.value = false;
     }
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: CustomAppBar(
-        title: isFromProfile ? 'تقديم شكوى ' : 'شكوى غرامية',
+        title: widget.isFromProfile ? 'تقديم شكوى ' : 'شكوى غرامية',
       ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: Insets.medium, vertical: Insets.medium),
@@ -51,19 +62,19 @@ class _SendingComplainPageState extends State<SendingComplainPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              if (!isFromProfile)
+              if (!widget.isFromProfile)
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
-                      'غرامة ${debtStatementReceipt!.number}#',
+                      'غرامة ${widget.debtStatementReceipt!.number}#',
                       style: TextStyle(
                         fontSize: CustomFontsTheme.bigSize,
                       ),
                     ),
                     SizedBox(width: Insets.exSmall),
                     Text(
-                      debtStatementReceipt.creationDate.format(),
+                      widget.debtStatementReceipt!.creationDate.format(),
                       style: TextStyle(
                         color: Theme.of(context).colorScheme.secondary,
                       ),
@@ -71,23 +82,27 @@ class _SendingComplainPageState extends State<SendingComplainPage> {
                   ],
                 ),
               SizedBox(height: Insets.medium),
-              if (!isFromProfile) Text('لقد حصلت على غرامة بسبب لايوجد'),
-              if (!isFromProfile) SizedBox(height: Insets.medium),
-              if (!isFromProfile)
+              if (!widget.isFromProfile) Text('لقد حصلت على غرامة بسبب لايوجد'),
+              if (!widget.isFromProfile) SizedBox(height: Insets.medium),
+              if (!widget.isFromProfile)
                 Text(
-                  'قيمة الغرامة: ${debtStatementReceipt!.totalAmount}',
+                  'قيمة الغرامة: ${widget.debtStatementReceipt!.totalAmount}',
                   style: TextStyle(
                     fontSize: CustomFontsTheme.bigSize,
                   ),
                 ),
-              if (isFromProfile)
-                CustomApiItemSelect(
+              if (widget.isFromProfile)
+                CustomPaginatedApiItemSelect(
                     labelText: 'أختر نوع الشكوى',
                     controller: complainTypeController,
-                    itemListFuture: Future.value([]),
+                    function: (String search, int page) =>
+                        ref.read(authClientProvider).getGovernorates(
+                              name: search,
+                              pageNumber: page,
+                            ),
                     validator: context.validator.build()),
-              if (!isFromProfile) SizedBox(height: Insets.exLarge),
-              if (isFromProfile) Gap(Insets.medium),
+              if (!widget.isFromProfile) SizedBox(height: Insets.exLarge),
+              if (widget.isFromProfile) Gap(Insets.medium),
               CustomAppTextFormField(
                 prefixIcon: Assets.assetsIconsNotePencil,
                 onChanged: countTextLength,
@@ -110,9 +125,11 @@ class _SendingComplainPageState extends State<SendingComplainPage> {
               ),
               Spacer(),
               ElevatedButton(
-                onPressed: send,
-                child: ElevatedButtonChild(
-                    text: 'أرسال الشكوى', icon: Assets.assetsIconsReciept3),
+                onPressed: isLoading.value ? null : send,
+                child: isLoading.value
+                    ? CircularProgressIndicator.adaptive()
+                    : ElevatedButtonChild(
+                        text: 'أرسال الشكوى', icon: Assets.assetsIconsReciept3),
               ),
               SizedBox(height: Insets.medium),
             ],

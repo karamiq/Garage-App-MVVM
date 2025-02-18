@@ -1,16 +1,15 @@
+import 'package:app/data/models/trip_info_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../common_lib.dart';
 import '../../../components/trip_card.dart';
-
-import '../../../data/models/last_trips.dart';
 
 class LatestTrips extends StatelessWidget {
   const LatestTrips({
     super.key,
     required this.latestTripsList,
   });
-  final List<TripHistory> latestTripsList;
+  final List<TripInfo> latestTripsList;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,9 +27,8 @@ class LatestTrips extends StatelessWidget {
                 physics: NeverScrollableScrollPhysics(),
                 separatorBuilder: (context, index) => Gap(Insets.small),
                 itemBuilder: (context, index) => TripCard(
-                    from: latestTripsList[index].garageName,
-                    to: latestTripsList[index].toGarageName,
-                    price: latestTripsList[index].taxes.toString()),
+                  trip: latestTripsList[index],
+                ),
               ));
   }
 }

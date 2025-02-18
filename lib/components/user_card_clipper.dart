@@ -9,11 +9,11 @@ class UserCardClipper extends CustomClipper<Path> {
     //path.moveTo(0, size.height * .1);
     path.lineTo(0, size.height * .5);
     var firstP1 = Offset(0, size.height * .65);
-    var endP1 = Offset(size.width * .07, size.height / 1.5);
+    var endP1 = Offset(size.width * .06, size.height / 1.5);
     path.quadraticBezierTo(firstP1.dx, firstP1.dy, endP1.dx, endP1.dy);
 
-    var firstP2 = Offset(size.width * .2, size.height * .65);
-    var endP2 = Offset(size.width * .2, size.height * 0.9);
+    var firstP2 = Offset(size.width * .18, size.height * .65);
+    var endP2 = Offset(size.width * .18, size.height * 0.9);
     path.quadraticBezierTo(firstP2.dx, firstP2.dy, endP2.dx, endP2.dy);
 
     var firstP3 = Offset(size.width * .2, size.height);

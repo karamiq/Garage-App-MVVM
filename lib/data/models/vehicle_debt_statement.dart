@@ -6,7 +6,7 @@ part 'vehicle_debt_statement.g.dart';
 @freezed
 class VehicleDebtStatement with _$VehicleDebtStatement {
   factory VehicleDebtStatement({
-    dynamic accumulatedPrice,
+    required int accumulatedPrice,
     required int numberOfReceipt,
     required List<DebtStatementReceipt> debtStatementReceipts,
   }) = _VehicleDebtStatement;

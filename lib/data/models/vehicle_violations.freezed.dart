@@ -131,7 +131,8 @@ class __$$VehicleViolationsImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@jsonSerializableResponse
 class _$VehicleViolationsImpl implements _VehicleViolations {
   _$VehicleViolationsImpl(
       {required this.accumulatedPrice,
@@ -246,12 +247,12 @@ mixin _$Violation {
   String get plateNumber => throw _privateConstructorUsedError;
   FeeFines get feeFines => throw _privateConstructorUsedError;
   bool get isPaid => throw _privateConstructorUsedError;
-  List<String> get images => throw _privateConstructorUsedError;
+  String get images => throw _privateConstructorUsedError;
   int get duplicateCount => throw _privateConstructorUsedError;
   int get amount => throw _privateConstructorUsedError;
   int get totalAmount => throw _privateConstructorUsedError;
-  String get lat => throw _privateConstructorUsedError;
-  String get lng => throw _privateConstructorUsedError;
+  double get lat => throw _privateConstructorUsedError;
+  double get lng => throw _privateConstructorUsedError;
   int get invoiceNumber => throw _privateConstructorUsedError;
   String get violationPayReceiptId => throw _privateConstructorUsedError;
   int get violationPayReceiptNumber => throw _privateConstructorUsedError;
@@ -289,12 +290,12 @@ abstract class $ViolationCopyWith<$Res> {
       String plateNumber,
       FeeFines feeFines,
       bool isPaid,
-      List<String> images,
+      String images,
       int duplicateCount,
       int amount,
       int totalAmount,
-      String lat,
-      String lng,
+      double lat,
+      double lng,
       int invoiceNumber,
       String violationPayReceiptId,
       int violationPayReceiptNumber});
@@ -416,7 +417,7 @@ class _$ViolationCopyWithImpl<$Res, $Val extends Violation>
       images: null == images
           ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as String,
       duplicateCount: null == duplicateCount
           ? _value.duplicateCount
           : duplicateCount // ignore: cast_nullable_to_non_nullable
@@ -432,11 +433,11 @@ class _$ViolationCopyWithImpl<$Res, $Val extends Violation>
       lat: null == lat
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
-              as String,
+              as double,
       lng: null == lng
           ? _value.lng
           : lng // ignore: cast_nullable_to_non_nullable
-              as String,
+              as double,
       invoiceNumber: null == invoiceNumber
           ? _value.invoiceNumber
           : invoiceNumber // ignore: cast_nullable_to_non_nullable
@@ -489,12 +490,12 @@ abstract class _$$ViolationImplCopyWith<$Res>
       String plateNumber,
       FeeFines feeFines,
       bool isPaid,
-      List<String> images,
+      String images,
       int duplicateCount,
       int amount,
       int totalAmount,
-      String lat,
-      String lng,
+      double lat,
+      double lng,
       int invoiceNumber,
       String violationPayReceiptId,
       int violationPayReceiptNumber});
@@ -613,9 +614,9 @@ class __$$ViolationImplCopyWithImpl<$Res>
           : isPaid // ignore: cast_nullable_to_non_nullable
               as bool,
       images: null == images
-          ? _value._images
+          ? _value.images
           : images // ignore: cast_nullable_to_non_nullable
-              as List<String>,
+              as String,
       duplicateCount: null == duplicateCount
           ? _value.duplicateCount
           : duplicateCount // ignore: cast_nullable_to_non_nullable
@@ -631,11 +632,11 @@ class __$$ViolationImplCopyWithImpl<$Res>
       lat: null == lat
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
-              as String,
+              as double,
       lng: null == lng
           ? _value.lng
           : lng // ignore: cast_nullable_to_non_nullable
-              as String,
+              as double,
       invoiceNumber: null == invoiceNumber
           ? _value.invoiceNumber
           : invoiceNumber // ignore: cast_nullable_to_non_nullable
@@ -653,7 +654,8 @@ class __$$ViolationImplCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@jsonSerializableResponse
 class _$ViolationImpl implements _Violation {
   _$ViolationImpl(
       {required this.id,
@@ -673,7 +675,7 @@ class _$ViolationImpl implements _Violation {
       required this.plateNumber,
       required this.feeFines,
       required this.isPaid,
-      required final List<String> images,
+      required this.images,
       required this.duplicateCount,
       required this.amount,
       required this.totalAmount,
@@ -681,8 +683,7 @@ class _$ViolationImpl implements _Violation {
       required this.lng,
       required this.invoiceNumber,
       required this.violationPayReceiptId,
-      required this.violationPayReceiptNumber})
-      : _images = images;
+      required this.violationPayReceiptNumber});
 
   factory _$ViolationImpl.fromJson(Map<String, dynamic> json) =>
       _$$ViolationImplFromJson(json);
@@ -721,14 +722,8 @@ class _$ViolationImpl implements _Violation {
   final FeeFines feeFines;
   @override
   final bool isPaid;
-  final List<String> _images;
   @override
-  List<String> get images {
-    if (_images is EqualUnmodifiableListView) return _images;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_images);
-  }
-
+  final String images;
   @override
   final int duplicateCount;
   @override
@@ -736,9 +731,9 @@ class _$ViolationImpl implements _Violation {
   @override
   final int totalAmount;
   @override
-  final String lat;
+  final double lat;
   @override
-  final String lng;
+  final double lng;
   @override
   final int invoiceNumber;
   @override
@@ -786,7 +781,7 @@ class _$ViolationImpl implements _Violation {
             (identical(other.feeFines, feeFines) ||
                 other.feeFines == feeFines) &&
             (identical(other.isPaid, isPaid) || other.isPaid == isPaid) &&
-            const DeepCollectionEquality().equals(other._images, _images) &&
+            (identical(other.images, images) || other.images == images) &&
             (identical(other.duplicateCount, duplicateCount) ||
                 other.duplicateCount == duplicateCount) &&
             (identical(other.amount, amount) || other.amount == amount) &&
@@ -824,7 +819,7 @@ class _$ViolationImpl implements _Violation {
         plateNumber,
         feeFines,
         isPaid,
-        const DeepCollectionEquality().hash(_images),
+        images,
         duplicateCount,
         amount,
         totalAmount,
@@ -870,12 +865,12 @@ abstract class _Violation implements Violation {
       required final String plateNumber,
       required final FeeFines feeFines,
       required final bool isPaid,
-      required final List<String> images,
+      required final String images,
       required final int duplicateCount,
       required final int amount,
       required final int totalAmount,
-      required final String lat,
-      required final String lng,
+      required final double lat,
+      required final double lng,
       required final int invoiceNumber,
       required final String violationPayReceiptId,
       required final int violationPayReceiptNumber}) = _$ViolationImpl;
@@ -918,7 +913,7 @@ abstract class _Violation implements Violation {
   @override
   bool get isPaid;
   @override
-  List<String> get images;
+  String get images;
   @override
   int get duplicateCount;
   @override
@@ -926,9 +921,9 @@ abstract class _Violation implements Violation {
   @override
   int get totalAmount;
   @override
-  String get lat;
+  double get lat;
   @override
-  String get lng;
+  double get lng;
   @override
   int get invoiceNumber;
   @override

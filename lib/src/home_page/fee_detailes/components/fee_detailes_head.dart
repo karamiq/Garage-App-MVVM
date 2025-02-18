@@ -20,24 +20,23 @@ class FeeDetailesHead extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Text(
-              'غرامة ${debtStatementReceipt.number}#',
+              'غرامة ${debtStatementReceipt.number + 1}#',
               style: TextStyle(
                 fontSize: CustomFontsTheme.bigSize,
               ),
             ),
             Gap(Insets.exSmall),
             Text(
-              debtStatementReceipt.creationDate.toString(),
+              debtStatementReceipt.creationDate.formatDate(),
               style: TextStyle(
                 color: Theme.of(context).colorScheme.secondary,
               ),
             ),
           ],
         ),
-        UnderLinedTextBUtton(
+        UnderlinedTextButton(
           text: 'تقديم شكوى',
-          onTap: () => context
-              .pushNamed(Routes.feesOnCarPage + Routes.sendingComplainPage, extra: {
+          onTap: () => context.pushNamed(Routes.sendingComplainPage, extra: {
             'isFromProfile': false,
             'debtStatementReceipt': debtStatementReceipt,
           }),

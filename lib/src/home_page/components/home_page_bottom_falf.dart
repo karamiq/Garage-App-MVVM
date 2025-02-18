@@ -1,13 +1,14 @@
+import 'package:app/data/models/money_transaction.dart';
+import 'package:app/data/models/trip_info_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../common_lib.dart';
-import '../../../data/models/last_trips.dart';
 import '../latest_trips/latest_trips.dart';
 import 'money_transfers.dart';
 
 class HomePageBottomHalf extends StatefulWidget {
-  final List<TripHistory> latestTripsList;
-  final List moneyTransfersList;
+  final List<TripInfo> latestTripsList;
+  final List<MoneyTransaction> moneyTransfersList;
 
   const HomePageBottomHalf(
       {super.key, required this.latestTripsList, required this.moneyTransfersList});

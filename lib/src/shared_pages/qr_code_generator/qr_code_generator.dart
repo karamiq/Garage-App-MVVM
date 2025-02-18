@@ -5,17 +5,13 @@ import '../../../components/custom_app_bar.dart';
 import '../../../components/custom_elevated_button.dart';
 
 class QrCodeGEneratorPage extends StatelessWidget {
-  const QrCodeGEneratorPage({super.key});
-
+  const QrCodeGEneratorPage({super.key, required this.newCar, required this.qrData});
+  final String qrData;
+  final bool newCar;
   @override
   Widget build(BuildContext context) {
-    final data = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
-    final text = data['text'];
-    final qrData = data['qrData'];
-    final newCar = data['newCar'];
-    var title;
     return Scaffold(
-      appBar: newCar ? null : CustomAppBar(title: title),
+      appBar: newCar ? null : CustomAppBar(),
       body: Center(
         heightFactor: .9,
         child: Padding(
@@ -47,8 +43,9 @@ class QrCodeGEneratorPage extends StatelessWidget {
                           child: Center(
                             child: QrImageView(
                               dataModuleStyle: QrDataModuleStyle(
-                                  dataModuleShape: QrDataModuleShape.circle),
-                              foregroundColor: Theme.of(context).colorScheme.primary,
+                                  color: context.theme.colorScheme.primary,
+                                  dataModuleShape: QrDataModuleShape.square),
+                              foregroundColor: context.theme.colorScheme.primary,
                               data: qrData,
                               version: QrVersions.auto,
                             ),
@@ -58,7 +55,7 @@ class QrCodeGEneratorPage extends StatelessWidget {
                     ),
                     Gap(Insets.medium),
                     Text(
-                      text,
+                      'قم بأعطاء الكود عند البوابة للخروج من الكراج',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: CustomFontsTheme.veryBigSize,

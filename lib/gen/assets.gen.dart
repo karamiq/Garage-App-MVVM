@@ -423,12 +423,23 @@ class $AssetsImagesGen {
       ];
 }
 
+class $AssetsThemesGen {
+  const $AssetsThemesGen();
+
+  /// File path: assets/themes/dark_map_style.json
+  String get darkMapStyle => 'assets/themes/dark_map_style.json';
+
+  /// List of all assets
+  List<String> get values => [darkMapStyle];
+}
+
 class Assets {
-  Assets._();
+  const Assets._();
 
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
   static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsThemesGen themes = $AssetsThemesGen();
 }
 
 class AssetGenImage {
@@ -464,7 +475,7 @@ class AssetGenImage {
     bool gaplessPlayback = true,
     bool isAntiAlias = false,
     String? package,
-    FilterQuality filterQuality = FilterQuality.low,
+    FilterQuality filterQuality = FilterQuality.medium,
     int? cacheWidth,
     int? cacheHeight,
   }) {

@@ -17,15 +17,17 @@ class MiniCard extends StatelessWidget {
   final String cardNumber;
   final String cardNumText;
   final void Function() onIconPressed;
+
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
+    return LayoutBuilder(builder: (context, constraints) {
+      return Container(
         height: 170,
-        width: 165,
+        width: constraints.maxWidth / 2 - 16,
         decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.onInverseSurface,
-            borderRadius: BorderRadius.circular(CustomBorderTheme.normalBorderRadius)),
+          color: Theme.of(context).colorScheme.onInverseSurface,
+          borderRadius: BorderRadius.circular(CustomBorderTheme.normalBorderRadius),
+        ),
         child: Stack(
           children: [
             decoration,
@@ -36,8 +38,9 @@ class MiniCard extends StatelessWidget {
                 child: Text(
                   cardTitle,
                   style: TextStyle(
-                      fontSize: CustomFontsTheme.mediumSize,
-                      fontWeight: CustomFontsTheme.mediumWeight),
+                    fontSize: CustomFontsTheme.mediumSize,
+                    fontWeight: CustomFontsTheme.mediumWeight,
+                  ),
                 ),
               ),
             ),
@@ -53,19 +56,24 @@ class MiniCard extends StatelessWidget {
                         Text(
                           cardNumber,
                           style: TextStyle(
-                              fontSize: CustomFontsTheme.bigSize,
-                              fontWeight: CustomFontsTheme.bigWeight),
+                            fontSize: CustomFontsTheme.bigSize,
+                            fontWeight: CustomFontsTheme.bigWeight,
+                          ),
                         ),
                         Gap(Insets.exSmall),
                         Text(cardNumText),
                       ],
                     ),
-                    Spacer(),
+                    const Spacer(),
                     IconButton(
                       onPressed: onIconPressed,
                       style: IconButton.styleFrom(
-                          backgroundColor: Theme.of(context).scaffoldBackgroundColor),
-                      icon: SvgPicture.asset(Assets.assetsIconsVector),
+                        backgroundColor: context.theme.colorScheme.surface,
+                      ),
+                      icon: SvgPicture.asset(
+                        Assets.assetsIconsVector,
+                        color: context.theme.colorScheme.onSurface,
+                      ),
                     ),
                   ],
                 ),
@@ -73,7 +81,7 @@ class MiniCard extends StatelessWidget {
             ),
           ],
         ),
-      ),
-    );
+      );
+    });
   }
 }

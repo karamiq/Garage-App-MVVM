@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../common_lib.dart';
 import '../../../components/custom_svg_style.dart';
@@ -84,7 +85,14 @@ class HolderInfoRow extends StatelessWidget {
                   InkWell(
                       borderRadius:
                           BorderRadius.circular(CustomBorderTheme.normalBorderRadius),
-                      onTap: () async => await (phoneNumber),
+                      onTap: () async {
+                        final Uri phoneUri = Uri.parse('tel:$phoneNumber');
+                        if (await canLaunchUrl(phoneUri)) {
+                          await launchUrl(phoneUri);
+                        } else {
+                          debugPrint("Could not launch $phoneUri");
+                        }
+                      },
                       child: CustomSvgStyle(icon: Assets.assetsIconsPhone))
                 ],
               ),

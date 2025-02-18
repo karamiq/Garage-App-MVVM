@@ -11,12 +11,14 @@ class VehiclesInfoRow extends StatelessWidget {
     required this.carLetter,
     required this.carState,
     required this.id,
+    required this.index,
   });
   final String id;
   final String carType;
   final String carPlateNumber;
   final String carLetter;
   final String carState;
+  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,7 @@ class VehiclesInfoRow extends StatelessWidget {
       elevation: 0,
       color: Theme.of(context).colorScheme.onSecondary,
       child: InkWell(
-        onTap: () => context.pushNamed(Routes.selectedCarInfoPage),
+        onTap: () => context.pushNamed(Routes.selectedCarInfoPage, extra: index),
         borderRadius: BorderRadius.circular(CustomBorderTheme.normalBorderRadius),
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: Insets.small, vertical: Insets.small),
@@ -76,7 +78,7 @@ class VehiclesInfoRow extends StatelessWidget {
                           ),
                           Gap(Insets.exSmall),
                           Text(
-                            '$carPlateNumber$carLetter/$carState',
+                            '$carPlateNumber $carLetter / $carState',
                             overflow: TextOverflow.ellipsis,
                             maxLines: 2,
                           ),

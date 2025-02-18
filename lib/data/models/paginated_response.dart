@@ -8,39 +8,29 @@ part "paginated_response.g.dart";
 @JsonSerializable(genericArgumentFactories: true, createToJson: false)
 class PaginatedResponse<T> implements Paginated<T> {
   const PaginatedResponse({
-    required this.result,
-    required this.count,
-    required this.message,
-    required this.statusCode,
+    required this.data,
+    required this.pagesCount,
   });
 
-
   @override
-  final List<T> result;
-  final int count;
-  final String message;
-  final int statusCode;
+  final List<T> data;
+  final int pagesCount;
 
-
-  factory PaginatedResponse.fromJson(
-          Map<String, dynamic> json, FromJsonT<T> fromJsonT) =>
+  factory PaginatedResponse.fromJson(Map<String, dynamic> json, FromJsonT<T> fromJsonT) =>
       _$PaginatedResponseFromJson<T>(json, fromJsonT);
 
   PaginatedResponse<T> copyWith({
     List<T>? result,
     int? count,
-    String? message,
+    int? message,
     int? statusCode,
   }) {
     return PaginatedResponse<T>(
-      result: result ?? this.result,
-      count: count ?? this.count,
-      message: message ?? this.message,
-      statusCode: statusCode ?? this.statusCode,
+      data: result ?? this.data,
+      pagesCount: statusCode ?? this.pagesCount,
     );
   }
-  
-  @override
-  int get total => count;
 
+  @override
+  int get total => pagesCount;
 }

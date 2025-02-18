@@ -1,3 +1,4 @@
+import 'package:app/data/models/trip_info_model.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -6,8 +7,8 @@ import '../../../components/custom_app_bar.dart';
 import 'components/trip_detailes_head.dart';
 
 class TripDetailesPage extends StatefulWidget {
-  const TripDetailesPage({super.key});
-
+  const TripDetailesPage({super.key, required this.trip});
+  final TripInfo trip;
   @override
   State<TripDetailesPage> createState() => _TripDetailesPageState();
 }
@@ -65,27 +66,30 @@ class _TripDetailesPageState extends State<TripDetailesPage> {
                   color: Theme.of(context).colorScheme.onSecondary,
                   borderRadius:
                       BorderRadius.circular(CustomBorderTheme.normalBorderRadius)),
-              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                Text(
-                  'معلومات الرحلة',
-                  style: TextStyle(
-                    fontSize: CustomFontsTheme.bigSize,
-                  ),
-                ),
-                Gap(Insets.medium),
-                TripDetailesInfoRow(
-                    icon: Assets.assetsIconsSignOut,
-                    text: 'وقت الخروج',
-                    value: DateFormat('h:mm a').format(DateTime.now())),
-                TripDetailesInfoRow(
-                    icon: Assets.assetsIconsSignIn,
-                    text: 'وقت الدخول',
-                    value: DateFormat('h:mm a').format(DateTime.now())),
-                TripDetailesInfoRow(
-                    icon: Assets.assetsIconsTimer,
-                    text: 'مدة الرحلة',
-                    value: '5 ساعات و 7 دقائق '),
-              ]),
+              child: ColumnPadded(
+                  gap: 5,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'معلومات الرحلة',
+                      style: TextStyle(
+                        fontSize: CustomFontsTheme.bigSize,
+                      ),
+                    ),
+                    Gap(Insets.medium),
+                    TripDetailesInfoRow(
+                        icon: Assets.assetsIconsSignOut,
+                        text: 'وقت الخروج',
+                        value: DateFormat('h:mm a').format(DateTime.now())),
+                    TripDetailesInfoRow(
+                        icon: Assets.assetsIconsSignIn,
+                        text: 'وقت الدخول',
+                        value: DateFormat('h:mm a').format(DateTime.now())),
+                    TripDetailesInfoRow(
+                        icon: Assets.assetsIconsTimer,
+                        text: 'مدة الرحلة',
+                        value: '5 ساعات و 7 دقائق '),
+                  ]),
             ),
             Gap(Insets.exLarge),
             Container(
@@ -94,7 +98,8 @@ class _TripDetailesPageState extends State<TripDetailesPage> {
                   color: Theme.of(context).colorScheme.onSecondary,
                   borderRadius:
                       BorderRadius.circular(CustomBorderTheme.normalBorderRadius)),
-              child: Column(
+              child: ColumnPadded(
+                gap: 5,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
