@@ -25,6 +25,12 @@ class OwnerCarInfoPage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final isLetterEnabled = ref
+        .watch(createOwnerControllerProvider.notifier)
+        .state
+        .carGovernorate
+        .text
+        .isNotEmpty;
     final controller = ref.watch(createOwnerControllerProvider.notifier).state;
     final redirectStatus = ref.watch(carInfoPageStatusProvider.notifier).state;
     void checkValidation() {
@@ -83,7 +89,7 @@ class OwnerCarInfoPage extends ConsumerWidget {
                   SizedBox(width: Insets.small),
                   Expanded(
                     child: CustomPaginatedApiItemSelect<PlateCharacters>(
-                      enabled: controller.carGovernorate.text.isNotEmpty,
+                      enabled: isLetterEnabled,
                       onChanged: (selectedChar) async {
                         controller.plateCharacterId.text = selectedChar.id;
                       },
@@ -114,6 +120,7 @@ class OwnerCarInfoPage extends ConsumerWidget {
                 onChanged: (selectedState) {
                   controller.carGovernorateId.text = selectedState.id;
                   controller.carPlateLetter.text = '';
+                  //   setState(() {});
                 },
               ),
               SizedBox(height: Insets.small),

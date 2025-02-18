@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import '../../../common_lib.dart';
 
 class CardInfoContainer extends StatelessWidget {
-  CardInfoContainer({super.key, required this.text, this.fontSize});
+  const CardInfoContainer({super.key, required this.text, this.fontSize});
   final String text;
-  double? fontSize;
+  final double? fontSize;
   @override
   Widget build(BuildContext context) {
     return Container(

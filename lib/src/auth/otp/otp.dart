@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:app/common_lib.dart';
 import 'package:flutter/material.dart';
 import 'package:pinput/pinput.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../components/custom_back_botton.dart';
 
@@ -65,15 +64,13 @@ class _OtpPageState extends State<OtpPage> {
   }
 
   void confirm() async {
-    final prefs = await SharedPreferences.getInstance();
     if (!_formKey.currentState!.validate()) {
       return;
     }
-
     if (widget.isLogin) {
       //Do some login logic then navigate to the next page
       //
-      context.pushNamed(Routes.tapsPage);
+      context.pushNamed(Routes.home);
     } else {
       //Do some register logic then navigate to the next page
       context.pushNamed(Routes.createAccountTypePage);
