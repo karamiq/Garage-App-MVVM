@@ -1,5 +1,5 @@
-import 'package:app/data/providers/settings_provider.dart';
-import 'package:app/theme/theme_mode.dart';
+import 'package:nafarat/data/providers/settings_provider.dart';
+import 'package:nafarat/theme/theme_mode.dart';
 import 'package:flutter/material.dart';
 
 import '../common_lib.dart';
@@ -27,7 +27,7 @@ class ElevatedButtonChild extends ConsumerWidget {
         if (icon is String)
           SvgPicture.asset(
             icon as String,
-            color: !isDark ? Colors.white : Colors.black,
+            color: isDark ? Colors.white : Colors.black,
           )
       ],
     );

@@ -1,6 +1,6 @@
-import 'package:app/data/models/_models.dart';
-import 'package:app/paging/pagination_controller.dart';
-import 'package:app/paging/paging_list_delegate.dart';
+import 'package:nafarat/data/models/_models.dart';
+import 'package:nafarat/paging/pagination_controller.dart';
+import 'package:nafarat/paging/paging_list_delegate.dart';
 import 'package:flutter/material.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 

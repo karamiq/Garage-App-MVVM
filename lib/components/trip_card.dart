@@ -1,4 +1,4 @@
-import 'package:app/data/models/trip_info_model.dart';
+import 'package:nafarat/data/models/trip_info_model.dart';
 import 'package:flutter/material.dart';
 
 import '../common_lib.dart';

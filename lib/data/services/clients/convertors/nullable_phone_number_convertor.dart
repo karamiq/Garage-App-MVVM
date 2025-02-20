@@ -1,4 +1,4 @@
-import 'package:app/data/models/phone_number.dart';
+import 'package:nafarat/data/models/phone_number.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 class PhoneNumberConvertor implements JsonConverter<PhoneNumber, String> {
@@ -16,8 +16,7 @@ class PhoneNumberConvertor implements JsonConverter<PhoneNumber, String> {
 }
 
 // Handle iraqi number and global and null numbers
-class NullablePhoneNumberConvertor
-    implements JsonConverter<PhoneNumber?, String?> {
+class NullablePhoneNumberConvertor implements JsonConverter<PhoneNumber?, String?> {
   const NullablePhoneNumberConvertor();
 
   @override

@@ -1,4 +1,4 @@
-import 'package:app/data/models/vehicle.dart';
+import 'package:nafarat/data/models/vehicle.dart';
 
 import '_models.dart';
 import 'driver_card.dart';

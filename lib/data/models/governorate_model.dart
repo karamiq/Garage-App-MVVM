@@ -1,4 +1,4 @@
-import 'package:app/utils/annotations/annotations_lib.dart';
+import 'package:nafarat/utils/annotations/annotations_lib.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'governorate_model.g.dart';

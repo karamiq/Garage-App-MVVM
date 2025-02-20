@@ -1,4 +1,4 @@
-import 'package:app/data/models/_models.dart';
+import 'package:nafarat/data/models/_models.dart';
 
 part 'garage_model.freezed.dart';
 part 'garage_model.g.dart';

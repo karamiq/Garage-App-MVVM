@@ -1,4 +1,4 @@
-import 'package:app/data/models/json_types.dart';
+import 'package:nafarat/data/models/json_types.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'default_response.g.dart';
@@ -22,8 +22,7 @@ class DefaultResponse<T> {
     required this.statusCode,
   });
 
-  factory DefaultResponse.fromJson(
-          Map<String, dynamic> json, FromJsonT<T> fromJsonT) =>
+  factory DefaultResponse.fromJson(Map<String, dynamic> json, FromJsonT<T> fromJsonT) =>
       _$DefaultResponseFromJson<T>(json, fromJsonT);
 
   DefaultResponse<T> copyWith({

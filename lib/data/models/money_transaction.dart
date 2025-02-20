@@ -1,4 +1,4 @@
-import 'package:app/data/models/_models.dart';
+import 'package:nafarat/data/models/_models.dart';
 
 part 'money_transaction.freezed.dart';
 part 'money_transaction.g.dart';

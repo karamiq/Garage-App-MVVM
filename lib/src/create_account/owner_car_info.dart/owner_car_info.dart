@@ -1,6 +1,6 @@
-import 'package:app/data/models/plate_types.dart';
-import 'package:app/data/models/vehicle_models.dart';
-import 'package:app/utils/app_validator.dart';
+import 'package:nafarat/data/models/plate_types.dart';
+import 'package:nafarat/data/models/vehicle_models.dart';
+import 'package:nafarat/utils/app_validator.dart';
 import 'package:flutter/material.dart';
 import '../../../common_lib.dart';
 import '../../../components/custom_app_bar.dart';

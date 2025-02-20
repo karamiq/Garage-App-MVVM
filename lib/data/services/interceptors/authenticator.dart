@@ -1,12 +1,10 @@
-import 'package:app/data/providers/authentication_provider.dart';
+import 'package:nafarat/data/providers/authentication_provider.dart';
 import 'package:dio/dio.dart';
 
 class Authenticator extends Interceptor {
   final Authentication authentication;
   Authenticator(
-     
-       this.authentication,
-     
+    this.authentication,
   );
 
   @override

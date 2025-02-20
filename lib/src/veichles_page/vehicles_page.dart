@@ -1,9 +1,9 @@
-import 'package:app/components/custom_list_tile_skeleton.dart';
-import 'package:app/data/fake_data/constatnt_fake.dart';
-import 'package:app/data/fake_data/drivers_fake.dart';
-import 'package:app/data/fake_data/profile_fake.dart';
-import 'package:app/data/providers/car_info_status.dart';
-import 'package:app/src/veichles_page/components/holder_info_row.dart';
+import 'package:nafarat/components/custom_list_tile_skeleton.dart';
+import 'package:nafarat/data/fake_data/constatnt_fake.dart';
+import 'package:nafarat/data/fake_data/drivers_fake.dart';
+import 'package:nafarat/data/fake_data/profile_fake.dart';
+import 'package:nafarat/data/providers/car_info_status.dart';
+import 'package:nafarat/src/veichles_page/components/holder_info_row.dart';
 import 'package:flutter/material.dart';
 import '../../common_lib.dart';
 import '../../components/cusotm_row_skeleton.dart';

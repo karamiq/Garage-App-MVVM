@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:app/components/cusotm_row_skeleton.dart';
-import 'package:app/data/models/garage_model.dart';
-import 'package:app/data/models/governorate_model.dart';
+import 'package:nafarat/components/cusotm_row_skeleton.dart';
+import 'package:nafarat/data/models/garage_model.dart';
+import 'package:nafarat/data/models/governorate_model.dart';
 import '../../../common_lib.dart';
 import '../../../components/custom_app_bar.dart';
 import '../../../components/custom_paginated_api_item_select.dart';

@@ -171,7 +171,7 @@ class __$$PlateCharactersImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-@jsonSerializableResponse
+@jsonSerializable
 class _$PlateCharactersImpl implements _PlateCharacters {
   const _$PlateCharactersImpl(
       {required this.name,

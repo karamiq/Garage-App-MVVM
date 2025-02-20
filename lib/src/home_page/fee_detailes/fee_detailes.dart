@@ -1,5 +1,5 @@
-import 'package:app/components/under_lined_text_button.dart';
-import 'package:app/src/home_page/fee_detailes/components/fee_detailes_head.dart';
+import 'package:nafarat/components/under_lined_text_button.dart';
+import 'package:nafarat/src/home_page/fee_detailes/components/fee_detailes_head.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 // Import hooks package

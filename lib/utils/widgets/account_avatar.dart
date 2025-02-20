@@ -1,18 +1,17 @@
-import 'package:app/utils/extensions.dart';
+import 'package:nafarat/utils/extensions.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:skeletons/skeletons.dart';
 
-import 'package:app/common_lib.dart';
+import 'package:nafarat/common_lib.dart';
 
 class AccountAvatar extends StatelessWidget {
-  const AccountAvatar({
-    super.key,
-    required this.imageUrl,
-    this.size = 56,
-    this.isVerified = false,
-    this.verifiedSize = 20
-  });
+  const AccountAvatar(
+      {super.key,
+      required this.imageUrl,
+      this.size = 56,
+      this.isVerified = false,
+      this.verifiedSize = 20});
 
   final String imageUrl;
   final double size, verifiedSize;
@@ -23,7 +22,7 @@ class AccountAvatar extends StatelessWidget {
     return Badge(
       label:
           // isVerified ? SvgPicture.asset(Assets.assetsSvgCheckmarkBadge) :
-           null,
+          null,
       smallSize: verifiedSize,
       largeSize: verifiedSize,
       backgroundColor: Colors.transparent,
@@ -32,15 +31,13 @@ class AccountAvatar extends StatelessWidget {
       child: CachedNetworkImage(
         fit: BoxFit.contain,
         imageUrl: imageUrl,
-        imageBuilder:(context, imageProvider)=> Container(
+        imageBuilder: (context, imageProvider) => Container(
           height: size,
           width: size,
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             border: Border.all(
-              color: isVerified
-                  ? context.colorScheme.primary
-                  : const Color(0xFF000000),
+              color: isVerified ? context.colorScheme.primary : const Color(0xFF000000),
               width: isVerified ? 1 : 0.15,
             ),
             image: DecorationImage(
@@ -48,7 +45,7 @@ class AccountAvatar extends StatelessWidget {
             ),
           ),
         ),
-        placeholder: (context, url) =>  SkeletonAvatar(
+        placeholder: (context, url) => SkeletonAvatar(
           style: SkeletonAvatarStyle(shape: BoxShape.circle, height: size, width: size),
         ),
       ),

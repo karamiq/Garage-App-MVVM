@@ -1,9 +1,12 @@
-import 'package:app/common_lib.dart';
+import 'package:nafarat/common_lib.dart';
 import 'package:flutter/material.dart';
 
 class SelectableButton extends StatelessWidget {
   const SelectableButton(
-      {super.key, required this.onPressed, required this.label, required this.isSelected});
+      {super.key,
+      required this.onPressed,
+      required this.label,
+      required this.isSelected});
 
   final VoidCallback onPressed;
   final String label;

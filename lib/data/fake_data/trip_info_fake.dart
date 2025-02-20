@@ -1,5 +1,5 @@
-import 'package:app/common_lib.dart';
-import 'package:app/data/models/trip_info_model.dart';
+import 'package:nafarat/common_lib.dart';
+import 'package:nafarat/data/models/trip_info_model.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'trip_info_fake.g.dart';

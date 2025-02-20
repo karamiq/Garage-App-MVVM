@@ -1,6 +1,5 @@
-import 'package:app/utils/constants/sizes.dart';
+import 'package:nafarat/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
-
 
 class CustomSkeleton extends StatelessWidget {
   const CustomSkeleton({super.key, this.height, this.width, this.layer = 1});
@@ -16,8 +15,7 @@ class CustomSkeleton extends StatelessWidget {
       padding: const EdgeInsets.all(Insets.medium / 2),
       decoration: BoxDecoration(
           color: Colors.black.withOpacity(0.04 * layer),
-          borderRadius:
-              const BorderRadius.all(Radius.circular(BorderSize.small))),
+          borderRadius: const BorderRadius.all(Radius.circular(BorderSize.small))),
     );
   }
 }

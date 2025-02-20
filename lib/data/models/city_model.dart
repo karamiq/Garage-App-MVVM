@@ -1,5 +1,5 @@
-import 'package:app/data/models/_models.dart';
-import 'package:app/data/models/governorate_model.dart';
+import 'package:nafarat/data/models/_models.dart';
+import 'package:nafarat/data/models/governorate_model.dart';
 
 part 'city_model.freezed.dart';
 part 'city_model.g.dart';

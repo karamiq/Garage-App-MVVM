@@ -1,11 +1,11 @@
-import 'package:app/data/services/clients/_clients.dart';
+import '../services/clients/_clients.dart';
 
 part 'plate_characters.freezed.dart';
 part 'plate_characters.g.dart';
 
 @freezedResponse
 class PlateCharacters with _$PlateCharacters {
-  @jsonSerializableResponse
+  @jsonSerializable
   const factory PlateCharacters({
     required String name,
     required String governorateId,

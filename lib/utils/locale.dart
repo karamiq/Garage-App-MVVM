@@ -1,6 +1,5 @@
-
-import 'package:app/common_lib.dart';
-import 'package:app/utils/extensions.dart';
+import 'package:nafarat/common_lib.dart';
+import 'package:nafarat/utils/extensions.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:form_validator/form_validator.dart';
 

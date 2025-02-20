@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:app/utils/constants/sizes.dart';
+import 'package:nafarat/utils/constants/sizes.dart';
 
 class DotIndicator extends StatelessWidget {
   const DotIndicator({
@@ -16,9 +16,7 @@ class DotIndicator extends StatelessWidget {
       height: 6,
       width: isActive ? 35 : 6,
       decoration: BoxDecoration(
-        color: isActive
-            ? Theme.of(context).colorScheme.primary
-            : const Color(0xffD9D9D9),
+        color: isActive ? Theme.of(context).colorScheme.primary : const Color(0xffD9D9D9),
         borderRadius: const BorderRadius.all(Radius.circular(Insets.large)),
       ),
     );

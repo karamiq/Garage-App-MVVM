@@ -1,6 +1,6 @@
-import 'package:app/data/models/_models.dart';
-import 'package:app/data/models/money_transaction.dart';
-import 'package:app/data/models/trip_info_model.dart';
+import 'package:nafarat/data/models/_models.dart';
+import 'package:nafarat/data/models/money_transaction.dart';
+import 'package:nafarat/data/models/trip_info_model.dart';
 
 part 'profile_model.freezed.dart';
 part 'profile_model.g.dart';

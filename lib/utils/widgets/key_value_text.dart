@@ -1,4 +1,4 @@
-import 'package:app/common_lib.dart';
+import 'package:nafarat/common_lib.dart';
 import 'package:flutter/widgets.dart';
 
 class KeyValueText extends StatelessWidget {

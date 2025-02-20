@@ -1,5 +1,5 @@
-import 'package:app/utils/constants/sizes.dart';
-import 'package:app/utils/widgets/skelton.dart';
+import 'package:nafarat/utils/constants/sizes.dart';
+import 'package:nafarat/utils/widgets/skelton.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 

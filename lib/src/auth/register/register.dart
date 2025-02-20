@@ -1,4 +1,4 @@
-import 'package:app/components/custom_auth_text_feild.dart';
+import 'package:nafarat/components/custom_auth_text_feild.dart';
 import 'package:flutter/material.dart';
 import '../../../common_lib.dart';
 import '../../../components/custom_back_botton.dart';

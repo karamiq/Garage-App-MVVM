@@ -1,6 +1,6 @@
-import 'package:app/data/models/authentication_model.dart';
-import 'package:app/data/shared_preference/preferences.dart';
-import 'package:app/router/app_router.dart';
+import 'package:nafarat/data/models/authentication_model.dart';
+import 'package:nafarat/data/shared_preference/preferences.dart';
+import 'package:nafarat/router/app_router.dart';
 import 'package:flutter/material.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'object_preference_provider.dart';

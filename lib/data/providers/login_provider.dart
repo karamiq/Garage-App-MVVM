@@ -1,6 +1,6 @@
-import 'package:app/data/models/authentication_model.dart';
-import 'package:app/data/providers/authentication_provider.dart';
-import 'package:app/data/services/clients/auth_client.dart';
+import 'package:nafarat/data/models/authentication_model.dart';
+import 'package:nafarat/data/providers/authentication_provider.dart';
+import 'package:nafarat/data/services/clients/auth_client.dart';
 
 import '../services/clients/_clients.dart';
 

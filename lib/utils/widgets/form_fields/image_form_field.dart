@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:app/common_lib.dart';
-import 'package:app/data/services/local_services.dart';
+import 'package:nafarat/common_lib.dart';
+import 'package:nafarat/data/services/local_services.dart';
 import 'package:flutter/material.dart';
 import 'package:image_cropper/image_cropper.dart';
 
@@ -116,5 +116,3 @@ class ImageFormField extends StatelessWidget {
     );
   }
 }
-
-

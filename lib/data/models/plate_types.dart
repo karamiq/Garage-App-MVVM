@@ -1,4 +1,4 @@
-import 'package:app/data/models/_models.dart';
+import 'package:nafarat/data/models/_models.dart';
 
 part 'plate_types.freezed.dart';
 part 'plate_types.g.dart';

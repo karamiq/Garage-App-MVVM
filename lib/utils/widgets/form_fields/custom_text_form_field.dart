@@ -1,4 +1,4 @@
-import 'package:app/utils/extensions.dart';
+import 'package:nafarat/utils/extensions.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextFormField extends StatelessWidget {
@@ -28,8 +28,6 @@ class CustomTextFormField extends StatelessWidget {
   final int? maxLines, maxLength;
   final bool obscureText;
   final TextInputType? keyboardType;
-  
-  
 
   @override
   Widget build(BuildContext context) {

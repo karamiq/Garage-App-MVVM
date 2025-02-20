@@ -1,5 +1,5 @@
-import 'package:app/common_lib.dart';
-import 'package:app/data/models/profile_model.dart';
+import 'package:nafarat/common_lib.dart';
+import 'package:nafarat/data/models/profile_model.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import 'constatnt_fake.dart';

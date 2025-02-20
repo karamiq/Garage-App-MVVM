@@ -1,5 +1,5 @@
-import 'package:app/data/models/money_transaction.dart';
-import 'package:app/data/models/trip_info_model.dart';
+import 'package:nafarat/data/models/money_transaction.dart';
+import 'package:nafarat/data/models/trip_info_model.dart';
 import 'package:flutter/material.dart';
 
 import '../../../common_lib.dart';

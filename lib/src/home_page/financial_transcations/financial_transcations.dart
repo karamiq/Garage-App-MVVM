@@ -1,5 +1,5 @@
-import 'package:app/components/custom_list_tile_skeleton.dart';
-import 'package:app/data/fake_data/financial_transaction_fake.dart';
+import 'package:nafarat/components/custom_list_tile_skeleton.dart';
+import 'package:nafarat/data/fake_data/financial_transaction_fake.dart';
 import 'package:flutter/material.dart';
 
 import '../../../common_lib.dart';

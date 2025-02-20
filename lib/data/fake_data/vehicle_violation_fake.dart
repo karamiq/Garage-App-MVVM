@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:app/common_lib.dart';
-import 'package:app/data/services/clients/_clients.dart';
+import 'package:nafarat/common_lib.dart';
+import 'package:nafarat/data/services/clients/_clients.dart';
 import '../models/vehicle_violations.dart';
 import 'constatnt_fake.dart';
 

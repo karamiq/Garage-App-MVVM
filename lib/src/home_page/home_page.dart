@@ -1,5 +1,5 @@
-import 'package:app/data/fake_data/constatnt_fake.dart';
-import 'package:app/data/fake_data/profile_fake.dart';
+import 'package:nafarat/data/fake_data/constatnt_fake.dart';
+import 'package:nafarat/data/fake_data/profile_fake.dart';
 import 'dart:async';
 import 'package:flutter/material.dart';
 import '../../common_lib.dart';

@@ -1,5 +1,5 @@
-import 'package:app/data/services/clients/callback.dart';
-import 'package:app/utils/extensions.dart';
+import 'package:nafarat/data/services/clients/callback.dart';
+import 'package:nafarat/utils/extensions.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_cropper/image_cropper.dart';

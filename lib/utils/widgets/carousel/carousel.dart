@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:app/common_lib.dart';
-import 'package:app/utils/widgets/carousel/carousel_banner.dart';
-import 'package:app/utils/widgets/carousel/dot_indicator.dart';
+import 'package:nafarat/common_lib.dart';
+import 'package:nafarat/utils/widgets/carousel/carousel_banner.dart';
+import 'package:nafarat/utils/widgets/carousel/dot_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 

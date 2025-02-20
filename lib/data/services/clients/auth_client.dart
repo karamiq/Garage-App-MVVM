@@ -1,7 +1,7 @@
-import 'package:app/data/models/authentication_model.dart';
-import 'package:app/data/models/garage_model.dart';
-import 'package:app/data/models/plate_characters.dart';
-import 'package:app/data/services/clients/callback.dart';
+import 'package:nafarat/data/models/authentication_model.dart';
+import 'package:nafarat/data/models/garage_model.dart';
+import 'package:nafarat/data/models/plate_characters.dart';
+import 'package:nafarat/data/services/clients/callback.dart';
 
 import '../../models/governorate_model.dart';
 import '../../models/plate_types.dart';

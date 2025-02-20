@@ -1,4 +1,4 @@
-import 'package:app/common_lib.dart';
+import 'package:nafarat/common_lib.dart';
 import 'package:flutter/material.dart';
 
 class RoundedButton extends StatelessWidget {
@@ -34,14 +34,12 @@ class RoundedButton extends StatelessWidget {
             onTap: onTap,
             child: Center(
               child: svgPath != null
-                  ? count !=
-                          null // <- Use count to conditionally render Badge.count
+                  ? count != null // <- Use count to conditionally render Badge.count
                       ? Badge.count(
                           count: count!,
                           alignment: Alignment.topLeft,
-                          backgroundColor: hasBadge
-                              ? context.colorScheme.primary
-                              : Colors.transparent,
+                          backgroundColor:
+                              hasBadge ? context.colorScheme.primary : Colors.transparent,
                           child: SvgPicture.asset(
                             svgPath!,
                             // ignore: deprecated_member_use
@@ -53,9 +51,8 @@ class RoundedButton extends StatelessWidget {
                       : Badge(
                           alignment: Alignment.topRight,
                           smallSize: 10,
-                          backgroundColor: hasBadge
-                              ? context.colorScheme.primary
-                              : Colors.transparent,
+                          backgroundColor:
+                              hasBadge ? context.colorScheme.primary : Colors.transparent,
                           child: SvgPicture.asset(
                             svgPath!,
                             // ignore: deprecated_member_use
@@ -67,9 +64,8 @@ class RoundedButton extends StatelessWidget {
                   : Badge(
                       alignment: Alignment.topRight,
                       smallSize: 10,
-                      backgroundColor: hasBadge
-                          ? context.colorScheme.primary
-                          : Colors.transparent,
+                      backgroundColor:
+                          hasBadge ? context.colorScheme.primary : Colors.transparent,
                       child: Icon(
                         icon!,
                         color: iconColor ?? context.colorScheme.onPrimary,

@@ -1,9 +1,14 @@
-import 'package:app/common_lib.dart';
+import 'package:nafarat/common_lib.dart';
 import 'package:flutter/material.dart';
 
 class ImageWithText extends StatelessWidget {
   const ImageWithText(
-      {super.key, required this.imagePath, required this.text, this.textColor, this.fontSize = 14, this.fontWeight = FontWeight.w400});
+      {super.key,
+      required this.imagePath,
+      required this.text,
+      this.textColor,
+      this.fontSize = 14,
+      this.fontWeight = FontWeight.w400});
 
   final String imagePath, text;
   final Color? textColor;

@@ -1,15 +1,11 @@
-import 'package:app/main.dart';
-import 'package:app/router/app_router.dart';
-import 'package:app/data/providers/settings_provider.dart';
-import 'package:app/theme/app_theme.dart';
-import 'package:app/utils/extensions.dart';
-import 'package:app/utils/snackbar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_kurdish_localization/kurdish_material_localization_delegate.dart';
 import 'package:flutter_kurdish_localization/kurdish_widget_localization_delegate.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:nafarat/main.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'common_lib.dart';
+import 'data/providers/settings_provider.dart';
+import 'theme/theme_lib.dart';
 
 class App extends ConsumerStatefulWidget {
   const App({super.key});
@@ -19,11 +15,10 @@ class App extends ConsumerStatefulWidget {
 }
 
 class _AppState extends ConsumerState<App> {
-
   // @override
   // void initState() {
   //   super.initState();
-    
+
   //   initializeFirebaseMessaging();
   //   FirebaseMessaging.onMessage.listen((RemoteMessage message) async {
   //     debugPrint("remote message received: ${message.messageId}");
@@ -61,10 +56,10 @@ class _AppState extends ConsumerState<App> {
       locale: settings.locale,
       onGenerateTitle: (context) => context.l10n.appName,
       localizationsDelegates: const [
-              ...AppLocalizations.localizationsDelegates,
-              KurdishMaterialLocalizations.delegate,
-              KurdishWidgetLocalizations.delegate,
-            ],
+        ...AppLocalizations.localizationsDelegates,
+        KurdishMaterialLocalizations.delegate,
+        KurdishWidgetLocalizations.delegate,
+      ],
       supportedLocales: AppLocalizations.supportedLocales,
       // Theme
       themeMode: settings.themeMode,

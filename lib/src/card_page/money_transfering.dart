@@ -1,4 +1,4 @@
-import 'package:app/data/fake_data/money_transaction_fake.dart';
+import 'package:nafarat/data/fake_data/money_transaction_fake.dart';
 import 'package:flutter/material.dart';
 import '../../common_lib.dart';
 import '../../components/custom_app_bar.dart';

@@ -1,5 +1,5 @@
-import 'package:app/data/services/clients/auth_client.dart';
-import 'package:app/utils/app_validator.dart';
+import 'package:nafarat/data/services/clients/auth_client.dart';
+import 'package:nafarat/utils/app_validator.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../components/custom_date_picker.dart';

@@ -1,5 +1,5 @@
-import 'package:app/components/custom_list_tile.dart';
-import 'package:app/data/models/money_transaction.dart';
+import 'package:nafarat/components/custom_list_tile.dart';
+import 'package:nafarat/data/models/money_transaction.dart';
 import 'package:flutter/material.dart';
 import '../../../common_lib.dart';
 

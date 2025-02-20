@@ -1,6 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:app/data/models/json_types.dart';
-import 'package:app/data/models/paginated.dart';
+import 'package:nafarat/data/models/json_types.dart';
+import 'package:nafarat/data/models/paginated.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part "paginated_response.g.dart";

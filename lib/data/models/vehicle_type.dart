@@ -1,5 +1,4 @@
-import 'package:app/utils/annotations/annotations_lib.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
+import '_models.dart';
 
 part 'vehicle_type.freezed.dart';
 part 'vehicle_type.g.dart';

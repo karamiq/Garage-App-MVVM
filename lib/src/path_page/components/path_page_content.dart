@@ -1,4 +1,4 @@
-import 'package:app/data/fake_data/constatnt_fake.dart';
+import 'package:nafarat/data/fake_data/constatnt_fake.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';

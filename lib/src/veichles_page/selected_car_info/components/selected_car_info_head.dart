@@ -1,4 +1,4 @@
-import 'package:app/data/fake_data/constatnt_fake.dart';
+import 'package:nafarat/data/fake_data/constatnt_fake.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 

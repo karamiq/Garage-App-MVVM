@@ -1,10 +1,11 @@
-import 'package:app/utils/annotations/annotations_lib.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:nafarat/utils/annotations/annotations_lib.dart';
+
+import '_models.dart';
 
 part 'vehicle_models.freezed.dart';
 part 'vehicle_models.g.dart';
 
-@freezedResponse
+@freezed
 class VehicleModel with _$VehicleModel {
   @jsonSerializableResponse
   const factory VehicleModel({

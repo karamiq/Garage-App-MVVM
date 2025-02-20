@@ -1,4 +1,4 @@
-import 'package:app/src/home_page/components/mini_card_shimmer.dart';
+import 'package:nafarat/src/home_page/components/mini_card_shimmer.dart';
 import 'package:flutter/material.dart';
 import '../../../common_lib.dart';
 import '../../../components/cusotm_row_skeleton.dart';

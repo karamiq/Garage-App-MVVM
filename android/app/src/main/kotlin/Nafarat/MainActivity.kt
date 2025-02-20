@@ -1,4 +1,4 @@
-package com.example.app
+package Nafarat
 
 import io.flutter.embedding.android.FlutterActivity
 

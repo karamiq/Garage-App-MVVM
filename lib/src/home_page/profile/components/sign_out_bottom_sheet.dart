@@ -1,6 +1,6 @@
-import 'package:app/data/providers/authentication_provider.dart';
-import 'package:app/data/providers/settings_provider.dart';
-import 'package:app/theme/theme_mode.dart';
+import 'package:nafarat/data/providers/authentication_provider.dart';
+import 'package:nafarat/data/providers/settings_provider.dart';
+import 'package:nafarat/theme/theme_mode.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../common_lib.dart';
