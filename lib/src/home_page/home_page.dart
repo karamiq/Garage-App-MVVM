@@ -16,7 +16,7 @@ class HomePage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
         resizeToAvoidBottomInset: false,
-        body: ref.watch(profilesProvider).when(
+        body: ref.watch(profilesProvider()).when(
             data: (data) {
               final prof = data[itemFake];
               return HomePageContent(

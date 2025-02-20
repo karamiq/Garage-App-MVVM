@@ -33,14 +33,8 @@ class _PathPageContentState extends State<PathPageContent> {
     addMarker('2', _startPoint, Assets.assetsIconsMapPin);
   }
 
-  void loadMapStyle() async {
-    try {
-      themeForMap = await DefaultAssetBundle.of(context)
-          .loadString(Assets.assetsThemesDarkMapStyle);
-    } catch (e) {
-      print('Error loading map style: $e');
-    }
-  }
+  void loadMapStyle() async => themeForMap =
+      await DefaultAssetBundle.of(context).loadString(Assets.assetsThemesDarkMapStyle);
 
   Future<void> getPolyPoints() async {
     try {
@@ -59,9 +53,8 @@ class _PathPageContentState extends State<PathPageContent> {
             result.points.map((point) => LatLng(point.latitude, point.longitude)));
         setState(() {});
       }
-    } catch (e) {
-      print('Error fetching polyline points: $e');
-    }
+      // ignore: empty_catches
+    } catch (e) {}
   }
 
   Future<void> addMarker(String id, LatLng location, String icon) async {
@@ -69,20 +62,17 @@ class _PathPageContentState extends State<PathPageContent> {
       final marker = Marker(
         markerId: MarkerId(id),
         position: location,
-        icon: await Container(
-          child: SvgPicture.asset(
-            icon,
-            color: const Color.fromARGB(255, 79, 180, 131),
-            height: 30,
-          ),
+        icon: await SvgPicture.asset(
+          icon,
+          color: const Color.fromARGB(255, 79, 180, 131),
+          height: 30,
         ).toBitmapDescriptor(logicalSize: const Size(430, 430)),
       );
       setState(() {
         markers[id] = marker;
       });
-    } catch (e) {
-      print('Error adding marker: $e');
-    }
+      // ignore: empty_catches
+    } catch (e) {}
   }
 
   @override

@@ -8,8 +8,7 @@ import 'trip_info_fake.dart';
 part 'profile_fake.g.dart';
 
 @riverpod
-Future<List<HomePageInfo>> profiles(Ref ref) async {
-  print("Fetching profile data...");
+Future<List<HomePageInfo>> profiles(Ref ref, {String? carName}) async {
   final trips = ref.watch(tripInfoProvider);
   final transactions = ref.watch(moneyTransactionsProvider);
   final carLetters = [
@@ -54,14 +53,11 @@ Future<List<HomePageInfo>> profiles(Ref ref) async {
 
   // Simulate a delay for async operation
   await Future.delayed(Duration(seconds: delaySeconds));
-
-  print("Profile data fetched successfully!");
-
-  return List.generate(35, (index) {
+  final profiles = List.generate(35, (index) {
     return HomePageInfo(
+      carState: cities[index % 2],
       carLetter: carLetters[index % carLetters.length], // Cycling through letters
-      imageUrl:
-          "https://avatars.githubusercontent.com/u/171433280?v=4", // Example image URL
+      imageUrl: myImageUrl, // Example image URL
       carPlateInfo:
           "${cities[index % cities.length]} ${1000 + index}", // Unique plate info
       carType: carTypes[index % carTypes.length], // Cycling through car types
@@ -82,6 +78,15 @@ Future<List<HomePageInfo>> profiles(Ref ref) async {
       latestTripsList: trips, // First 5 trips
     );
   });
+
+  List<HomePageInfo> filteredProfiles = profiles;
+  if (carName != null) {
+    filteredProfiles = profiles
+        .where((element) => element.carType.toLowerCase().contains(carName.toLowerCase()))
+        .toList();
+  }
+
+  return filteredProfiles;
 
   // return [
   //   HomePageInfo(

@@ -34,6 +34,7 @@ mixin _$HomePageInfo {
   String get tripsCardNumber => throw _privateConstructorUsedError;
   String get tripsCardNumText => throw _privateConstructorUsedError;
   String get carLetter => throw _privateConstructorUsedError;
+  String get carState => throw _privateConstructorUsedError;
   List<MoneyTransaction> get moneyTransfersList =>
       throw _privateConstructorUsedError;
   List<TripInfo> get latestTripsList => throw _privateConstructorUsedError;
@@ -69,6 +70,7 @@ abstract class $HomePageInfoCopyWith<$Res> {
       String tripsCardNumber,
       String tripsCardNumText,
       String carLetter,
+      String carState,
       List<MoneyTransaction> moneyTransfersList,
       List<TripInfo> latestTripsList});
 }
@@ -102,6 +104,7 @@ class _$HomePageInfoCopyWithImpl<$Res, $Val extends HomePageInfo>
     Object? tripsCardNumber = null,
     Object? tripsCardNumText = null,
     Object? carLetter = null,
+    Object? carState = null,
     Object? moneyTransfersList = null,
     Object? latestTripsList = null,
   }) {
@@ -162,6 +165,10 @@ class _$HomePageInfoCopyWithImpl<$Res, $Val extends HomePageInfo>
           ? _value.carLetter
           : carLetter // ignore: cast_nullable_to_non_nullable
               as String,
+      carState: null == carState
+          ? _value.carState
+          : carState // ignore: cast_nullable_to_non_nullable
+              as String,
       moneyTransfersList: null == moneyTransfersList
           ? _value.moneyTransfersList
           : moneyTransfersList // ignore: cast_nullable_to_non_nullable
@@ -197,6 +204,7 @@ abstract class _$$HomePageInfoImplCopyWith<$Res>
       String tripsCardNumber,
       String tripsCardNumText,
       String carLetter,
+      String carState,
       List<MoneyTransaction> moneyTransfersList,
       List<TripInfo> latestTripsList});
 }
@@ -228,6 +236,7 @@ class __$$HomePageInfoImplCopyWithImpl<$Res>
     Object? tripsCardNumber = null,
     Object? tripsCardNumText = null,
     Object? carLetter = null,
+    Object? carState = null,
     Object? moneyTransfersList = null,
     Object? latestTripsList = null,
   }) {
@@ -288,6 +297,10 @@ class __$$HomePageInfoImplCopyWithImpl<$Res>
           ? _value.carLetter
           : carLetter // ignore: cast_nullable_to_non_nullable
               as String,
+      carState: null == carState
+          ? _value.carState
+          : carState // ignore: cast_nullable_to_non_nullable
+              as String,
       moneyTransfersList: null == moneyTransfersList
           ? _value._moneyTransfersList
           : moneyTransfersList // ignore: cast_nullable_to_non_nullable
@@ -319,6 +332,7 @@ class _$HomePageInfoImpl implements _HomePageInfo {
       required this.tripsCardNumber,
       required this.tripsCardNumText,
       required this.carLetter,
+      required this.carState,
       required final List<MoneyTransaction> moneyTransfersList,
       required final List<TripInfo> latestTripsList})
       : _moneyTransfersList = moneyTransfersList,
@@ -355,6 +369,8 @@ class _$HomePageInfoImpl implements _HomePageInfo {
   final String tripsCardNumText;
   @override
   final String carLetter;
+  @override
+  final String carState;
   final List<MoneyTransaction> _moneyTransfersList;
   @override
   List<MoneyTransaction> get moneyTransfersList {
@@ -374,7 +390,7 @@ class _$HomePageInfoImpl implements _HomePageInfo {
 
   @override
   String toString() {
-    return 'HomePageInfo(imageUrl: $imageUrl, carPlateInfo: $carPlateInfo, carType: $carType, expireDate: $expireDate, cardNumber: $cardNumber, qrData: $qrData, cardMoney: $cardMoney, feesCardTitle: $feesCardTitle, feesCardNumber: $feesCardNumber, feesCardNumText: $feesCardNumText, tripsCardTitle: $tripsCardTitle, tripsCardNumber: $tripsCardNumber, tripsCardNumText: $tripsCardNumText, carLetter: $carLetter, moneyTransfersList: $moneyTransfersList, latestTripsList: $latestTripsList)';
+    return 'HomePageInfo(imageUrl: $imageUrl, carPlateInfo: $carPlateInfo, carType: $carType, expireDate: $expireDate, cardNumber: $cardNumber, qrData: $qrData, cardMoney: $cardMoney, feesCardTitle: $feesCardTitle, feesCardNumber: $feesCardNumber, feesCardNumText: $feesCardNumText, tripsCardTitle: $tripsCardTitle, tripsCardNumber: $tripsCardNumber, tripsCardNumText: $tripsCardNumText, carLetter: $carLetter, carState: $carState, moneyTransfersList: $moneyTransfersList, latestTripsList: $latestTripsList)';
   }
 
   @override
@@ -408,6 +424,8 @@ class _$HomePageInfoImpl implements _HomePageInfo {
                 other.tripsCardNumText == tripsCardNumText) &&
             (identical(other.carLetter, carLetter) ||
                 other.carLetter == carLetter) &&
+            (identical(other.carState, carState) ||
+                other.carState == carState) &&
             const DeepCollectionEquality()
                 .equals(other._moneyTransfersList, _moneyTransfersList) &&
             const DeepCollectionEquality()
@@ -432,6 +450,7 @@ class _$HomePageInfoImpl implements _HomePageInfo {
       tripsCardNumber,
       tripsCardNumText,
       carLetter,
+      carState,
       const DeepCollectionEquality().hash(_moneyTransfersList),
       const DeepCollectionEquality().hash(_latestTripsList));
 
@@ -467,6 +486,7 @@ abstract class _HomePageInfo implements HomePageInfo {
       required final String tripsCardNumber,
       required final String tripsCardNumText,
       required final String carLetter,
+      required final String carState,
       required final List<MoneyTransaction> moneyTransfersList,
       required final List<TripInfo> latestTripsList}) = _$HomePageInfoImpl;
 
@@ -501,6 +521,8 @@ abstract class _HomePageInfo implements HomePageInfo {
   String get tripsCardNumText;
   @override
   String get carLetter;
+  @override
+  String get carState;
   @override
   List<MoneyTransaction> get moneyTransfersList;
   @override

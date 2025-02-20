@@ -34,18 +34,19 @@ class VeichlesPage extends ConsumerWidget {
                       Routes.allVeichlesPage,
                     )),
             Gap(Insets.large * 1.5),
-            ref.watch(profilesProvider).when(
+            ref.watch(profilesProvider()).when(
                   data: (data) => ListView.separated(
                       padding: EdgeInsets.all(0),
                       shrinkWrap: true,
                       physics: NeverScrollableScrollPhysics(),
                       itemBuilder: (context, index) => VehiclesInfoRow(
-                          index: index,
-                          id: index.toString(),
-                          carType: data[index].carType,
-                          carPlateNumber: (index + 1 * 2453).toString(),
-                          carLetter: String.fromCharCode(0x0621 + index),
-                          carState: 'بغداد'),
+                            index: index,
+                            id: index.toString(),
+                            carType: data[index].carType,
+                            carPlateNumber: (index + 1 * 2453).toString(),
+                            carLetter: String.fromCharCode(0x0621 + index),
+                            carState: data[index].carState,
+                          ),
                       separatorBuilder: (context, index) => Gap(Insets.small),
                       itemCount: 3),
                   error: (e, r) => Center(child: Text('Error: $e')),

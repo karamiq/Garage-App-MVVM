@@ -1,3 +1,4 @@
+import 'package:app/data/fake_data/constatnt_fake.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -27,7 +28,7 @@ class SelectedCarInfoHead extends StatelessWidget {
           children: [
             Row(
               children: [
-                CustomCirculerAvatar(path: Assets.assetsImagesAvatarImage),
+                CustomCirculerAvatar(path: myImageUrl),
                 Gap(Insets.small),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

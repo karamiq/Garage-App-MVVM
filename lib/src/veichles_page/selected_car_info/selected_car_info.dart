@@ -22,18 +22,18 @@ class SelectedCarInfoPage extends ConsumerWidget {
         appBar: CustomAppBar(),
         body: Padding(
             padding: EdgeInsets.symmetric(horizontal: Insets.small),
-            child: ref.watch(profilesProvider).when(
+            child: ref.watch(profilesProvider()).when(
                 data: (data) => Column(
                       children: [
                         SelectedCarInfoHead(
-                            userName: 'محمد علي', phoneNumber: '07728833423'),
+                            userName: 'كرم رشيد', phoneNumber: '07712345678'),
                         Gap(Insets.medium),
                         UserCard(
                             cardAvailable: true,
                             carPlateInfo: data[index].carPlateInfo,
                             carType: data[index].carType,
-                            expireDate: ' 10/12/2025',
-                            cardNumber: '10023',
+                            expireDate: data[index].expireDate,
+                            cardNumber: data[index].cardNumber,
                             qrData: 'https://github.com/karamiq',
                             cardMoney: 125000),
                         Gap(Insets.small),

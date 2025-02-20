@@ -1,39 +1,25 @@
+import 'package:app/data/fake_data/profile_fake.dart';
 import 'package:flutter/material.dart';
 
 import '../../../common_lib.dart';
+import '../../../components/cusotm_row_skeleton.dart';
 import '../../../components/custom_app_bar.dart';
 import '../../../components/custom_text_form_field.dart';
 import '../components/viechle_info_row.dart';
 
-class AllVeichlesPage extends StatefulWidget {
+class AllVeichlesPage extends ConsumerStatefulWidget {
   const AllVeichlesPage({super.key});
 
   @override
-  State<AllVeichlesPage> createState() => _AllVeichlesPageState();
+  ConsumerState<AllVeichlesPage> createState() => _AllVeichlesPageState();
 }
 
-class _AllVeichlesPageState extends State<AllVeichlesPage> {
-  final SearchController = TextEditingController();
-
-  List carsList = [];
-  List filteredCars = [];
-  final TextEditingController textFiledController = TextEditingController();
-  String searchQuery = '';
-
-  void filterCars(String query) {
-    print('Cars filtering: $query');
-    if (mounted) {
-      setState(() {
-        searchQuery = query;
-        filteredCars = carsList
-            .where((car) => car.name.toLowerCase().contains(query.toLowerCase()))
-            .toList();
-      });
-    }
-  }
+class _AllVeichlesPageState extends ConsumerState<AllVeichlesPage> {
+  final TextEditingController searchController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
+    final cars = ref.watch(profilesProvider(carName: searchController.text.trim()));
     return Scaffold(
       appBar: CustomAppBar(
         title: 'جميع المركبات',
@@ -43,25 +29,47 @@ class _AllVeichlesPageState extends State<AllVeichlesPage> {
         child: Column(
           children: [
             CustomAppTextFormField(
-              onChanged: filterCars,
-              controller: SearchController,
+              onChanged: (value) {
+                setState(() {});
+              },
+              controller: searchController,
               labelText: 'أبحث عن أسم  سيارة',
               prefixIcon: Assets.assetsIconsMagnifyingGlass,
               validator: null,
             ),
-            ListView.separated(
+            cars.when(
+              data: (data) => data.isEmpty
+                  ? Center(
+                      child: Container(
+                      padding: EdgeInsets.all(Insets.medium),
+                      decoration: BoxDecoration(
+                          color: context.theme.colorScheme.surface,
+                          borderRadius: BorderRadius.circular(Insets.medium)),
+                      child: Text('لا توجد سيارات متوفرة'),
+                    ))
+                  : ListView.separated(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemBuilder: (context, index) => VehiclesInfoRow(
+                        index: index,
+                        id: index.toString(),
+                        carType: data[index].carType,
+                        carPlateNumber: (index + 1 * 2453).toString(),
+                        carLetter: String.fromCharCode(0x0621 + index),
+                        carState: data[index].carState,
+                      ),
+                      separatorBuilder: (context, index) => const Gap(Insets.small),
+                      itemCount: data.length,
+                    ),
+              error: (e, r) => Center(child: Text('Error: $e')),
+              loading: () => ListView.separated(
                 shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                //The filtered list must be applied here when linking with api
-                itemBuilder: (context, index) => VehiclesInfoRow(
-                    index: index,
-                    id: index.toString(),
-                    carType: 'كورلا',
-                    carPlateNumber: '93745',
-                    carLetter: 'أ ',
-                    carState: 'بغداد'),
-                separatorBuilder: (context, index) => Gap(Insets.small),
-                itemCount: 11)
+                physics: const NeverScrollableScrollPhysics(),
+                itemBuilder: (context, index) => const CustomRowSkeleton(),
+                separatorBuilder: (context, index) => const Gap(Insets.small),
+                itemCount: 11,
+              ),
+            ),
           ],
         ),
       ),

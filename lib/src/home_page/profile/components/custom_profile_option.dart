@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../../../../components/custom_svg_style.dart';
 
 class CustomProfileOption extends StatelessWidget {
-  CustomProfileOption(
+  const CustomProfileOption(
       {super.key,
       required this.title,
       required this.icon,
@@ -11,8 +11,8 @@ class CustomProfileOption extends StatelessWidget {
 
   final String title;
   final String icon;
-  Color? color;
-  void Function() onPressed;
+  final Color? color;
+  final void Function() onPressed;
   @override
   Widget build(BuildContext context) {
     return ListTile(

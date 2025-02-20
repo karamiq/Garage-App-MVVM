@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:app/components/cusotm_row_skeleton.dart';
 import 'package:app/data/models/garage_model.dart';
 import 'package:app/data/models/governorate_model.dart';
@@ -76,12 +75,9 @@ class _AllAvailableDriversPageState extends ConsumerState<AllAvailableDriversPag
                               pageNumber: page,
                             ),
                     validator: null,
-                    onChanged: (value) {
-                      setState(
-                        () => ref.invalidate(fakeIraqiInfoProvider(
-                            garage: value.name, region: stateController.text)),
-                      );
-                    },
+                    onChanged: (value) => setState(
+                      () {},
+                    ),
                   ),
                 ),
               ],

@@ -23,6 +23,7 @@ class HomePageInfo with _$HomePageInfo {
     required String tripsCardNumber,
     required String tripsCardNumText,
     required String carLetter,
+    required String carState,
     required List<MoneyTransaction> moneyTransfersList,
     required List<TripInfo> latestTripsList,
   }) = _HomePageInfo;

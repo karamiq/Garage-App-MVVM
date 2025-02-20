@@ -9,18 +9,9 @@ class GarageRatingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double ratingFrom = 1;
-    double ratingTo = 1;
+    void submitRatingTo(double rating) {}
 
-    void submitRatingTo(double rating) {
-      ratingTo = rating;
-      print('Rating to: $rating');
-    }
-
-    void submitRatingFrom(double rating) {
-      ratingFrom = rating;
-      print('Rating from: $rating');
-    }
+    void submitRatingFrom(double rating) {}
 
     return Scaffold(
       appBar: CustomAppBar(
@@ -82,8 +73,8 @@ class GarageRatingPage extends StatelessWidget {
 }
 
 class CustomRatingBar extends StatelessWidget {
-  CustomRatingBar({super.key, required this.onRating});
-  void Function(double) onRating;
+  const CustomRatingBar({super.key, required this.onRating});
+  final void Function(double) onRating;
 
   @override
   Widget build(BuildContext context) {

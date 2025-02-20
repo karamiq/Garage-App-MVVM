@@ -27,9 +27,8 @@ class _PathPageState extends State<PathPage> {
           data = 'map data'; // Replace with actual data fetching logic
         });
       }
-    } catch (e) {
-      print('Error fetching data: $e');
-    }
+      // ignore: empty_catches
+    } catch (e) {}
   }
 
   @override

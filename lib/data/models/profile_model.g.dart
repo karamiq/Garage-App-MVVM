@@ -22,6 +22,7 @@ _$HomePageInfoImpl _$$HomePageInfoImplFromJson(Map<String, dynamic> json) =>
       tripsCardNumber: json['tripsCardNumber'] as String,
       tripsCardNumText: json['tripsCardNumText'] as String,
       carLetter: json['carLetter'] as String,
+      carState: json['carState'] as String,
       moneyTransfersList: (json['moneyTransfersList'] as List<dynamic>)
           .map((e) => MoneyTransaction.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -46,6 +47,7 @@ Map<String, dynamic> _$$HomePageInfoImplToJson(_$HomePageInfoImpl instance) =>
       'tripsCardNumber': instance.tripsCardNumber,
       'tripsCardNumText': instance.tripsCardNumText,
       'carLetter': instance.carLetter,
+      'carState': instance.carState,
       'moneyTransfersList': instance.moneyTransfersList,
       'latestTripsList': instance.latestTripsList,
     };

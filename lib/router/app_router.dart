@@ -32,7 +32,7 @@ import '../src/path_page/path_page.dart';
 import '../src/shared_pages/notifications/notifications.dart';
 import '../src/splash/splash_page.dart';
 import '../src/veichles_page/all_veichles/all_veichles.dart';
-import '../src/veichles_page/veichles_page.dart';
+import '../src/veichles_page/vehicles_page.dart';
 
 final Provider<GoRouter> routerProvider = Provider((ref) => router);
 

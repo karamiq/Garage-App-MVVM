@@ -30,8 +30,7 @@ class _TripDetailesPageState extends State<TripDetailesPage> {
     var to = 'كراج ام قصر';
 
     void fetchData() {}
-    final data = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
-    final id = data['id'];
+
     return Scaffold(
       appBar: CustomAppBar(),
       body: SingleChildScrollView(
