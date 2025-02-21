@@ -1,5 +1,3 @@
-import 'package:nafarat/utils/annotations/annotations_lib.dart';
-
 import '_models.dart';
 
 part 'vehicle_models.freezed.dart';

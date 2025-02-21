@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 import '../common_lib.dart';
 
 class CustomSvgStyle extends StatelessWidget {
-  CustomSvgStyle({
+  const CustomSvgStyle({
     super.key,
     required this.icon,
     this.color,
   });
 
   final String icon;
-  Color? color;
+  final Color? color;
 
   @override
   Widget build(BuildContext context) {

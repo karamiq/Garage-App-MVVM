@@ -38,7 +38,7 @@ class HomePage extends ConsumerWidget {
                   latestTripsList: prof.latestTripsList);
             },
             error: (error, t) {
-              return null;
+              return Center(child: Text('Error: $error'));
             },
             loading: () => HomePageSkeleton()));
   }

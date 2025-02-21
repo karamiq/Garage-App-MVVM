@@ -50,21 +50,19 @@ class HomePageContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: Insets.smallAll,
-      child: Expanded(
-        child: Column(
-          children: [
-            HomePageHead(imageUrl: imageUrl),
-            Gap(Insets.medium),
-            _buildUserCard(),
-            Gap(Insets.small),
-            _buildMiniCardsRow(context),
-            Gap(Insets.small),
-            HomePageBottomHalf(
-              moneyTransfersList: moneyTransfersList,
-              latestTripsList: latestTripsList,
-            ),
-          ],
-        ),
+      child: Column(
+        children: [
+          HomePageHead(imageUrl: imageUrl),
+          Gap(Insets.medium),
+          _buildUserCard(),
+          Gap(Insets.small),
+          _buildMiniCardsRow(context),
+          Gap(Insets.small),
+          HomePageBottomHalf(
+            moneyTransfersList: moneyTransfersList,
+            latestTripsList: latestTripsList,
+          ),
+        ],
       ),
     );
   }

@@ -23,7 +23,6 @@ class MiniCard extends StatelessWidget {
     return LayoutBuilder(builder: (context, constraints) {
       return Container(
         height: 170,
-        width: constraints.maxWidth / 2 - 16,
         decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.onInverseSurface,
           borderRadius: BorderRadius.circular(CustomBorderTheme.normalBorderRadius),
