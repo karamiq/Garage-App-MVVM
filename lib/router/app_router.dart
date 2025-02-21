@@ -27,6 +27,7 @@ import '../src/home_page/financial_transcations/financial_transcations.dart';
 import '../src/home_page/garage_rating/garage_rating.dart';
 import '../src/home_page/home_page.dart';
 import '../src/home_page/profile/profile.dart';
+import '../src/home_page/trips/trips.dart';
 import '../src/path_page/path_page.dart';
 import '../src/shared_pages/notifications/notifications.dart';
 import '../src/splash/splash_page.dart';
@@ -149,6 +150,12 @@ final router = GoRouter(
             builder: (context, state) => VeichlesPage(),
           ),
         ]),
+
+    GoRoute(
+      path: Routes.tripsPage,
+      name: Routes.tripsPage,
+      builder: (context, state) => TripsPage(),
+    ),
     GoRoute(
       path: Routes.feesOnCarPage,
       name: Routes.feesOnCarPage,
