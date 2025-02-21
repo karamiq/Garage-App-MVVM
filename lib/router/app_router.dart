@@ -9,7 +9,6 @@ import 'package:nafarat/src/veichles_page/selected_car_info/selected_car_info.da
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-
 import '../data/models/vehicle_violations.dart';
 import '../src/auth/otp/otp.dart';
 import '../src/auth/register/register.dart';
@@ -44,7 +43,7 @@ final GlobalKey<NavigatorState> _shellNavigatorKey =
 // GoRouter configuration
 final router = GoRouter(
   debugLogDiagnostics: true,
-  initialLocation: Routes.home,
+  initialLocation: Routes.loginOrRigisterPage,
   navigatorKey: _rootNavigatorKey,
   // redirect: (context, state) async {
   //   final sharedPreferences = await SharedPreferences.getInstance();
@@ -79,12 +78,10 @@ final router = GoRouter(
             isLogin: isLogin,
           );
         }),
-
     GoRoute(
         path: Routes.registerPage,
         name: Routes.registerPage,
         builder: (context, state) => RegisterPage()),
-
     GoRoute(
         path: Routes.createAccountTypePage,
         name: Routes.createAccountTypePage,
@@ -96,7 +93,6 @@ final router = GoRouter(
           // final extra = state.extra as Map<String, dynamic>;
           return EnterHolderOrOwnerInfoPage();
         }),
-
     GoRoute(
         path: Routes.enterPersonalPicturePage,
         name: Routes.enterPersonalPicturePage,
@@ -119,7 +115,6 @@ final router = GoRouter(
           // final extra = state.extra as Map<String, dynamic>;
           return CreateQrCodePage();
         }),
-
     GoRoute(
         path: Routes.whereDoYouWantToWorkPage,
         name: Routes.whereDoYouWantToWorkPage,

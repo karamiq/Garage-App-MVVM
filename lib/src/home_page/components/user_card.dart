@@ -116,7 +116,7 @@ class UserCard extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Icon(
                       Icons.chevron_right,
-                      size: 30,
+                      size: context.width * 0.08,
                       //size: 32,
                     ),
                   ),
