@@ -20,18 +20,23 @@ class TripsPage extends ConsumerWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                TripsSequaredInfoCard(
-                    title: 'عدد الرحلات الكلية',
-                    count: '50',
-                    type: 'زيادة',
-                    iconType: Icons.trending_up_outlined,
-                    percentage: '+6.08'),
-                TripsSequaredInfoCard(
-                    title: 'عدد الرحلات الأسبوعية',
-                    count: '18',
-                    type: 'زيادة',
-                    iconType: Icons.trending_up_outlined,
-                    percentage: '+2.03'),
+                Expanded(
+                  child: TripsSequaredInfoCard(
+                      title: 'عدد الرحلات الكلية',
+                      count: '50',
+                      type: 'زيادة',
+                      iconType: Icons.trending_up_outlined,
+                      percentage: '+6.08'),
+                ),
+                Gap(Insets.medium),
+                Expanded(
+                  child: TripsSequaredInfoCard(
+                      title: 'عدد الرحلات الأسبوعية',
+                      count: '18',
+                      type: 'زيادة',
+                      iconType: Icons.trending_up_outlined,
+                      percentage: '+2.03'),
+                ),
               ],
             ),
             Gap(Insets.medium),

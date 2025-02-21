@@ -33,7 +33,7 @@ class UserCard extends StatelessWidget {
             clipper: isCardPage ? null : UserCardClipper(),
             child: Container(
                 width: double.infinity,
-                height: 210,
+                height: 220,
                 padding: Insets.mediumAll,
                 decoration: BoxDecoration(
                     borderRadius:

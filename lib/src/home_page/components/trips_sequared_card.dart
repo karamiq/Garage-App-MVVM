@@ -22,7 +22,7 @@ class TripsSequaredInfoCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 165,
-      width: 165,
+      //width: 165,
       decoration: BoxDecoration(
           color: Theme.of(context).colorScheme.surfaceContainerHighest,
           borderRadius: BorderRadius.circular(CustomBorderTheme.normalBorderRadius)),
