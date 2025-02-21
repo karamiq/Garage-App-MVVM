@@ -44,7 +44,7 @@ final GlobalKey<NavigatorState> _shellNavigatorKey =
 // GoRouter configuration
 final router = GoRouter(
   debugLogDiagnostics: true,
-  initialLocation: Routes.home,
+  initialLocation: Routes.loginOrRigisterPage,
   navigatorKey: _rootNavigatorKey,
   // redirect: (context, state) async {
   //   final sharedPreferences = await SharedPreferences.getInstance();
