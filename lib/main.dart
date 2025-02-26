@@ -6,7 +6,7 @@ import 'package:timeago/timeago.dart' as timeago;
 import 'app.dart';
 
 //
-const String appName = 'App';
+const String appName = 'نفرات';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

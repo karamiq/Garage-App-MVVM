@@ -54,6 +54,7 @@ final router = GoRouter(
   //   }
   //   return null;
   // },
+
   routes: [
     GoRoute(
       parentNavigatorKey: _rootNavigatorKey,
@@ -282,32 +283,32 @@ class Routes {
   static const String splashPage = '/splash_page';
   static const String pathPage = '/path_page';
   static const String cardPage = '/card_page';
-  static const tapsPage = '/taps_page';
-  static const loginOrRigisterPage = '/login_or_rigister';
-  static const otpPage = '/otp';
-  static const registerPage = '/register';
-  static const createAccountTypePage = '/create_account_type';
-  static const enterHolderOrOwnerInfoPage = '/enter_holder_or_owner_info';
-  static const ownerCarInfoPage = '/owner_car_info';
-  static const enterPersonalPicturePage = '/enter_personal_picture';
-  static const createQrCodePage = '/create_qr_code';
-  static const keepGoingPage = '/keep_going_page';
-  static const whereDoYouWantToWorkPage = '/where_do_you_want_to_work';
-  static const qrCodeGeneratorPage = '/qr_code_generator';
-  static const notificationsPage = '/notifications';
-  static const tripsPage = '/trips_page';
-  static const tripDetailesPage = '/trip_detailes';
-  static const feesOnCarPage = '/fees_on_car';
-  static const feeDetailesPage = '/fee_detailes';
-  static const sendingComplainPage = '/sending_complain';
-  static const profilePage = '/profile';
-  static const financialTranscationsPage = '/financial_transcations';
-  static const garageRatingPage = '/garage_rating';
-  static const allAvailableDriversPage = '/all_available_drivers';
-  static const allVeichlesPage = '/all_veichles';
-  static const selectedCarInfoPage = '/selected_car_info';
-  static const seeAllPage = '/see_all';
-  static const veichlesPage = '/veichles_page';
+  static const String tapsPage = '/taps_page';
+  static const String loginOrRigisterPage = '/login_or_rigister';
+  static const String otpPage = '/otp';
+  static const String registerPage = '/register';
+  static const String createAccountTypePage = '/create_account_type';
+  static const String enterHolderOrOwnerInfoPage = '/enter_holder_or_owner_info';
+  static const String ownerCarInfoPage = '/owner_car_info';
+  static const String enterPersonalPicturePage = '/enter_personal_picture';
+  static const String createQrCodePage = '/create_qr_code';
+  static const String keepGoingPage = '/keep_going_page';
+  static const String whereDoYouWantToWorkPage = '/where_do_you_want_to_work';
+  static const String qrCodeGeneratorPage = '/qr_code_generator';
+  static const String notificationsPage = '/notifications';
+  static const String tripsPage = '/trips_page';
+  static const String tripDetailesPage = '/trip_detailes';
+  static const String feesOnCarPage = '/fees_on_car';
+  static const String feeDetailesPage = '/fee_detailes';
+  static const String sendingComplainPage = '/sending_complain';
+  static const String profilePage = '/profile';
+  static const String financialTranscationsPage = '/financial_transcations';
+  static const String garageRatingPage = '/garage_rating';
+  static const String allAvailableDriversPage = '/all_available_drivers';
+  static const String allVeichlesPage = '/all_veichles';
+  static const String selectedCarInfoPage = '/selected_car_info';
+  static const String seeAllPage = '/see_all';
+  static const String veichlesPage = '/veichles_page';
 
   // // Product
   // static String productDetails(String id) => 'product-details/$id';
